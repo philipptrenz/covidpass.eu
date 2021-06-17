@@ -174,7 +174,9 @@ export default Vue.extend({
         return
       }
 
-      await this.$axios.$post('/api/generate', { data: data }, { responseType: 'blob' })
+      const apiUrl = document.location.href + 'api/generate'
+
+      await this.$axios.$post(apiUrl, { data: data }, { responseType: 'blob' })
         .then(res => {
           if (!res) {
             throw Error("No response data received");
