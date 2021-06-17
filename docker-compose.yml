@@ -1,0 +1,14 @@
+# docker-compose.yml
+version: '3.7'
+
+services:
+  nuxt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    volumes:
+      - ./keys:/var/www/nuxt/keys:ro
+    restart: unless-stopped
+    ports:
+      - "3000:3000"

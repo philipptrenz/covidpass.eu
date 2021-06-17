@@ -1,0 +1,14 @@
+# node modules
+node_modules
+
+# nuxt.js build output
+.nuxt
+
+# .env file
+.env
+
+# Keys and certificates
+keys/
+
+# .DS_Store
+.DS_Store
