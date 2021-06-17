@@ -1,0 +1,26 @@
+{
+  "name": "dgc2pkpass",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "core-js": "^3.9.1",
+    "express": "^4.17.1",
+    "nuxt": "^2.15.3",
+    "passbook": "^2.3.0",
+    "vue-qrcode-reader": "2.3.18"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.3",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/tailwindcss": "^4.0.1",
+    "postcss": "^8.2.8"
+  }
+}
