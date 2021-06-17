@@ -181,7 +181,8 @@ export default Vue.extend({
           if (!res) {
             throw Error("No response data received");
           }
-          const url = window.URL.createObjectURL(new Blob([res]));
+          const blob = new Blob([res], { type: "application/vnd.apple.pkpass" });
+          const url = window.URL.createObjectURL(blob);
           const link = <HTMLLinkElement>this.$refs.download;
           link.href = url;
           link.setAttribute('download', 'eudcc.pkpass');
