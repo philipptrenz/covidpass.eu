@@ -36,3 +36,16 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+
+## Deploy with Docker Compose
+
+```bash
+docker-compose build  # build container
+docker-compose up -d  # run container
+```
+
+The container must be run behind a reverse proxy (e.g. nginx), which provides SSL and redirects all traffic to HTTPS.
+
+
+
