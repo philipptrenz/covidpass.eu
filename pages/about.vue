@@ -14,7 +14,7 @@
       everyday life and travel a little easier.
     </p>
     
-    <NuxtLink to="/" class="underline text-sm">Back to home</NuxtLink>
+    <NuxtLink :to="localePath('/')" class="underline text-sm">Back to home</NuxtLink>
 
   </div>
 </template>

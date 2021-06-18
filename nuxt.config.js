@@ -54,10 +54,14 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
+    'nuxt-i18n',
   ],
 
-  axios: {
+  axios: {},
 
+  i18n: {
+    locales: ['en', 'de', ],
+    defaultLocale: 'en',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
