@@ -1,0 +1,53 @@
+{
+  "index": {
+    "title": "Fügen Sie Ihr digitales grünes EU-Zertifikat zu Ihrer Apple Wallet hinzu",
+    "consent": {
+      "title": "Zustimmen",
+      "paragraphs": [
+        "Ihr QR-Code enthält sensible persönliche Daten. Diese Daten müssen ausgelesen und an unseren Server übertragen werden, um Ihren Apple Wallet Pass zu erstellen. Wir verwenden die Daten aus Ihrem QR-Code ausschließlich für die Erstellung des Apple Wallet Passes.",
+        "Wir speichern oder verkaufen Ihre sensiblen Daten nicht. Bitte nutzen auch Sie den Wallet Pass verantwortungsvoll, er ist nur für Sie persönlich bestimmt."
+      ],
+      "inputText": "Ich stimme der Verarbeitung meiner sensiblen Daten zu"
+    },
+    "scan": {
+      "title": "Scanne dein Zertifikat (QR Code)",
+      "errors": {
+        "NotAllowedError": "Bitte erlauben Sie den Zugriff auf die Kamera",
+        "NotFoundError": "Es konnte keine Kamera gefunden werden",
+        "NotSupportedError": "Diese Funktion wird leiter nicht unterstützt",
+        "NotReadableError": "Ihre Kamera scheint anderweitig verwendet zu werden",
+        "OverconstrainedError": "Kameras sind leider nicht geeignet",
+        "StreamApiNotSupportedError": "Ihr Browser unterstützt diese Funktion leider nicht"      
+      }
+    },
+    "addToWallet": {
+      "title": "Zu Apple Wallet hinzufügen",
+      "note": "<b>Hinweis:</b> Um Ihre Daten zu schützen, stellen Sie bitte sicher, dass Ihr Pass nicht sichtbar ist, wenn Ihr Telefon gesperrt ist. Falls nötig, können Sie diese Einstellung unter <i>Einstellungen</i> > <i>Touch / Face ID & Passcode</i> > <i>Im Sperrzustand Zugriff erlauben</i> ändern.",
+      "button": {
+        "addTo": "Hinzufügen zu"
+      }
+    }
+  },
+  "about": {
+    "title": "Über uns",
+    "paragraphs": [
+      "Hi, wir sind Marius, Donatus und Philipp. Drei Entwickler und Designer mit einem 💙 für innovative Lösungen und intuitive User Experience, um soziale Herausforderungen zu meistern und Teilhabe (wieder) zu ermöglichen.",
+      "COVID hat unser aller Leben in den letzten Monaten stark beeinträchtigt. Allmählich kehrt nun eine gewisse Normalität zurück. Mit diesem Tool wollen wir einen kleinen Beitrag dazu leisten, den Alltag und das Reisen ein wenig einfacher zu machen."
+    ]
+  },
+  "impress": {
+    "title": "Impressum",
+    "paragraphs": []
+  },
+  "privacy": {
+    "title": "Datenschutz",
+    "paragraphs": []
+  },
+  "labels": {
+    "next": "Weiter",
+    "backToHome": "Zurück zur Startseite",
+    "loading": "Laden ...",
+    "tryAgain": "Erneut versuchen",
+    "step": "Schritt"
+  }
+}

@@ -1,18 +1,17 @@
 <template>
-  <div class="w-full flex flex-row justify-end">
-    <span v-for="(code, index) in langCodes" v-bind:key="code" @click="$emit('change', code)">
-      <button class="uppercase px-1 focus:outline-none" :class="selected == code ? 'font-bold tracking-normal' : ''">{{ code }}</button>
-      <span v-if="index < langCodes.length-1">|</span>
+  <div class="w-full flex flex-row justify-end text-sm">
+    <span v-for="(lang, index) in $i18n.locales" v-bind:key="lang">
+
+      <nuxt-link 
+        :to="switchLocalePath(lang)"
+        class="uppercase px-1 focus:outline-none" 
+        :class="$i18n.locale == lang ? 'font-bold tracking-normal' : ''"
+        >
+        {{ lang }}
+      </nuxt-link>
+      
+      <span v-if="index < $i18n.locales.length-1">|</span>
+
     </span>
   </div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  props: {
-    langCodes: Array,
-    selected: String,
-  }
-})
-</script>
