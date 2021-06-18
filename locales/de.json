@@ -1,28 +1,28 @@
 {
   "index": {
-    "title": "Fügen Sie Ihr digitales grünes EU-Zertifikat zu Ihrer Apple Wallet hinzu",
+    "title": "Füge Dein EU Digital Green Certificate zu Deiner Apple Wallet hinzu",
     "consent": {
       "title": "Zustimmen",
       "paragraphs": [
-        "Ihr QR-Code enthält sensible persönliche Daten. Diese Daten müssen ausgelesen und an unseren Server übertragen werden, um Ihren Apple Wallet Pass zu erstellen. Wir verwenden die Daten aus Ihrem QR-Code ausschließlich für die Erstellung des Apple Wallet Passes.",
-        "Wir speichern oder verkaufen Ihre sensiblen Daten nicht. Bitte nutzen auch Sie den Wallet Pass verantwortungsvoll, er ist nur für Sie persönlich bestimmt."
+        "Dein QR-Code enthält sensible persönliche Daten. Diese Daten müssen ausgelesen und an unseren Server übertragen werden, um Deinen Apple Wallet Pass zu erstellen. Wir verwenden diese Daten ausschließlich für die Erstellung des Apple Wallet Passes.",
+        "Wir speichern Deine sensiblen Daten nicht. Bitte nutze auch Du den Wallet Pass verantwortungsvoll, er ist nur für Dich persönlich bestimmt."
       ],
       "inputText": "Ich stimme der Verarbeitung meiner sensiblen Daten zu"
     },
     "scan": {
-      "title": "Scanne dein Zertifikat (QR Code)",
+      "title": "Scanne Dein Zertifikat (QR Code)",
       "errors": {
-        "NotAllowedError": "Bitte erlauben Sie den Zugriff auf die Kamera",
+        "NotAllowedError": "Bitte erlaube den Zugriff auf die Kamera",
         "NotFoundError": "Es konnte keine Kamera gefunden werden",
-        "NotSupportedError": "Diese Funktion wird leiter nicht unterstützt",
-        "NotReadableError": "Ihre Kamera scheint anderweitig verwendet zu werden",
-        "OverconstrainedError": "Kameras sind leider nicht geeignet",
-        "StreamApiNotSupportedError": "Ihr Browser unterstützt diese Funktion leider nicht"      
+        "NotSupportedError": "Diese Funktion wird leider nicht unterstützt",
+        "NotReadableError": "Deine Kamera scheint anderweitig verwendet zu werden",
+        "OverconstrainedError": "Dein Gerät ist leider nicht geeignet",
+        "StreamApiNotSupportedError": "Dein Browser unterstützt diese Funktion leider nicht"      
       }
     },
     "addToWallet": {
       "title": "Zu Apple Wallet hinzufügen",
-      "note": "<b>Hinweis:</b> Um Ihre Daten zu schützen, stellen Sie bitte sicher, dass Ihr Pass nicht sichtbar ist, wenn Ihr Telefon gesperrt ist. Falls nötig, können Sie diese Einstellung unter <i>Einstellungen</i> > <i>Touch / Face ID & Passcode</i> > <i>Im Sperrzustand Zugriff erlauben</i> ändern.",
+      "note": "<b>Hinweis:</b> Um Deine Daten zu schützen, stellen bitte sicher, dass Dein Pass nicht sichtbar ist, wenn Dein Telefon gesperrt ist. Falls nötig, kannst Du diese Einstellung unter <i>Einstellungen</i> > <i>Touch / Face ID & Passcode</i> > <i>Im Sperrzustand Zugriff erlauben</i> ändern.",
       "button": {
         "addTo": "Hinzufügen zu"
       }
