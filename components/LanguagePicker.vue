@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-row justify-end">
+  <div class="w-full flex flex-row justify-end text-sm">
     <span v-for="(lang, index) in $i18n.locales" v-bind:key="lang">
 
       <nuxt-link 

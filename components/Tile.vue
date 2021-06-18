@@ -1,7 +1,7 @@
 <template>
   <div class="border-solid border-2 rounded-2xl p-4" >
         
-    <h2 class="text-lg font-bold" @click="$emit('to-step', step)">Step {{ step }}: {{ title }}</h2>
+    <h2 class="text-lg font-bold" @click="$emit('to-step', step)">{{ $t('labels.step') }} {{ step }}: {{ title }}</h2>
 
     <div v-show="outerState == step" class="pt-3">
 
