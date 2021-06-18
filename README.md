@@ -1,4 +1,4 @@
-# dgc2pkpass
+# EU Digital Green Certificate to Apple Wallet pass converter
 
 ## Add and convert certificate
 
