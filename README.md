@@ -18,7 +18,7 @@ PASS_CERT_SECRET=        # The .pem secret you set when converting your signing 
 PASS_SERIAL_NUMBER=      # The serial number of your Apple Wallet Pass
 ```
 
-## Build Setup
+## Development Setup
 
 ```bash
 # install dependencies
@@ -26,13 +26,6 @@ $ yarn install
 
 # serve with hot reload at localhost:3000
 $ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
