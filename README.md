@@ -63,6 +63,7 @@ $ yarn dev
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
+For testing, the QR codes from the [EU DGC test data set](https://github.com/eu-digital-green-certificates/dgc-testdata) can be used.
 
 ### Deploy with Docker Compose
 
