@@ -67,8 +67,11 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 ### Deploy with Docker Compose
 
 ```bash
-docker-compose build  # build container
-docker-compose up -d  # run container
+# build container
+$ docker-compose build  
+
+# run container
+$ docker-compose up -d  
 ```
 
 Except when accessed from `localhost`, the container must be run behind a reverse proxy (e.g. nginx), which provides SSL and redirects all traffic to HTTPS!
