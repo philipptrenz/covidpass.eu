@@ -36,7 +36,7 @@ This project attempts a compromise to enable the user experience of Apple Wallet
 Add your Pass Type ID certificate (with extension `.cer`) from the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/passtypeids/index.action) to your Keychain and export as `.p12` to the `./keys` folder, named by your Pass ID (e.g. `com.example.myNewPass.p12`). Then run the following command to convert to `.pem` as well as to automatically load the needed `wwdr.pem` certificate:
 
 ```bash
-node_modules/passbook/bin/node-passbook prepare-keys -p keys
+./node_modules/passbook/bin/node-passbook prepare-keys -p keys
 ```
 
 ### Set environment variables
