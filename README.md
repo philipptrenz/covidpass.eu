@@ -8,7 +8,8 @@ Since the QR codes store sensitive personal information as well as health data, 
 
 Providing Apple Wallet® passes from the official COVID apps, like [Corona-Warn](https://github.com/corona-warn-app), has already been discussed and was probably already partly discarded due to security concerns and lack of specification of this requirement to developers (see [here](https://github.com/eu-digital-green-certificates/dgca-wallet-app-ios/issues/69) or [here](https://github.com/corona-warn-app/cwa-app-ios/issues/2965)).
 
-While we very much understand these decisions for the official COVID apps, we believe that with proper education, users can assess these risks for themselves. As furthermore named [here](https://github.com/eu-digital-green-certificates/dgca-wallet-app-ios/issues/69#issuecomment-861384615), there are countless apps which can be utilized to generate Apple Wallet® passes. However, they also use external servers and it is intransparent how in this case very sensitive data is handled. Therefore, this project aims to create a dedicated solution that takes into account the sensitivity of the data. If you disagree, feel free to open an issue and let's discuss it.
+While we very much understand these decisions for the official COVID apps, we believe that with proper education, users can assess these risks for themselves. As furthermore named [here](https://github.com/eu-digital-green-certificates/dgca-wallet-app-ios/issues/69#issuecomment-861384615), there are countless apps which can be utilized to generate Apple Wallet® passes. However, they also use external servers and it is intransparent how data, this case very sensitive data, is handled. Therefore, this project aims to create a dedicated solution that takes into account the sensitivity of the data. 
+If you disagree, feel free to open an issue and let's discuss it.
 
 ## Principles
 
