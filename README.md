@@ -1,4 +1,4 @@
-# EU Digital COVID Certificate to Apple Wallet Converter
+# Add your EU COVID Certificates to Apple Wallet
 
 This web application offers the possibility to scan the EU-wide vaccination, test and recovery certificates (namely [EU Digital COVID Certificate](https://github.com/eu-digital-green-certificates/dgc-overview)) as QR code and generate an [Apple Wallet® pass](https://support.apple.com/en-us/HT204003) from it, so they are easily accessible for validation on iPhone®, iPad®, and Apple Watch®.
 
