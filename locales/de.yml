@@ -1,0 +1,57 @@
+---
+index:
+  title: Dein COVID-19 Zertifikat
+  subtitle: Mit nur einem Klick in Deiner Apple Wallet
+  consent:
+    paragraphs:
+    - "Dein QR-Code enthält sensible persönliche Daten. Diese Daten müssen 
+    ausgelesen und an unseren Server übertragen werden, um Deinen Apple Wallet 
+    Pass zu erstellen. Wir verwenden diese Daten ausschließlich für die Erstellung 
+    des Apple Wallet Passes. \nWir speichern Deine sensiblen Daten nicht. Bitte 
+    nutze auch Du den Wallet Pass verantwortungsvoll, er ist nur für Dich persönlich 
+    bestimmt."
+    inputText: Ich stimme der Verarbeitung meiner sensiblen Daten zu
+    icons:
+      noStorage: Keine Speicherung
+      fullTransparency: Volle Transparenz
+      openSource: Open Source
+      noProfit: Kein Profit
+    buttonText: Scanne den QR-Code
+  scan:
+    errors:
+      NotAllowedError: Bitte erlaube den Zugriff auf die Kamera
+      NotFoundError: Es konnte keine Kamera gefunden werden
+      NotSupportedError: Diese Funktion wird leider nicht unterstützt
+      NotReadableError: Deine Kamera scheint anderweitig verwendet zu werden
+      OverconstrainedError: Dein Gerät ist leider nicht geeignet
+      StreamApiNotSupportedError: Dein Browser unterstützt diese Funktion leider nicht
+  addToWallet:
+    passTitle: COVID-19 Zertifikat
+    successMessage: QR-Code erfolgreich gescannt
+    note: "<b>Hinweis:</b> Um Deine Daten zu schützen, stellen bitte sicher, dass 
+    Dein Pass nicht sichtbar ist, wenn Dein Telefon gesperrt ist. Falls nötig, 
+    kannst Du diese Einstellung unter <i>Einstellungen</i> > <i>Touch / Face ID 
+    & Passcode</i> > <i>Im Sperrzustand Zugriff erlauben</i> ändern."
+    shareButtonText: Share with friends
+about:
+  title: Über uns
+  paragraphs:
+  - "Hi, wir sind Marius, Donatus und Philipp. Drei Entwickler und Designer mit 
+  einem 💙 für innovative Lösungen und intuitive User Experience, um soziale 
+  Herausforderungen zu meistern und Teilhabe (wieder) zu ermöglichen."
+  - "COVID hat unser aller Leben in den letzten Monaten stark beeinträchtigt. 
+  Allmählich kehrt nun eine gewisse Normalität zurück. Mit diesem Tool wollen 
+  wir einen kleinen Beitrag dazu leisten, den Alltag und das Reisen ein wenig 
+  einfacher zu machen."
+impress:
+  title: Impressum
+  paragraphs: []
+privacy:
+  title: Datenschutz
+  paragraphs: []
+labels:
+  next: Weiter
+  backToHome: Zurück zur Startseite
+  loading: Laden ...
+  tryAgain: Erneut versuchen
+

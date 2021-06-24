@@ -13,6 +13,7 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "core-js": "^3.9.1",
     "express": "^4.17.1",
+    "js-yaml-loader": "^1.2.2",
     "nuxt": "^2.15.3",
     "nuxt-i18n": "^6.27.1",
     "passbook": "^2.3.0",
