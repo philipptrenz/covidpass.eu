@@ -10,32 +10,13 @@
       <form @submit.prevent="consented" class="flex flex-col space-y-6 pt-2">
         
         <div>
-
           <p v-for=" p in $t('index.consent.paragraphs')" v-bind:key="p" class="" v-html="p" />
-
-          <div class="flex flex-row flex-wrap px-3 justify-between break-normal">
+          <div class="flex flex-row flex-wrap justify-between break-normal">
             
             <Icon :text="$t('index.consent.icons.noStorage')">
               <svg class="my-auto" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M42 30C42 28.8954 41.1046 28 40 28H8C6.89543 28 6 28.8954 6 30V34C6 35.1046 6.89543 36 8 36H40C41.1046 36 42 35.1046 42 34V30ZM41.7889 26.0498C41.8618 26.1958 41.9164 26.3495 41.9518 26.5077C41.3745 26.1843 40.7087 26 40 26H8C7.29125 26 6.62555 26.1843 6.04824 26.5077C6.08361 26.3495 6.13819 26.1958 6.21115 26.0498L12.6833 13.1056C13.0221 12.428 13.7146 12 14.4721 12H33.5279C34.2854 12 34.9779 12.428 35.3167 13.1056L41.7889 26.0498ZM44 30V26.9443C44 26.3233 43.8554 25.7108 43.5777 25.1554L37.1056 12.2111C36.428 10.856 35.043 10 33.5279 10H14.4721C12.957 10 11.572 10.856 10.8944 12.2111L4.42229 25.1554C4.14458 25.7108 4 26.3233 4 26.9443V30V34C4 36.2091 5.79086 38 8 38H40C42.2091 38 44 36.2091 44 34V30Z" fill="white"/>
                 <rect x="4.58579" y="40" width="50" height="4" rx="2" transform="rotate(-45 4.58579 40)" fill="white" stroke="#27215B" stroke-width="2"/>
-              </svg>
-            </Icon>
-
-            <Icon :text="$t('index.consent.icons.fullTransparency')">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="15" stroke="white" stroke-width="2"/>
-                <path d="M33.6695 14.1127C35.9533 15.0451 37.9719 16.5262 39.5465 18.4251C41.1211 20.3239 42.2031 22.5817 42.6967 24.9986C43.1902 27.4155 43.0801 29.9168 42.3761 32.281C41.6721 34.6452 40.3959 36.7992 38.6606 38.5524C36.9252 40.3055 34.7843 41.6036 32.4274 42.3317C30.0706 43.0598 27.5705 43.1954 25.1487 42.7265C22.7269 42.2576 20.4582 41.1987 18.5434 39.6436C16.6286 38.0884 15.1269 36.085 14.1713 33.8109" stroke="white" stroke-width="2"/>
-                <mask id="path-3-inside-1" fill="white">
-                <path d="M35.1403 13.6816C32.134 12.1824 28.732 11.6675 25.4167 12.2099C22.1014 12.7523 19.041 14.3244 16.6691 16.7035C14.2973 19.0825 12.7345 22.1478 12.2021 25.4647C11.6698 28.7816 12.1951 32.182 13.7034 35.1837L15.6063 34.2276C14.2987 31.6254 13.8434 28.6776 14.3049 25.8022C14.7663 22.9267 16.1211 20.2695 18.1773 18.2071C20.2334 16.1447 22.8865 14.7818 25.7606 14.3116C28.6346 13.8414 31.5837 14.2878 34.1899 15.5874L35.1403 13.6816Z"/>
-                </mask>
-                <path d="M35.1403 13.6816C32.134 12.1824 28.732 11.6675 25.4167 12.2099C22.1014 12.7523 19.041 14.3244 16.6691 16.7035C14.2973 19.0825 12.7345 22.1478 12.2021 25.4647C11.6698 28.7816 12.1951 32.182 13.7034 35.1837L15.6063 34.2276C14.2987 31.6254 13.8434 28.6776 14.3049 25.8022C14.7663 22.9267 16.1211 20.2695 18.1773 18.2071C20.2334 16.1447 22.8865 14.7818 25.7606 14.3116C28.6346 13.8414 31.5837 14.2878 34.1899 15.5874L35.1403 13.6816Z" stroke="white" stroke-width="4" stroke-dasharray="2 2" mask="url(#path-3-inside-1)"/>
-              </svg>
-            </Icon>
-
-            <Icon :text="$t('index.consent.icons.openSource')">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 1.92C18.842 1.92 13.8467 3.72581 9.88106 7.02409C5.91538 10.3224 3.22958 14.9049 2.2897 19.9766C1.34982 25.0483 2.21518 30.2889 4.73563 34.7892C7.09936 39.0097 10.7788 42.3292 15.1992 44.2502L19.9111 31.9724C18.3477 31.1706 17.0477 29.9229 16.1823 28.3776C15.1597 26.5514 14.8086 24.4248 15.1901 22.3668C15.5715 20.3088 16.6615 18.4493 18.2707 17.111C19.8799 15.7726 21.9069 15.0398 24 15.0398C26.0931 15.0398 28.1201 15.7726 29.7293 17.111C31.3385 18.4493 32.4285 20.3088 32.8099 22.3668C33.1914 24.4248 32.8403 26.5514 31.8177 28.3776C30.9523 29.9229 29.6523 31.1706 28.0889 31.9724L32.8008 44.2502C37.2212 42.3292 40.9006 39.0097 43.2644 34.7892C45.7848 30.2889 46.6502 25.0483 45.7103 19.9766C44.7704 14.9049 42.0846 10.3224 38.1189 7.02409C34.1533 3.72581 29.158 1.92 24 1.92ZM8.65332 5.54792C12.9638 1.96284 18.3935 0 24 0C29.6065 0 35.0362 1.96284 39.3467 5.54792C43.6572 9.13301 46.5765 14.1141 47.5982 19.6268C48.6198 25.1394 47.6792 30.8358 44.9395 35.7274C42.1999 40.619 37.8342 44.3971 32.6 46.4062C32.3623 46.4974 32.0981 46.4905 31.8655 46.3869C31.6329 46.2833 31.4509 46.0916 31.3597 45.8539L25.9709 31.8123C25.781 31.3173 26.0282 30.7621 26.5231 30.5721C28.0584 29.9827 29.3389 28.8744 30.1425 27.4395C30.946 26.0047 31.2218 24.3337 30.9221 22.7167C30.6224 21.0997 29.766 19.6387 28.5016 18.5871C27.2372 17.5356 25.6445 16.9598 24 16.9598C22.3555 16.9598 20.7628 17.5356 19.4984 18.5871C18.234 19.6387 17.3776 21.0997 17.0779 22.7167C16.7782 24.3337 17.054 26.0046 17.8576 27.4395C18.6611 28.8744 19.9416 29.9827 21.4769 30.5721C21.9718 30.7621 22.219 31.3173 22.0291 31.8123L16.6403 45.8539C16.5491 46.0916 16.3671 46.2833 16.1345 46.3869C15.9019 46.4905 15.6377 46.4974 15.4 46.4062C10.1658 44.3971 5.80008 40.619 3.06046 35.7274C0.320851 30.8358 -0.619766 25.1394 0.401844 19.6268C1.42345 14.1141 4.34281 9.13301 8.65332 5.54792Z" fill="white"/>
               </svg>
             </Icon>
 
@@ -46,17 +27,28 @@
               </svg>
             </Icon>
 
-          </div>
+            <Icon :text="$t('index.consent.icons.openSource')">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 1.92C18.842 1.92 13.8467 3.72581 9.88106 7.02409C5.91538 10.3224 3.22958 14.9049 2.2897 19.9766C1.34982 25.0483 2.21518 30.2889 4.73563 34.7892C7.09936 39.0097 10.7788 42.3292 15.1992 44.2502L19.9111 31.9724C18.3477 31.1706 17.0477 29.9229 16.1823 28.3776C15.1597 26.5514 14.8086 24.4248 15.1901 22.3668C15.5715 20.3088 16.6615 18.4493 18.2707 17.111C19.8799 15.7726 21.9069 15.0398 24 15.0398C26.0931 15.0398 28.1201 15.7726 29.7293 17.111C31.3385 18.4493 32.4285 20.3088 32.8099 22.3668C33.1914 24.4248 32.8403 26.5514 31.8177 28.3776C30.9523 29.9229 29.6523 31.1706 28.0889 31.9724L32.8008 44.2502C37.2212 42.3292 40.9006 39.0097 43.2644 34.7892C45.7848 30.2889 46.6502 25.0483 45.7103 19.9766C44.7704 14.9049 42.0846 10.3224 38.1189 7.02409C34.1533 3.72581 29.158 1.92 24 1.92ZM8.65332 5.54792C12.9638 1.96284 18.3935 0 24 0C29.6065 0 35.0362 1.96284 39.3467 5.54792C43.6572 9.13301 46.5765 14.1141 47.5982 19.6268C48.6198 25.1394 47.6792 30.8358 44.9395 35.7274C42.1999 40.619 37.8342 44.3971 32.6 46.4062C32.3623 46.4974 32.0981 46.4905 31.8655 46.3869C31.6329 46.2833 31.4509 46.0916 31.3597 45.8539L25.9709 31.8123C25.781 31.3173 26.0282 30.7621 26.5231 30.5721C28.0584 29.9827 29.3389 28.8744 30.1425 27.4395C30.946 26.0047 31.2218 24.3337 30.9221 22.7167C30.6224 21.0997 29.766 19.6387 28.5016 18.5871C27.2372 17.5356 25.6445 16.9598 24 16.9598C22.3555 16.9598 20.7628 17.5356 19.4984 18.5871C18.234 19.6387 17.3776 21.0997 17.0779 22.7167C16.7782 24.3337 17.054 26.0046 17.8576 27.4395C18.6611 28.8744 19.9416 29.9827 21.4769 30.5721C21.9718 30.7621 22.219 31.3173 22.0291 31.8123L16.6403 45.8539C16.5491 46.0916 16.3671 46.2833 16.1345 46.3869C15.9019 46.4905 15.6377 46.4974 15.4 46.4062C10.1658 44.3971 5.80008 40.619 3.06046 35.7274C0.320851 30.8358 -0.619766 25.1394 0.401844 19.6268C1.42345 14.1141 4.34281 9.13301 8.65332 5.54792Z" fill="white"/>
+              </svg>
+            </Icon>
 
+          </div>
         </div>
 
         <div class="flex flex-row ">
-          <input type="checkbox" v-model="consentGiven" class="check-background form-checkbox h-6 w-6 text-gray border-primary border-2 rounded-md bg-white checked:bg-primary appearance-none focus:outline-none">
-          <span class="ml-2">{{ $t('index.consent.inputText') }}</span>
+          <span class="flex flex-row justify-center">
+            <input type="checkbox" v-model="consentGiven" class="check-background form-checkbox h-6 w-6 text-gray border-primary border-2 rounded-md bg-white checked:bg-primary appearance-none focus:outline-none">
+            <span class="ml-2">{{ $t('index.consent.inputText') }}</span>
+          </span>
         </div>
 
-        <button class="bg-primary bg-opacity-20 text-primary text-xl font-medium rounded-lg p-5 focus:outline-none" v-html="$t('index.consent.buttonText')" />
-
+        <button class="bg-primary bg-opacity-20 text-primary text-xl font-medium rounded-lg py-5 px-3 focus:outline-none" >
+          <svg class="inline-block pr-2" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M38.5 20V36H10.5V20H13.4296C14.767 20 16.016 19.3316 16.7578 18.2188L19.5704 14H29.4296L32.2422 18.2188C32.984 19.3316 34.233 20 35.5704 20H38.5ZM8.5 20C8.5 18.8954 9.39543 18 10.5 18H13.4296C14.0983 18 14.7228 17.6658 15.0937 17.1094L17.9063 12.8906C18.2772 12.3342 18.9017 12 19.5704 12H29.4296C30.0983 12 30.7228 12.3342 31.0937 12.8906L33.9063 17.1094C34.2772 17.6658 34.9017 18 35.5704 18H38.5C39.6046 18 40.5 18.8954 40.5 20V36C40.5 37.1046 39.6046 38 38.5 38H10.5C9.39543 38 8.5 37.1046 8.5 36V20ZM30.5 26C30.5 29.3137 27.8137 32 24.5 32C21.1863 32 18.5 29.3137 18.5 26C18.5 22.6863 21.1863 20 24.5 20C27.8137 20 30.5 22.6863 30.5 26ZM32.5 26C32.5 30.4183 28.9183 34 24.5 34C20.0817 34 16.5 30.4183 16.5 26C16.5 21.5817 20.0817 18 24.5 18C28.9183 18 32.5 21.5817 32.5 26Z" fill="#27215B"/>
+          </svg>
+          <span>{{ $t('index.consent.buttonText') }}</span>
+        </button>
       </form>
     </div>
 
@@ -96,13 +88,15 @@
 
     <div v-show="state == 2" class="space-y-6">
 
-      <div class="bg-primary bg-opacity-20 text-primary text-xl rounded-lg p-4 focus:outline-none">
+      <div class="bg-primary bg-opacity-20 text-primary text-xl rounded-lg py-5 px-3 focus:outline-none">
         <div class="flex justify-center align-middle">
           <div class="inline-block my-auto ">
-            <svg class="inline-block" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.5 24L18.5 36L40.5 14" stroke="#27215B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="inline-block font-medium align-middle px-2">{{ $t('index.addToWallet.successMessage') }}</span>
+            <span class="inline-block font-medium align-middle">
+              <svg class="inline-block" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.5 24L18.5 36L40.5 14" stroke="#27215B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              {{ $t('index.addToWallet.successMessage') }}
+            </span>
           </div>
         </div>
       </div>
@@ -110,10 +104,12 @@
       <div class="flex flex-col bg-primary text-white text-xl rounded-lg p-4 focus:outline-none space-y-4 ">
         
         <h1 class="">
-          <svg class="inline-block" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0724 8.41553L24 19.3136L28.9276 8.41553L35.0725 11.9631L28.0979 21.6793L40 20.4975V27.5928L28.0977 26.411L35.0724 36.1283L28.9275 39.6759L24 28.7771L19.0725 39.6759L12.9276 36.1283L19.9023 26.411L8 27.5928V20.4975L19.9021 21.6793L12.9275 11.9631L19.0724 8.41553Z" fill="white"/>
-          </svg>
-          <span class="pl-2 inline-block align-middle font-semibold">{{ $t('index.addToWallet.passTitle') }}</span>
+          <span class="pl-2 inline-block align-middle font-semibold">
+            <svg class="inline-block" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0724 8.41553L24 19.3136L28.9276 8.41553L35.0725 11.9631L28.0979 21.6793L40 20.4975V27.5928L28.0977 26.411L35.0724 36.1283L28.9275 39.6759L24 28.7771L19.0725 39.6759L12.9276 36.1283L19.9023 26.411L8 27.5928V20.4975L19.9021 21.6793L12.9275 11.9631L19.0724 8.41553Z" fill="white"/>
+            </svg>
+            {{ $t('index.addToWallet.passTitle') }}
+          </span>
         </h1>
 
         <div class="flex flex-row align-middle justify-center">
@@ -122,7 +118,7 @@
           </a>
         </div>
 
-        <div class="pb-10">
+        <div class="pb-32">
           <p class="font-light text-xs leading-5" v-html="$t('index.addToWallet.note')"></p>
         </div>
 

@@ -13,7 +13,6 @@ index:
     inputText: Ich stimme der Verarbeitung meiner sensiblen Daten zu
     icons:
       noStorage: Keine Speicherung
-      fullTransparency: Volle Transparenz
       openSource: Open Source
       noProfit: Kein Profit
     buttonText: Scanne den QR-Code

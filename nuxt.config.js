@@ -6,7 +6,10 @@ export default {
   head: {
     title: 'EU COVID-19 pass for Apple Wallet',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
+    },
+    bodyAttrs: {
+      class: 'bg-primary'
     },
     meta: [
       { charset: 'utf-8' },

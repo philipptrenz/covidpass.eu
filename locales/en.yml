@@ -12,7 +12,6 @@ index:
     inputText: I consent to the processing of my sensitive data
     icons:
       noStorage: No Storage
-      fullTransparency: Full Transparency
       openSource: Open Source
       noProfit: No Profit
     buttonText: Scan QR-Code
