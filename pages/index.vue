@@ -159,6 +159,7 @@ enum State {
 }
 
 export default Vue.extend({
+  layout: 'main',
   data() {
     return {
       state: State.NONE,
