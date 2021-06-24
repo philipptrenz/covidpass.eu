@@ -1,22 +1,25 @@
 import express from 'express';
 import passbook from 'passbook';
+import tailwind from '../tailwind.config'
 
 const app = express();
 app.use(express.json())
 
+const title = "COVID-19 Certificate";
+
 const template = passbook("generic", {
     /* Required top level */
-    description: "Forename Lastname Vaccination Cert.",
+    description: title,
     organizationName: process.env.PASS_ORGANIZATION_NAME,
     passTypeIdentifier: process.env.PASS_TYPE_IDENTIFIER,
     teamIdentifier: process.env.PASS_TEAM_IDENTIFIER,
     serialNumber: process.env.PASS_SERIAL_NUMBER,
 
     /* Optional top level */
-    backgroundColor: "rgb(255,255,255)",
-    foregroundColor:  "rgb(0,0,0)",
-    labelColor: "rgb(128,128,128)",
-    logoText: "Vaccinaction Cert"
+    backgroundColor: tailwind.theme.colors.primary,
+    foregroundColor:  tailwind.theme.colors.white,
+    labelColor: tailwind.theme.colors.white,
+    logoText: title,
 });
 
 template.keys("./keys", process.env.PASS_CERT_SECRET);

@@ -1,13 +1,19 @@
 {
   "index": {
-    "title": "Add your EU Digital Green Certificate to your Apple Wallet",
+    "title": "Your COVID-19 Certificate",
+    "subtitle": "Just a few taps away from your Apple Wallet",
     "consent": {
-      "title": "Consent",
       "paragraphs": [
-        "Your QR Code contains sensitive personal data. These data have to be read and transmitted to our server to be embedded into your Apple Wallet Pass. \nWe will use your provided data from the QR Code solely for creating the Apple Wallet Pass.",
-        "We do not store, give away or sell your sensitive information. Please also use the Wallet Pass responsibly, it is intended only for you personally."
+        "Your QR Code contains sensitive personal data. These data have to be read and transmitted to our server to be embedded into your Apple Wallet Pass. \nWe will use your provided data from the QR Code solely for creating the Apple Wallet Pass. We do not store, give away or sell your sensitive information. Please also use the Wallet Pass responsibly, it is intended only for you personally."
       ],
-      "inputText": "I consent to the processing of my sensitive data"
+      "inputText": "I consent to the processing of my sensitive data",
+      "icons": {
+        "noStorage": "No Storage",
+        "fullTransparency": "Full Transparency",
+        "openSource": "Open Source",
+        "noProfit": "No Profit"
+      },
+      "buttonText": "Scan QR-Code"
     },
     "scan": {
       "title": "Scan your certificate (QR Code)",
@@ -22,10 +28,10 @@
     },
     "addToWallet": {
       "title": "Add to your Wallet",
+      "passTitle": "COVID-19 Certificate",
+      "successMessage": "QR-Code successfully scanned",
       "note": "<b>Note:</b> To protect your data, please make sure that your Pass is not visible when your phone is locked. If necessary, you can change this setting under <i>Settings</i> > <i>Touch / Face ID & Passcode</i> > <i>Allow access when locked</i>.",
-      "button": {
-        "addTo": "Add to"
-      }
+      "shareButtonText": "Share with friends"
     }
   },
   "about": {

@@ -5,7 +5,7 @@
       <nuxt-link 
         :to="switchLocalePath(lang)"
         class="uppercase px-1 focus:outline-none" 
-        :class="$i18n.locale == lang ? 'font-bold tracking-normal' : ''"
+        :class="$i18n.locale == lang ? 'font-medium tracking-normal' : ''"
         >
         {{ lang }}
       </nuxt-link>
