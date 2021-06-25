@@ -1,6 +1,6 @@
 ---
 index:
-  title: Your COVID-19 Certificate
+  title: Your COVID Pass
   subtitle: Just a click away in your Apple Wallet
   consent:
     paragraphs:
@@ -55,5 +55,5 @@ labels:
   backToHome: Back to home
   loading: Loading ...
   tryAgain: Try again
-  reportIssue: Report issue
+  reportIssue: Report an issue
 
