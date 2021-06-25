@@ -25,19 +25,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  methods: {
-    showSelect() {
-      const select = <HTMLSelectElement>this.$refs.select;
-      select.focus();
-      select.click();
-    },
-  }
-})
-</script>
-
 <style scoped>
 #select {
   background-image: url("data:image/svg+xml; utf8, <svg class='inline-block' width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M4.30005 6L8.30005 10L12.3 6' stroke='white' stroke-linecap='round' stroke-linejoin='round'/></svg>");
