@@ -16,7 +16,7 @@ index:
       noProfit: No Profit
     buttonText: Scan QR-Code
   scan:
-    hint: Scan your QR-Code
+    hint: Scan QR-Code
     errors:
       NotAllowedError: Please grant camera access permisson
       NotFoundError: Could not open camera
@@ -26,7 +26,7 @@ index:
       StreamApiNotSupportedError: Unfortunately your browser does not support this
         feature
   addToWallet:
-    passTitle: COVID-19 Certificate
+    passTitle: COVID Pass
     successMessage: QR-Code successfully scanned
     note: "<b>Note:</b> To protect your data, please make sure that your Pass is not
       visible when your phone is locked. If necessary, you can change this setting

@@ -4,7 +4,7 @@ import tailwind from './tailwind.config'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'EU COVID-19 pass for Apple Wallet',
+    title: 'COVID Pass',
     htmlAttrs: {
       lang: 'en',
     },
@@ -15,14 +15,25 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
+      { name: 'application-name', content: 'COVID Pass'},
       { name: 'theme-color', content: tailwind.theme.colors.primary },
+      { name: 'msapplication-TileColor', content: tailwind.theme.colors.primary },
+      { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
+      { property: 'og:title', content: 'COVID Pass' },
+      { property: 'og:description', content: 'Your digital COVID pass just one click away' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'covidpass.eu' },
+      { property: 'og:site_name', content: 'COVID Pass' },
+      { property: 'og:image', content: '/og-image.png' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:image', content: '/og-image.png' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-      { rel: 'apple-touch-icon', type: 'image/x-icon', href: '/apple-touch-icon.png' },
-      { rel: 'manifest', href: '/site.webmanifest' }, 
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { rel: 'icon" type="image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon" type="image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+      { rel: 'manifest', href: '/site.webmanifest' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: tailwind.theme.colors.primary },
     ]
   },
 

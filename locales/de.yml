@@ -15,9 +15,9 @@ index:
       noStorage: Keine Speicherung
       openSource: Open Source
       noProfit: Kein Profit
-    buttonText: Scanne den QR-Code
+    buttonText: QR-Code scannen
   scan:
-    hint: Scanne Deinen QR-Code
+    hint: Scanne den QR-Code
     errors:
       NotAllowedError: Bitte erlaube den Zugriff auf die Kamera
       NotFoundError: Es konnte keine Kamera gefunden werden
@@ -26,7 +26,7 @@ index:
       OverconstrainedError: Dein Gerät ist leider nicht geeignet
       StreamApiNotSupportedError: Dein Browser unterstützt diese Funktion leider nicht
   addToWallet:
-    passTitle: COVID-19 Zertifikat
+    passTitle: COVID Pass
     successMessage: QR-Code erfolgreich gescannt
     note: "<b>Hinweis:</b> Um Deine Daten zu schützen, stellen bitte sicher, dass 
     Dein Pass nicht sichtbar ist, wenn Dein Telefon gesperrt ist. Falls nötig, 
