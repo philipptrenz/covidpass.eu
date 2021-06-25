@@ -1,12 +1,15 @@
 <template>
   <div class="w-full flex flex-row justify-center text-xs font-light">
-    <div class="w-full max-w-md flex flex-row flex-wrap justify-between px-6">
+    <div class="w-full max-w-md flex flex-row flex-wrap justify-around px-6">
+
       <NuxtLink :to="localePath('/about')">{{ $t('about.title') }}</NuxtLink> 
       <span>|</span> 
       <NuxtLink :to="localePath('/impress')" class="">{{ $t('impress.title') }}</NuxtLink>
       <span>|</span> 
       <NuxtLink :to="localePath('/privacy')" class="">{{ $t('privacy.title') }}</NuxtLink>
+
       <span>|</span> 
+
       <a class="" href="https://github.com/philipptrenz/apple-wallet-eu-covid-pass" target="_blank">Github</a>
       <span>|</span> 
       <a class="" href="https://github.com/philipptrenz/apple-wallet-eu-covid-pass/issues/new" target="_blank">{{ $t('labels.reportIssue') }}</a> |
