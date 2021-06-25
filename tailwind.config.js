@@ -6,6 +6,7 @@ module.exports = {
       primary: 'rgb(39,33,91)',  // Important: In rgb() notation for Wallet pass compatibility!
       white: 'rgb(255,255,255)', // Important: In rgb() notation for Wallet pass compatibility!
       black: 'rgb(0,0,0)',       // Important: In rgb() notation for Wallet pass compatibility!
+      error: 'rgb(255,17,31)',
       walletGray: 'rgb(30,30,30)',
       walletText: 'rgb(209,209,209)',
     },

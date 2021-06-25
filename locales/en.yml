@@ -1,7 +1,7 @@
 ---
 index:
   title: Your COVID-19 Certificate
-  subtitle: Just a few taps away from your Apple Wallet
+  subtitle: Just a click away in your Apple Wallet
   consent:
     paragraphs:
     - "Your QR Code contains sensitive personal data. These data have to be read and
@@ -16,6 +16,7 @@ index:
       noProfit: No Profit
     buttonText: Scan QR-Code
   scan:
+    hint: Scan your QR-Code
     errors:
       NotAllowedError: Please grant camera access permisson
       NotFoundError: Could not open camera
@@ -31,7 +32,7 @@ index:
       visible when your phone is locked. If necessary, you can change this setting
       under <i>Settings</i> > <i>Touch / Face ID & Passcode</i> > <i>Allow access
       when locked</i>."
-    shareButtonText: Share with friends
+    shareButtonText: Tell your friends
 about:
   title: About us
   paragraphs:
@@ -42,14 +43,17 @@ about:
     Gradually, some normality is now returning. With this tool, we want to make a
     small contribution to making everyday life and travel a little easier.
 impress:
-  title: Impress
-  paragraphs: []
+  title: Impressum
+  paragraphs:
+  - Coming soon
 privacy:
   title: Privacy
-  paragraphs: []
+  paragraphs: 
+  - Coming soon
 labels:
   next: Next
   backToHome: Back to home
   loading: Loading ...
   tryAgain: Try again
+  reportIssue: Report issue
 

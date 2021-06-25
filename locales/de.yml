@@ -1,7 +1,7 @@
 ---
 index:
   title: Dein COVID-19 Zertifikat
-  subtitle: Mit nur einem Klick in Deiner Apple Wallet
+  subtitle: Nur einen Klick entfernt im Apple Wallet
   consent:
     paragraphs:
     - "Dein QR-Code enthält sensible persönliche Daten. Diese Daten müssen 
@@ -17,6 +17,7 @@ index:
       noProfit: Kein Profit
     buttonText: Scanne den QR-Code
   scan:
+    hint: Scanne Deinen QR-Code
     errors:
       NotAllowedError: Bitte erlaube den Zugriff auf die Kamera
       NotFoundError: Es konnte keine Kamera gefunden werden
@@ -31,7 +32,7 @@ index:
     Dein Pass nicht sichtbar ist, wenn Dein Telefon gesperrt ist. Falls nötig, 
     kannst Du diese Einstellung unter <i>Einstellungen</i> > <i>Touch / Face ID 
     & Passcode</i> > <i>Im Sperrzustand Zugriff erlauben</i> ändern."
-    shareButtonText: Share with friends
+    shareButtonText: Erzähle es weiter
 about:
   title: Über uns
   paragraphs:
@@ -44,13 +45,16 @@ about:
   einfacher zu machen."
 impress:
   title: Impressum
-  paragraphs: []
+  paragraphs: 
+  - Bald verfügbar
 privacy:
   title: Datenschutz
-  paragraphs: []
+  paragraphs: 
+  - Bald verfügbar
 labels:
   next: Weiter
   backToHome: Zurück zur Startseite
   loading: Laden ...
   tryAgain: Erneut versuchen
+  reportIssue: Fehler melden
 

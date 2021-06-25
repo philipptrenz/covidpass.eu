@@ -5,7 +5,7 @@ import tailwind from '../tailwind.config'
 const app = express();
 app.use(express.json())
 
-const title = "COVID-19 Certificate";
+const title = "COVID Pass";
 
 const template = passbook("generic", {
     /* Required top level */
