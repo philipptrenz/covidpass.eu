@@ -172,7 +172,7 @@ exports.createPass = async function(data) {
         {
           key: "disclaimer",
           label: "Disclaimer",
-          value: "This certificate is only valid in combination with the ID card of the certificate holder and expires one year + 14 days after the last dose. The validity of this certificate was not checked by CovidPass."
+          value: "This certificate is only valid in combination with the ID card of the certificate holder and expires one year + 14 days after the last dose. The validity of this certificate was not checked by COVID Pass."
         }
       ]
     }
