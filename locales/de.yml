@@ -55,6 +55,20 @@ privacy:
   title: Datenschutz
   paragraphs: 
   - Bald verfügbar
+pass:
+  certificateType: Zertifikatstyp
+  name: Name
+  dose: Dosis
+  dateOfVaccination: Impfdatum
+  vaccine: Impfung
+  dateOfBirth: Geburtsdatum
+  uniqueCertificateIdentifier: Eindeutiger Zertifikatsidentifizierer (UVCI)
+  certificateIssuer: Zertifikatsaussteller
+  countryOfVaccination: Land der Impfung
+  manufacturer: Hersteller
+  disclaimer:
+    label: Haftungsausschluss
+    value: Dieses Zertifikat ist nur in Verbindung mit dem Personalausweis des Zertifikatsinhabers gültig und läuft ein Jahr + 14 Tage nach der letzten Dosis ab. Die Gültigkeit dieses Zertifikats wurde von COVID Pass nicht überprüft.
 labels:
   next: Weiter
   backToHome: Zurück zur Startseite

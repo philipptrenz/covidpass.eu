@@ -52,6 +52,20 @@ privacy:
   title: Privacy
   paragraphs: 
   - Coming soon
+pass:
+  certificateType: Certificate Type
+  name: Name
+  dose: Dose
+  dateOfVaccination: Date of Vaccination
+  vaccine: Vaccine
+  dateOfBirth: Date of Birth
+  uniqueCertificateIdentifier: Unique Certificate Identifier (UVCI)
+  certificateIssuer:  Certificate Issuer
+  countryOfVaccination: Country of Vaccination
+  manufacturer: Manufacturer
+  disclaimer:
+    label: Disclaimer
+    value: This certificate is only valid in combination with the ID card of the certificate holder and expires one year + 14 days after the last dose. The validity of this certificate was not checked by COVID Pass.
 labels:
   next: Next
   backToHome: Back to home

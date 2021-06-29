@@ -111,26 +111,26 @@ exports.createPass = async function(data) {
       headerFields: [
         {
           key: "type",
-          label: "Certificate Type",
+          label: window.$nuxt.$t('pass.certificateType'),
           value: payload.certificateType
         }
       ],
       primaryFields: [
         {
           key: "name",
-          label: "Name",
+          label: window.$nuxt.$t('pass.name'),
           value: payload.name
         }
       ],
       secondaryFields: [
         {
           key: "dose",
-          label: "Dose",
+          label:  window.$nuxt.$t('pass.dose'),
           value: payload.dose
         },
         {
           key: "dov",
-          label: "Date of Vaccination",
+          label: window.$nuxt.$t('pass.dateOfVaccination'),
           value: payload.dateOfVaccination,
           textAlignment: "PKTextAlignmentRight"
         }
@@ -138,41 +138,41 @@ exports.createPass = async function(data) {
       auxiliaryFields: [
         {
           key: "vaccine",
-          label: "Vaccine",
+          label: window.$nuxt.$t('pass.vaccine'),
           value: payload.vaccineName
         },
         {
           key: "dob",
-          label: "Date of Birth", value:
-          payload.dateOfBirth,
+          label: window.$nuxt.$t('pass.dateOfBirth'),
+          value: payload.dateOfBirth,
           textAlignment: "PKTextAlignmentRight"
         }
       ],
       backFields: [
         {
           key: "uvci",
-          label: "Unique Certificate Identifier (UVCI)",
+          label: window.$nuxt.$t('pass.uniqueCertificateIdentifier'),
           value: payload.uvci
         },
         {
           key: "issuer",
-          label: "Certificate Issuer",
+          label: window.$nuxt.$t('pass.certificateIssuer'),
           value: payload.certificateIssuer
         },
         {
           key: "country",
-          label: "Country of Vaccination",
+          label: window.$nuxt.$t('pass.countryOfVaccination'),
           value: payload.countryOfVaccination
         },
         {
           key: "manufacturer",
-          label: "Manufacturer",
+          label: window.$nuxt.$t('pass.manufacturer'),
           value: payload.manufacturer
         },
         {
           key: "disclaimer",
-          label: "Disclaimer",
-          value: "This certificate is only valid in combination with the ID card of the certificate holder and expires one year + 14 days after the last dose. The validity of this certificate was not checked by COVID Pass."
+          label: window.$nuxt.$t('pass.disclaimer.label'),
+          value: window.$nuxt.$t('pass.disclaimer.value'),
         }
       ]
     }
