@@ -11,12 +11,10 @@
         <span>|</span> 
       </div>
 
-      <!--<span>|</span> -->
-
       <div>
-        <a class="px-1" href="https://github.com/philipptrenz/apple-wallet-eu-covid-pass" target="_blank">Github</a>
+        <a class="px-1" href="https://github.com/philipptrenz/covidpass" target="_blank">Github</a>
         <span>|</span> 
-        <a class="px-1" href="https://github.com/philipptrenz/apple-wallet-eu-covid-pass/issues/new" target="_blank">{{ $t('labels.reportIssue') }}</a> |
+        <a class="px-1" href="https://github.com/philipptrenz/covidpass/issues/new" target="_blank">{{ $t('labels.reportIssue') }}</a> |
 
         <select id="select" ref="select" v-model="$i18n.locale" class="uppercase appearance-none bg-transparent border-none rounded-none pr-4 focus:outline-none px-1">
           <option
