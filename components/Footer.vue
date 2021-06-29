@@ -2,27 +2,32 @@
   <div class="w-full flex flex-row justify-center text-xs font-light">
     <div class="w-full max-w-md flex flex-row flex-wrap justify-around px-6">
 
-      <NuxtLink :to="localePath('/about')">{{ $t('about.title') }}</NuxtLink> 
-      <span>|</span> 
-      <NuxtLink :to="localePath('/impress')" class="">{{ $t('impress.title') }}</NuxtLink>
-      <span>|</span> 
-      <NuxtLink :to="localePath('/privacy')" class="">{{ $t('privacy.title') }}</NuxtLink>
+      <div> 
+        <NuxtLink :to="localePath('/about')" class="px-1">{{ $t('about.title') }}</NuxtLink> 
+        <span>|</span> 
+        <NuxtLink :to="localePath('/impress')" class="px-1">{{ $t('impress.title') }}</NuxtLink>
+        <span>|</span> 
+        <NuxtLink :to="localePath('/privacy')" class="px-1">{{ $t('privacy.title') }}</NuxtLink>
+        <span>|</span> 
+      </div>
 
-      <span>|</span> 
+      <!--<span>|</span> -->
 
-      <a class="" href="https://github.com/philipptrenz/apple-wallet-eu-covid-pass" target="_blank">Github</a>
-      <span>|</span> 
-      <a class="" href="https://github.com/philipptrenz/apple-wallet-eu-covid-pass/issues/new" target="_blank">{{ $t('labels.reportIssue') }}</a> |
+      <div>
+        <a class="px-1" href="https://github.com/philipptrenz/apple-wallet-eu-covid-pass" target="_blank">Github</a>
+        <span>|</span> 
+        <a class="px-1" href="https://github.com/philipptrenz/apple-wallet-eu-covid-pass/issues/new" target="_blank">{{ $t('labels.reportIssue') }}</a> |
 
-      <select id="select" ref="select" v-model="$i18n.locale" class="uppercase appearance-none bg-transparent border-none rounded-none pr-4 focus:outline-none">
-        <option
-          class="appearance-none bg-none"
-          v-for="lang in $i18n.locales"
-          :key="lang"
-          :value="lang"
-          >{{ lang }}</option
-        >
-      </select>
+        <select id="select" ref="select" v-model="$i18n.locale" class="uppercase appearance-none bg-transparent border-none rounded-none pr-4 focus:outline-none px-1">
+          <option
+            class="appearance-none bg-none"
+            v-for="lang in $i18n.locales"
+            :key="lang"
+            :value="lang"
+            >{{ lang }}</option
+          >
+        </select>
+      </div>
 
     </div>
   </div>
