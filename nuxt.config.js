@@ -39,6 +39,8 @@ export default {
 
   // Environment variables
   publicRuntimeConfig: { // accessible from server and client
+    teamIdentifier: process.env.PASS_TEAM_IDENTIFIER,
+    passIdentifier: process.env.PASS_TYPE_IDENTIFIER,
   },
   privateRuntimeConfig: { // only accessible from server
   },
@@ -49,7 +51,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/qr', mode:  'client' }
+    { src: '~/plugins/qr', mode: 'client' },
+    { src: '~/plugins/hcert', mode: 'client' },
+    { src: '~/plugins/pkpass', mode: 'client' },
   ],
 
   // The nuxt.js internal REST endpoint
@@ -71,7 +75,7 @@ export default {
   ],
 
   tailwindcss: {
-    jit: true // enable just-in-time mode
+    mode: 'jit' // enable just-in-time mode
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

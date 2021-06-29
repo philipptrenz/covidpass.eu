@@ -209,9 +209,16 @@ export default Vue.extend({
       else 
         this.hintNotConsented = true;
     },
-    onDecode(data: string) {
-      if (data) {
-        this.generate(data)
+    onDecode(rawData: string) {
+      try {
+        const decoded = this.$hcertDecode(rawData)
+        this.generate(rawData, decoded)
+      } catch (error) {
+        console.error('Invalid QR code found');
+        this.reloadQRScanner();
+
+        // TODO: Prompt user for wrong QR Code
+
       }
     },
     async onInit (promise: Promise<any>) {
@@ -236,46 +243,31 @@ export default Vue.extend({
       await this.$nextTick()
       this.qrScannerDestroyed = false
     },
-    async generate(data: String) {
-      
-      if (!data) {
-        console.error("No qr code scanned")
-        return
-      }
+    async generate(rawData: String, decodedData: String) {
 
-      const apiUrl = window.location.protocol + "//" + window.location.host + '/api/generate'
+      try {
+        const pass = await this.$createPass({
+            decoded: decodedData, 
+            raw: rawData
+          })
+        
+        if (!pass) {
+          console.error('Error:', "Something went wrong.")
 
-      await this.$axios.$post(apiUrl, { data: data }, { responseType: 'blob' })
-        .then(res => {
-          if (!res) {
-            throw Error("No response data received");
-          }
-          const blob = new Blob([res], { type: "application/vnd.apple.pkpass" });
-          const url = window.URL.createObjectURL(blob);
+          // TODO: Prompt user
+
+        } else {
+          const passBlob = new Blob([pass], {type: "application/vnd.apple.pkpass"});
+          const url = window.URL.createObjectURL(passBlob);
           const link = <HTMLLinkElement>this.$refs.download;
           link.href = url;
-          link.setAttribute('download', 'eudcc.pkpass');
+          link.setAttribute('download', 'covidpass.pkpass');
 
           this.state = State.SCANNED;
-        })
-        .catch(error => {
-          if (error.response) {
-            // The request was made and the server responded with a status code
-            // that falls out of the range of 2xx
-            console.log(error.response.data);
-            console.log(error.response.status);
-            console.log(error.response.headers);
-          } else if (error.request) {
-            // The request was made but no response was received
-            // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-            // http.ClientRequest in node.js
-            console.log(error.request);
-          } else {
-            // Something happened in setting up the request that triggered an Error
-            console.log('Error', error.message);
-          }
-          console.log(error.config);
-        });
+        }
+      } catch (e) {
+        console.error('Error:', e.message)
+      }
     },
     downloaded() {
       this.state = State.DOWNLOADED
