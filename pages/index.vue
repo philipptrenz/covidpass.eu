@@ -261,7 +261,7 @@ export default Vue.extend({
           const url = window.URL.createObjectURL(passBlob);
           const link = <HTMLLinkElement>this.$refs.download;
           link.href = url;
-          link.setAttribute('download', 'covidpass.pkpass');
+          link.setAttribute('download', `covidpass-${ this.randomId(12) }.pkpass`);
 
           this.state = State.SCANNED;
         }
@@ -284,6 +284,15 @@ export default Vue.extend({
       } catch(err) {
         console.error('Sharing failed: ' + err)
       }
+    },
+    randomId(length: number) {
+      var result           = '';
+      var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var charactersLength = characters.length;
+      for ( var i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+      return result;
     }
   }
 })
