@@ -81,7 +81,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    //'nuxt-i18n',
+    '@nuxtjs/markdownit',
   ],
 
   axios: {},
@@ -90,6 +90,21 @@ export default {
     locales: ['en', 'de', ],
     defaultLocale: 'en',
     vueI18n: i18n,
+  },
+
+  // See https://github.com/markdown-it/markdown-it
+  markdownit: {
+    preset: 'default',
+    html: true,
+    xhtmlOut: true, 
+    runtime: true ,// Support `$md()`
+    linkify: true,
+    typographer: true,
+    breaks: true,
+    use: [
+      //'markdown-it-div',
+      //'markdown-it-attrs'
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
