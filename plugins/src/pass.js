@@ -8,6 +8,16 @@ const crypto = require('crypto')
 
 exports.createPass = async function(data) {
 
+  function randomId(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  }
+
   function getBufferHash(buffer) {
     // creating hash
     const sha = crypto.createHash('sha1');
@@ -104,7 +114,7 @@ exports.createPass = async function(data) {
     labelColor: payload.labelColor,
     foregroundColor: payload.foregroundColor,
     backgroundColor: payload.backgroundColor,
-    serialNumber: payload.uvci,
+    serialNumber: payload.uvci + randomId(8),
     barcodes: [qrCode],
     barcode: qrCode,
     generic: {

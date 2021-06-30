@@ -261,7 +261,7 @@ export default Vue.extend({
           const url = window.URL.createObjectURL(passBlob);
           const link = <HTMLLinkElement>this.$refs.download;
           link.href = url;
-          link.setAttribute('download', `covidpass-${ this.randomId(12) }.pkpass`);
+          link.setAttribute('download', `covidpass-${ this.randomId(8) }.pkpass`);
 
           this.state = State.SCANNED;
         }
