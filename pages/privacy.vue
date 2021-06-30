@@ -3,7 +3,7 @@
 
     <h1 class="text-2xl font-bold">{{ $t('privacy.title') }}</h1>
     
-    <p v-for=" p in $t('privacy.paragraphs')" v-bind:key="p" v-html="p" />
+    <div v-html="$md.render(this.$t('privacy.md'))" class="md"></div>
     
     <NuxtLink :to="localePath('/')" class="underline text-sm">{{ $t('labels.backToHome') }}</NuxtLink>
 
