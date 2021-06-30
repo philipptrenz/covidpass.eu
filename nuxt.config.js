@@ -75,7 +75,8 @@ export default {
   ],
 
   tailwindcss: {
-    mode: 'jit' // enable just-in-time mode
+    //mode: 'jit', // enable just-in-time mode
+    jit: true
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
