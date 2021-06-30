@@ -105,7 +105,7 @@ exports.createPass = async function(data) {
   const pass = {
     passTypeIdentifier: window.$nuxt.$config.passIdentifier,
     teamIdentifier: window.$nuxt.$config.teamIdentifier,
-    sharingProhibited: false,
+    sharingProhibited: true,
     voided: false,
     formatVersion: 1,
     logoText: passName,
