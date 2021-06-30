@@ -4,15 +4,18 @@ index:
   subtitle: Nur einen Klick entfernt im Apple Wallet
   consent:
     paragraphs:
-    - "Dein QR-Code enthält sensible persönliche Daten. Diese Daten müssen 
-    ausgelesen und an unseren Server übertragen werden, um Deinen Apple Wallet 
-    Pass zu erstellen. Wir verwenden diese Daten ausschließlich für die Erstellung 
-    des Apple Wallet Passes. \nWir speichern Deine sensiblen Daten nicht. Bitte 
-    nutze auch Du den Wallet Pass verantwortungsvoll, er ist nur für Dich persönlich 
-    bestimmt."
-    inputText: Ich stimme der Verarbeitung meiner sensiblen Daten zu
+    - Deine Privatsphäre ist uns wichtig! Dein QR-Code enthält neben persönlichen 
+      Daten auch sensible Gesundheitsdaten. Um diese zu schützen, werden diese Daten
+      Deinen Computer nicht verlassen. Die Verarbeitung der Informationen geschieht
+      ausschließlich in Deinem Browser. Zur Erstellung des Passes wird lediglich ein
+      kryptografischer Hash an unseren Server gesendet und dort signiert. Das bedeutet
+      wir haben erst gar keine Möglichkeit Deine Daten zu lesen oder zu speichern. Bitte 
+      nutze auch Du den Wallet Pass verantwortungsvoll, er ist nur für Dich persönlich 
+      bestimmt.
+    - Zum Schutz Deiner Privatsphäre bitten wir auch Dich deinen Pass nicht an Dritte weiterzugeben.
+    inputText: Ich habe die Datenschutz-Bestimmungen gelesen und stimme der Verarbeitung meiner Daten zu
     icons:
-      noStorage: Keine Speicherung
+      noStorage: Lokale Verarbeitung
       openSource: Open Source
       noProfit: Kein Profit
     buttonText: QR-Code scannen
@@ -33,6 +36,20 @@ index:
     kannst Du diese Einstellung unter <i>Einstellungen</i> > <i>Touch / Face ID 
     & Passcode</i> > <i>Im Sperrzustand Zugriff erlauben</i> ändern."
     shareButtonText: Erzähle es weiter
+pass:
+  certificateType: Zertifikatstyp
+  name: Name
+  dose: Dosis
+  dateOfVaccination: Impfdatum
+  vaccine: Impfung
+  dateOfBirth: Geburtsdatum
+  uniqueCertificateIdentifier: Eindeutiger Zertifikatsidentifizierer (UVCI)
+  certificateIssuer: Zertifikatsaussteller
+  countryOfVaccination: Land der Impfung
+  manufacturer: Hersteller
+  disclaimer:
+    label: Haftungsausschluss
+    value: Dieses Zertifikat ist nur in Verbindung mit dem Personalausweis des Zertifikatsinhabers gültig und läuft ein Jahr + 14 Tage nach der letzten Dosis ab. Die Gültigkeit dieses Zertifikats wurde von COVID Pass nicht überprüft.
 labels:
   next: Weiter
   backToHome: Zurück zur Startseite

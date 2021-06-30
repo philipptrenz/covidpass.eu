@@ -4,11 +4,13 @@ This web application offers the possibility to scan the EU-wide vaccination, tes
 
 ## Discussion
 
-Since the QR codes store sensitive personal information as well as health data, it would be ideal if Apple Wallet® passes could be generated locally by an iOS app or as a pure client-side web application. Unfortunately passes have to be signed with a valid **Pass Type ID certificate**, which requires an Apple Developer membership and therefore has to be done on a server (see [here](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/PassKit_PG/index.html)).
+Since the QR codes store sensitive personal information as well as health data, processing of the data is done entirely within the users browser. Only a hash over the data is sent to the server to sign it with a certificate issued by Apple®, for which a Apple® Developer Program Membership is required.
 
-Providing Apple Wallet® passes from the official COVID apps, like [Corona-Warn](https://github.com/corona-warn-app), has already been discussed and was probably already partly discarded due to security concerns and lack of specification of this requirement to developers (see [here](https://github.com/eu-digital-green-certificates/dgca-wallet-app-ios/issues/69) or [here](https://github.com/corona-warn-app/cwa-app-ios/issues/2965)).
+Providing Apple Wallet® passes from the official COVID apps, like [Corona-Warn](https://github.com/corona-warn-app), has already been discussed and seems to have been discarded due to security concerns and lack of specification of this requirement to developers (see [here](https://github.com/eu-digital-green-certificates/dgca-wallet-app-ios/issues/69) or [here](https://github.com/corona-warn-app/cwa-app-ios/issues/2965)).
 
-While we very much understand these decisions for the official COVID apps, we believe that with proper education, users can assess these risks for themselves. As furthermore named [here](https://github.com/eu-digital-green-certificates/dgca-wallet-app-ios/issues/69#issuecomment-861384615), there are countless apps which can be utilized to generate Apple Wallet® passes. However, they also use external servers and it is intransparent how data, this case very sensitive data, is handled. Therefore, this project aims to create a dedicated solution that takes into account the sensitivity of the data. 
+While we very much understand these decisions for the official COVID apps, we believe that with proper education, users can assess these risks for themselves. As furthermore named [here](https://github.com/eu-digital-green-certificates/dgca-wallet-app-ios/issues/69#issuecomment-861384615), there are countless apps which can be utilized to generate Apple Wallet® passes. However, they also use external servers and it is intransparent how data, this case very sensitive data, is handled. 
+
+Therefore, this project offers a transparent and secure way to create passes.
 If you disagree, feel free to open an issue and let's discuss it.
 
 ## Principles
@@ -16,8 +18,8 @@ If you disagree, feel free to open an issue and let's discuss it.
 This project attempts a compromise to enable the user experience of Apple Wallet® passes while protecting sensitive information in the best possible way. For this it follows the following principles:
 
 * Data economy
-  * The sensitive data is only used in transit and never stored
-  * The data are only entered in the Apple Wallet® pass without looking at their content
+  * The sensitive data is only used within the users browser
+  * The data itself is never transmitted or stored
   * No website analytics or ad tracking 
 * Transparency
   * The authors strive to be as transparent as possible
@@ -45,11 +47,11 @@ Add your Pass Type ID certificate (with extension `.cer`) from the [iOS Provisio
 The following environment variables have to be set for Apple Wallet® pass generation. This can be done by an `.env` file within the project root or by adding the variables to the environment.
 
 ```bash
-PASS_ORGANIZATION_NAME=  # The organization name
+NODE_ENV=production
+ALLOWED_ORIGINS=         # Comma separated list of origins
 PASS_TYPE_IDENTIFIER=    # The Wallet Pass ID
 PASS_TEAM_IDENTIFIER=    # The Developer Team identifier
 PASS_CERT_SECRET=        # The .pem secret set while converting from .p12 to .pem
-PASS_SERIAL_NUMBER=      # A serial number of the Apple Wallet pass
 ```
 
 ### Development Setup

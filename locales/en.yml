@@ -4,14 +4,15 @@ index:
   subtitle: Just a click away in your Apple Wallet
   consent:
     paragraphs:
-    - "Your QR Code contains sensitive personal data. These data have to be read and
-      transmitted to our server to be embedded into your Apple Wallet Pass. \nWe will
-      use your provided data from the QR Code solely for creating the Apple Wallet
-      Pass. We do not store, give away or sell your sensitive information. Please
-      also use the Wallet Pass responsibly, it is intended only for you personally."
-    inputText: I consent to the processing of my sensitive data
+    - Your privacy is important to us! Your QR code contains personal 
+      as well as sensitive health data. To protect this data, it will not leave
+      your computer. The processing of the information happens exclusively in your 
+      browser. To create the Pass, only a cryptographic hash is sent to our server 
+      and signed there. This means we have no possibility to read or save your data.
+    - To protect your privacy, we also ask you not to share your Pass with others.
+    inputText: I have read the privacy policy and consent to the processing of my data
     icons:
-      noStorage: No Storage
+      noStorage: Local Processing
       openSource: Open Source
       noProfit: No Profit
     buttonText: Scan QR-Code
@@ -33,6 +34,20 @@ index:
       under <i>Settings</i> > <i>Touch / Face ID & Passcode</i> > <i>Allow access
       when locked</i>."
     shareButtonText: Tell your friends
+pass:
+  certificateType: Certificate Type
+  name: Name
+  dose: Dose
+  dateOfVaccination: Date of Vaccination
+  vaccine: Vaccine
+  dateOfBirth: Date of Birth
+  uniqueCertificateIdentifier: Unique Certificate Identifier (UVCI)
+  certificateIssuer:  Certificate Issuer
+  countryOfVaccination: Country of Vaccination
+  manufacturer: Manufacturer
+  disclaimer:
+    label: Disclaimer
+    value: This certificate is only valid in combination with the ID card of the certificate holder and expires one year + 14 days after the last dose. The validity of this certificate was not checked by COVID Pass.
 labels:
   next: Next
   backToHome: Back to home
