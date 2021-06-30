@@ -5,3 +5,26 @@
 p > a {
   text-decoration: underline;
 }
+
+.md a {
+  text-decoration: underline;
+}
+
+.md p, ul {
+  padding-top: 0.5rem;
+}
+
+.md h3 {
+  padding-top: 1.5rem;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.md ul {
+  padding-left: 1.5rem;
+}
+
+.md ul li {
+  margin-left: 0.25rem;
+  list-style-type: disc;
+}

@@ -33,29 +33,236 @@ index:
     kannst Du diese Einstellung unter <i>Einstellungen</i> > <i>Touch / Face ID 
     & Passcode</i> > <i>Im Sperrzustand Zugriff erlauben</i> ändern."
     shareButtonText: Erzähle es weiter
-about:
-  title: Über uns
-  paragraphs:
-  - "Hi, wir sind Marius, Donatus und Philipp. Drei Entwickler und Designer mit 
-  einem 💙 für innovative Lösungen und intuitive User Experience, um soziale 
-  Herausforderungen zu meistern und Teilhabe (wieder) zu ermöglichen."
-  - "COVID hat unser aller Leben in den letzten Monaten stark beeinträchtigt. 
-  Allmählich kehrt nun eine gewisse Normalität zurück. Mit diesem Tool wollen 
-  wir einen kleinen Beitrag dazu leisten, den Alltag und das Reisen ein wenig 
-  einfacher zu machen."
-  - 'Vielen Dank an <a href="https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208" target="_blank" >Ann-Kathrin</a>, die das Logo bereitgestellt hat.'
-impress:
-  title: Impressum
-  paragraphs: 
-  - Bald verfügbar
-privacy:
-  title: Datenschutz
-  paragraphs: 
-  - Bald verfügbar
 labels:
   next: Weiter
   backToHome: Zurück zur Startseite
   loading: Laden ...
   tryAgain: Erneut versuchen
   reportIssue: Fehler melden
+about:
+  title: Über uns
+  md: "Hallo, wir sind Marius, Donatus und Philipp. Drei Entwickler und Designer mit einem 💙  für innovative Lösungen und intuitive User Experience, um soziale Herausforderungen zu meistern und Teilhabe (wieder) zu ermöglichen.
 
+    COVID hat unser aller Leben in den letzten Monaten stark beeinträchtigt. Allmählich kehrt nun eine gewisse Normalität zurück. Mit diesem Tool wollen wir einen kleinen Beitrag dazu leisten, den Alltag und das Reisen ein wenig leichter zu machen.
+
+    Vielen Dank an [Ann-Kathrin](https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208), die das Logo zur Verfügung gestellt hat."
+impress:
+  title: Impressum
+  md: "### Informationen nach § 5 TMG
+
+    Philipp Trenz
+
+    Luisenplatz 3
+
+    14471 Potsdam
+
+    Deutschland
+
+    ### Kontakt
+
+    [covidpass@philipptrenz.de](mailto:covidpass@philipptrenz.de)
+
+    ### EU-Streitbeilegung
+
+    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr. Die E-Mail-Adresse finden Sie im obigen Impressum.
+
+    ### Verbraucherstreitbeilegung / Allgemeine Schlichtungsstelle
+
+    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+
+    ### Haftung für Inhalte
+
+    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+
+    ### Haftung für Links
+
+    Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+
+    ### Credits
+
+    Erarbeitet von [Marvin Sextro](https://marvinsextro.de) 
+    
+    Mit Auszügen aus: https://www.e-recht24.de/impressum-generator.html 
+    
+    Übersetzt mit www.DeepL.com/Translator (freie Version)"
+privacy:
+  title: Datenschutz
+  md: "Unsere Datenschutzerklärung basiert auf den Begriffen, die der europäische Gesetzgeber bei der Verabschiedung der General Data Protection Regulation (GDPR) verwendet hat.
+
+    ### Allgemeine Informationen
+
+    * Der gesamte Prozess der Erzeugung der Pass-Datei geschieht lokal in Ihrem Browser. Für den Signierschritt wird nur eine gehashte Darstellung Ihrer Daten an den Server gesendet.
+
+    * Ihre Daten werden nicht über die aktive Browsersitzung hinaus gespeichert und die Seite verwendet keine Cookies.
+
+    * Es werden keine Daten an Dritte weitergegeben.
+
+    * Wir übertragen Ihre Daten sicher über https.
+
+    * Unser Server wird in Nürnberg, Deutschland, gehostet.
+
+    * Der Quellcode dieser Seite ist auf [GitHub](http://github.com/philipptrenz/covidpass) verfügbar.
+
+    * Standardmäßig sind die Apple-Wallet-Pässe über den Sperrbildschirm zugänglich. Dies kann in den [Einstellungen](https://support.apple.com/de-de/guide/iphone/iph9a2a69136/ios) geändert werden.
+
+    * Der Serveranbieter verarbeitet Daten, um diese Seite bereitzustellen. Um besser zu verstehen, welche Maßnahmen er zum Schutz Ihrer Daten ergreift, lesen Sie bitte auch seine [Datenschutzrichtlinie](https://www.hetzner.com/de/rechtliches/datenschutz/) und die [Datenschutz-FAQ](https://docs.hetzner.com/general/general-terms-and-conditions/data-privacy-faq/).
+
+    ### Kontakt
+
+    Philipp Trenz
+
+    Luisenplatz 3
+
+    14471 Potsdam
+
+    Deutschland
+
+    E-Mail: [covidpass@philipptrenz.de](mailto:covidpass@philipptrenz.de)
+
+    ### Vereinfachte Erklärung des Prozesses
+
+    Dieser Prozess wird erst nach dem Akzeptieren dieser Richtlinie und dem Klick auf die Schaltfläche Zu Wallet hinzufügen gestartet.
+
+    Zunächst finden die folgenden Schritte lokal in Ihrem Browser statt:
+
+    * Scannen und Extrahieren der QR-Code-Daten Ihres ausgewählten Zertifikats über die Kamera Ihres Geräts
+
+    * Dekodierung Ihrer persönlichen und gesundheitsbezogenen Daten aus den QR-Code-Nutzdaten
+
+    * Zusammenstellen einer unvollständigen Pass-Datei aus Ihren Daten
+
+    * Erzeugen eines Hashes der in der Passdatei gespeicherten Daten
+
+    * Senden nur der Hashes an unseren Server
+
+
+    Zweitens: Die folgenden Schritte finden auf unserem Server statt:
+
+    * Empfangen und Prüfen der Hashes, die lokal erzeugt wurden
+
+    * Signieren der Datei, die die Hashes enthält
+
+    * Zurücksenden der Signatur
+
+
+    Schließlich finden die folgenden Schritte lokal in Ihrem Browser statt:
+
+    * Zusammensetzen der signierten Pass-Datei aus der unvollständigen, lokal erzeugten Datei und der Signatur
+
+    * Abspeichern der Datei auf Ihrem Gerät
+
+    ### Lokal verarbeitete Daten
+
+    Die folgenden Daten werden in Ihrem Browser verarbeitet, um die Pass-Datei zu erzeugen.
+
+    Verarbeitete personenbezogene Daten, die im QR-Code enthalten sind:
+
+    * Ihr Vor- und Nachname
+
+    * Ihr Geburtsdatum
+
+
+    Für jeden im QR-Code enthaltenen Impfpass werden die folgenden Daten verarbeitet:
+
+    * Geimpfte Krankheit
+
+    * Impfstoff-Medizinprodukt
+
+    * Hersteller/Zulassungsinhaber
+
+    * Dosierungsnummer
+
+    * Gesamtserie der Dosen
+
+    * Datum der Impfung
+
+    * Land der Impfung
+
+    * Aussteller des Zertifikats
+
+    * Eindeutiger Zertifikatsbezeichner (UVCI)
+
+
+    Für jedes im QR-Code enthaltene Testzertifikat werden die folgenden Daten verarbeitet:
+
+    * Geimpfte Krankheit
+
+    * Testtyp
+
+    * NAA Testname
+
+    * RAT Testname und Hersteller
+
+    * Datum/Uhrzeit der Probenentnahme
+
+    * Testergebnis
+
+    * Testzentrum
+
+    * Land des Tests
+
+    * Zertifikatsaussteller
+
+    * Eindeutiger Zertifikatsbezeichner (UVCI)
+
+
+    Für jedes im QR-Code enthaltene Genesungszertifikat werden die folgenden Daten verarbeitet:
+
+    * Geimpfte Krankheit
+
+    * Datum des ersten positiven NAA-Testergebnisses
+
+    * Land des Tests
+
+    * Aussteller des Zertifikats
+
+    * Zertifikat gültig von
+
+    * Zertifikat gültig bis
+
+    * Eindeutiger Zertifikatsbezeichner (UVCI)
+
+
+    Das [Digital Covid Certificate Schema](https://github.com/ehn-dcc-development/ehn-dcc-schema) enthält eine detaillierte Spezifikation, welche Daten im QR-Code enthalten sein können.
+
+    ### Server-Anbieter
+
+    Unser Server-Provider ist die Hetzner Online GmbH. Folgende Daten können erhoben und in den Server-Logfiles gespeichert werden:
+
+    * Die verwendeten Browsertypen und -versionen
+
+    * Das vom zugreifenden System verwendete Betriebssystem
+
+    * die Website, von der aus ein zugreifendes System auf unsere Website gelangt (sog. Referrer)
+
+    * das Datum und die Uhrzeit des Zugriffs
+
+    * die pseudonymisierten IP-Adressen
+
+    ### Ihre Rechte
+
+    Gemäß der GDPR haben Sie folgende Rechte:
+
+    * Recht auf Auskunft über Ihre Daten: Sie haben das Recht zu erfahren, welche Daten über Sie erhoben wurden und wie diese verarbeitet wurden.
+
+    * Recht auf Vergessenwerden: Löschung Ihrer personenbezogenen Daten.
+
+    * Recht auf Berichtigung: Sie haben das Recht, unzutreffende Daten zu berichtigen.
+
+    * Recht auf Datenübertragbarkeit: Sie haben das Recht, Ihre Daten von einem Verarbeitungssystem in ein anderes zu übertragen.
+
+    ### Drittanbieter verlinkt
+
+    * GitHub: [Privacy Policy](https://docs.github.com/en/github/site-policy/github-privacy-statement)
+
+    * PayPal: [Datenschutzrichtlinie](https://www.paypal.com/de/webapps/mpp/ua/privacy-full?locale.x=en_EN)
+
+    * Apple kann Ihre Ausweise über iCloud synchronisieren: [Datenschutzrichtlinie](https://www.apple.com/legal/privacy/en-ww/)
+
+    ### Credits
+
+    Vorläufer von [Marvin Sextro](https://marvinsextro.de) 
+    
+    Mit Auszügen aus: https://www.e-recht24.de/impressum-generator.html 
+    
+    Übersetzt mit www.DeepL.com/Translator (kostenlose Version)"
