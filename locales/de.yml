@@ -43,16 +43,24 @@ pass:
     recovery: Genesung
     test: Test
   name: Name
+  dateOfBirth: Geburtsdatum
   dose: Dosis
   dateOfVaccination: Impfdatum
-  vaccine: Impfung
-  dateOfBirth: Geburtsdatum
+  vaccine: Impfstoff
+  positiveTested: Positiv getestet
+  validFrom: Gültig ab
+  validUntil: Gültig bis
+  testType: Art des Tests
+  testResult: Testergebnis
+  testingTime: Testzeitpunkt
   uniqueCertificateIdentifier: Eindeutiger Zertifikatsidentifizierer (UVCI)
   certificateIssuer: Zertifikatsaussteller
   country: Ausstellendes Land
-  manufacturer: Hersteller
+  credits:
+    label: Erstellt durch
+    value: https://covidpass.eu
   disclaimer:
-    label: Haftungsausschluss
+    label: Hinweis
     value: Dieses Zertifikat ist nur in Verbindung mit dem Personalausweis des Zertifikatsinhabers gültig. Die Gültigkeit dieses Zertifikats wurde von COVID Pass nicht überprüft.
 labels:
   next: Weiter

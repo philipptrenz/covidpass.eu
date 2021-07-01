@@ -112,9 +112,24 @@ exports.createPass = async function(data) {
     } else if (payload.certificateType == consts.CERTIFICATE_TYPE.TEST) {
       return {
         secondaryFields: [
-        
+          {
+            key: "testType",
+            label: window.$nuxt.$t('pass.testType'),
+            value: payload.testType,
+          },
+          {
+            key: "testResult",
+            label: window.$nuxt.$t('pass.testResult'),
+            value: payload.testResult,
+            textAlignment: "PKTextAlignmentRight"
+          }
         ],
         auxiliaryFields: [
+          {
+            key: "testingTime",
+            label: window.$nuxt.$t('pass.testingTime'),
+            value: payload.testingTime,
+          },
           {
             key: "dob",
             label: window.$nuxt.$t('pass.dateOfBirth'),
@@ -126,9 +141,24 @@ exports.createPass = async function(data) {
     } else if (payload.certificateType == consts.CERTIFICATE_TYPE.RECOVERY) {
       return {
         secondaryFields: [
-        
+          {
+            key: "validFrom",
+            label:  window.$nuxt.$t('pass.validFrom'),
+            value: payload.validFromDate
+          },
+          {
+            key: "validUntil",
+            label: window.$nuxt.$t('pass.validUntil'),
+            value: payload.validUntilDate,
+            textAlignment: "PKTextAlignmentRight"
+          }
         ],
         auxiliaryFields: [
+          {
+            key: "firstPositiveTested",
+            label: window.$nuxt.$t('pass.positiveTested'),
+            value: payload.positiveTestedDate
+          },
           {
             key: "dob",
             label: window.$nuxt.$t('pass.dateOfBirth'),
@@ -223,6 +253,11 @@ exports.createPass = async function(data) {
           key: "disclaimer",
           label: window.$nuxt.$t('pass.disclaimer.label'),
           value: window.$nuxt.$t('pass.disclaimer.value'),
+        },
+        {
+          key: "credits",
+          label: window.$nuxt.$t('pass.credits.label'),
+          value: window.$nuxt.$t('pass.credits.value'),
         }
       ]
     }

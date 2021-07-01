@@ -3,6 +3,10 @@ const consts = require('./constants')
 
 exports.Payload = class {
 
+  /*
+   * For key descriptions, see: https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/main/DCC.Types.schema.json
+   */
+
   constructor(body, valueSets) {
 
     const rawData = body["raw"]
@@ -128,23 +132,23 @@ exports.Payload = class {
     
     /* Test specific data */
 
-    /*
-     TODO: Fill data, example:
-
-     {
-      "ci": "URN:UVCI:01DE/IZ12345A/5CWLU12RNOB9RXSEOP6FG8#W",
-      "co": "DE",
-      "is": "Robert Koch-Institut",
-      "tg": "840539006",
-
-      "tt": "LP217198-3",
-      "sc": "2021-05-30T10:12:22Z",
-      "dr": "2021-05-30T10:30:15Z",
-      "tr": "260415000",
-      "tc": "Testzentrum Köln Hbf"
+    const testTypeId = t["tt"]
+    const testTypes = valueSets.testTypes["valueSetValues"]
+    if(!(testTypeId in testTypes)) {
+      throw new Error('Invalid test type code:', testTypeId)
+    }
+    
+    const testResultId = t["tr"]
+    const testResults = valueSets.testResults["valueSetValues"]
+    if(!(testResultId in testResults)) {
+      throw new Error('Invalid test result code:', testResultId)
     }
 
-    */
+    this.testType = testTypes[testTypeId].display
+    this.testResult = testResults[testResultId].display
+    this.testingTime = t["sc"] // Date/Time of Sample Collection
+
+    console.log(this.testType, this.testResult)
   }
 
   parseRecoveryData(r, valueSets) {
@@ -165,23 +169,11 @@ exports.Payload = class {
       throw new Error('Invalid country code')
     }
     this.country = countryCodes[countryCode].display
-    
+
     /* Recovery specific data */
-
-    /*
-     TODO: Fill data, example:
-
-     {
-      "ci": "URN:UVCI:01DE/5CWLU12RNOB9RXSEOP6FG8#W",
-      "co": "DE",
-      "is": "Robert Koch-Institut",
-      "tg": "840539006",
-
-      "fr": "2021-01-10",
-      "df": "2021-05-29",
-      "du": "2021-06-15"
-    }
-
-    */
+    
+    this.positiveTestedDate = r["fr"]
+    this.validFromDate = r["df"]
+    this.validUntilDate = r["du"]
   }
 }
