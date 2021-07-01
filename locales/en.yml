@@ -10,7 +10,7 @@ index:
       browser. To create the Pass, only a cryptographic hash is sent to our server 
       and signed there. This means we have no possibility to read or save your data.
     - To protect your privacy, we also ask you not to share your COVID Pass with others.
-    inputText: I have read the <a href='/privacy' target='_blank'>privacy policy</a> and consent to the processing of my data
+    inputText: I have read the <a href='/privacy'>privacy policy</a> and consent to the processing of my data
     icons:
       noStorage: Local Processing
       openSource: Open Source

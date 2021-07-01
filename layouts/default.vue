@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen bg-primary font-light align-middle justify-center">
+  <div class="min-h-screen bg-primary font-light flex flex-col align-middle justify-center">
 
     <div class="pt-8 pb-8 h-full sm:min-h-screen flex flex-row px-4 md:px-6 space-x-6">
-      <div class="flex-1 flex flex-col justify-center pr-2">
+      <div class="flex-1 flex flex-col justify-center sm:pr-2">
         <div>
           <Nuxt />
           <Footer class="pt-2 text-white" />

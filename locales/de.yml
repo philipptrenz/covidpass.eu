@@ -11,7 +11,7 @@ index:
       kryptografischer Hash an unseren Server gesendet und dort signiert. Das bedeutet
       wir haben erst gar keine Möglichkeit Deine Daten zu lesen oder zu speichern.
     - Zum Schutz Deiner Privatsphäre bitten wir auch Dich deinen COVID Pass nicht an Dritte weiterzugeben.
-    inputText: Ich habe die <a href='/de/privacy' target='_blank'>Datenschutz-Bestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten zu
+    inputText: Ich habe die <a href='/de/privacy'>Datenschutz-Bestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten zu
     icons:
       noStorage: Lokale Verarbeitung
       openSource: Open Source

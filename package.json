@@ -20,6 +20,7 @@
     "do-not-zip": "^1.0.0",
     "express": "^4.17.1",
     "js-yaml-loader": "^1.2.2",
+    "markdown-it-link-attributes": "^3.0.0",
     "node-forge": "^0.10.0",
     "nuxt": "^2.15.3",
     "nuxt-i18n": "^6.27.1",

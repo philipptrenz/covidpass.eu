@@ -98,13 +98,21 @@ export default {
     preset: 'default',
     html: true,
     xhtmlOut: true, 
-    runtime: true ,// Support `$md()`
+    runtime: true,  // Support `$md()`
     linkify: true,
     typographer: true,
     breaks: true,
     use: [
-      //'markdown-it-div',
-      //'markdown-it-attrs'
+      [
+        'markdown-it-link-attributes',
+        {
+          attrs: {
+            target: '_blank',
+            rel: 'noopener'
+          }
+        }
+      ],
+      // 'markdown-it-div',
     ]
   },
 
