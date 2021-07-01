@@ -81,7 +81,7 @@
                 <path d="M278 2.00806L298 2.00806V22.0081" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M22 298.008H2L2 278.008" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <span class="pt-2">{{ $t('index.scan.hint') }}</span>
+              <span class="pt-2">{{ scanHint }}</span>
             </div>
             <div v-if="!qrScannerDestroyed && !qrScannerLoading && !qrScannerError" class="absolute top-0 left-0 w-full h-full z-40 bg-primary opacity-40"></div>
 
@@ -184,6 +184,7 @@ export default Vue.extend({
       qrScannerLoading: false,
       qrScannerDestroyed: false,
       qrScannerError: <string|null>null,
+      scanHint: this.$t('index.scan.hint'),
     }
   },
   computed: {
@@ -214,6 +215,7 @@ export default Vue.extend({
         const decoded = this.$hcertDecode(rawData)
         this.generate(rawData, decoded)
       } catch (error) {
+        this.scanHint = this.$t('index.scan.errorHint')
         console.error('Invalid QR code found');
         this.reloadQRScanner();
 

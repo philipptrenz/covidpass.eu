@@ -19,6 +19,7 @@ index:
     buttonText: QR-Code scannen
   scan:
     hint: Scanne den QR-Code
+    errorHint: Dieser QR-Code ist nicht korrekt
     errors:
       NotAllowedError: Bitte erlaube den Zugriff auf die Kamera
       NotFoundError: Es konnte keine Kamera gefunden werden

@@ -18,6 +18,7 @@ index:
     buttonText: Scan QR-Code
   scan:
     hint: Scan QR-Code
+    errorHint: This QR-Code is not valid
     errors:
       NotAllowedError: Please grant camera access permisson
       NotFoundError: Could not open camera
