@@ -134,14 +134,16 @@
           </span>
         </h1>
 
-        <div class="flex flex-row align-middle justify-center">
-          <a ref="download" @click="downloaded" >
-            <img :src="walletBadgeIcon" />
-          </a>
-        </div>
+
 
         <div class="pb-24">
           <p class="font-light text-xs leading-5" v-html="$t('index.addToWallet.note')"></p>
+        </div>
+
+        <div class="flex flex-row align-middle justify-center">
+          <a ref="download" @click="downloaded" >
+            <img :src="walletBadgeIcon" width="220" height="68" />
+          </a>
         </div>
 
       </div>
