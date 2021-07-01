@@ -4,7 +4,7 @@ index:
   subtitle: Just a click away in your Apple Wallet
   consent:
     paragraphs:
-    - Your privacy is important to us! Your QR code contains personal 
+    - Your QR code contains personal 
       as well as sensitive health data. To protect this data, it will not leave
       your computer. The processing of the information happens exclusively in your 
       browser. To create the Pass, only a cryptographic hash is sent to our server 
@@ -68,11 +68,11 @@ labels:
   reportIssue: Report an issue
 about:
   title: About us
-  md: "Hi, we are Marius, Donatus and Philipp. Three developer and designer with a 💙 for innovative solutions and intuitive user experience to overcome social challenges and (re)enable participation.
+  md: "Hi, we are [Donatus](https://www.linkedin.com/in/donatuswolf/) and [Philipp](https://www.linkedin.com/in/philipp-trenz-a544a8182/). Two developer and designer with a 💙 for innovative solutions and intuitive user experience to overcome social challenges and (re)enable participation.
 
     COVID has been a major constraint on all of our lives over the past few months. Gradually, some normality is now returning. With this tool, we want to make a small contribution to making everyday life and travel a little easier.
 
-    Thanks to [Ann-Kathrin](https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208), who contributed the Logo we use."
+    Thanks to [Ann-Kathrin](https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208), who contributed the logo we use."
 impress:
   title: Impressum
   md: "### Information according to § 5 TMG
@@ -105,10 +105,12 @@ impress:
 
     Our offer contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the sites is always responsible for the content of the linked sites. The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking. However, a permanent control of the contents of the linked pages is not reasonable without concrete evidence of a violation of the law. If we become aware of any infringements, we will remove such links immediately.
 
+    ### Trademark notice
+    
+    Apple, Apple Wallet, iPhone and Apple Watch are trademarks of Apple Inc., registered in the U.S. and other countries and regions.
+
     ### Credits
 
-    Pioneered by [Marvin Sextro](https://marvinsextro.de) 
-    
     With excerpts from: https://www.e-recht24.de/impressum-generator.html 
     
     Translated with www.DeepL.com/Translator (free version)"
@@ -286,9 +288,13 @@ privacy:
 
     * Apple may sync your passes via iCloud: [Privacy Policy](https://www.apple.com/legal/privacy/en-ww/)
 
+    ### Trademark notice
+    
+    Apple, Apple Wallet, iPhone and Apple Watch are trademarks of Apple Inc., registered in the U.S. and other countries and regions.
+
     ### Credits
 
-    Pioneered by [Marvin Sextro](https://marvinsextro.de) 
+    Privacy policy authoritatively prepared by [Marvin Sextro](https://marvinsextro.de) (see [here](https://github.com/covidpass-org/covidpass))
     
     With excerpts from: https://www.e-recht24.de/impressum-generator.html 
     

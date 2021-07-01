@@ -4,7 +4,7 @@ index:
   subtitle: Nur einen Klick entfernt im Apple Wallet
   consent:
     paragraphs:
-    - Deine Privatsphäre ist uns wichtig! Dein QR-Code enthält neben persönlichen 
+    - Dein QR-Code enthält neben persönlichen 
       Daten auch sensible Gesundheitsdaten. Um diese zu schützen, werden diese Daten
       Deinen Computer nicht verlassen. Die Verarbeitung der Informationen geschieht
       ausschließlich in Deinem Browser. Zur Erstellung des Passes wird lediglich ein
@@ -70,7 +70,7 @@ labels:
   reportIssue: Fehler melden
 about:
   title: Über uns
-  md: "Hallo, wir sind Marius, Donatus und Philipp. Drei Entwickler und Designer mit einem 💙  für innovative Lösungen und intuitive User Experience, um soziale Herausforderungen zu meistern und Teilhabe (wieder) zu ermöglichen.
+  md: "Hallo, wir sind [Donatus](https://www.linkedin.com/in/donatuswolf/) und [Philipp](https://www.linkedin.com/in/philipp-trenz-a544a8182/). Zwei Entwickler und Designer mit einem 💙  für innovative Lösungen und intuitive User Experience, um soziale Herausforderungen zu meistern und Teilhabe (wieder) zu ermöglichen.
 
     COVID hat unser aller Leben in den letzten Monaten stark beeinträchtigt. Allmählich kehrt nun eine gewisse Normalität zurück. Mit diesem Tool wollen wir einen kleinen Beitrag dazu leisten, den Alltag und das Reisen ein wenig leichter zu machen.
 
@@ -107,16 +107,18 @@ impress:
 
     Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
 
-    ### Credits
+    ### Hinweis zu Warenzeichen
+    
+    Apple, Apple Wallet, iPhone und Apple Watch sind Warenzeichen von Apple Inc., registriert in den Vereinigten Staaten und anderen Ländern und Regionen.
 
-    Erarbeitet von [Marvin Sextro](https://marvinsextro.de) 
+    ### Credits
     
     Mit Auszügen aus: https://www.e-recht24.de/impressum-generator.html 
     
     Übersetzt mit www.DeepL.com/Translator (freie Version)"
 privacy:
   title: Datenschutz
-  md: "Unsere Datenschutzerklärung basiert auf den Begriffen, die der europäische Gesetzgeber bei der Verabschiedung der General Data Protection Regulation (GDPR) verwendet hat.
+  md: "Unsere Datenschutzerklärung basiert auf den Begriffen, die der europäische Gesetzgeber bei der Verabschiedung der Datenschutz-Grundverordnung (DSGVO) verwendet hat.
 
     ### Allgemeine Informationen
 
@@ -270,7 +272,7 @@ privacy:
 
     ### Ihre Rechte
 
-    Gemäß der GDPR haben Sie folgende Rechte:
+    Gemäß der DSGVO haben Sie folgende Rechte:
 
     * Recht auf Auskunft über Ihre Daten: Sie haben das Recht zu erfahren, welche Daten über Sie erhoben wurden und wie diese verarbeitet wurden.
 
@@ -288,9 +290,14 @@ privacy:
 
     * Apple kann Ihre Ausweise über iCloud synchronisieren: [Datenschutzrichtlinie](https://www.apple.com/legal/privacy/en-ww/)
 
+    ### Hinweis zu Warenzeichen
+    
+    Apple, Apple Wallet, iPhone und Apple Watch sind Warenzeichen von Apple Inc., registriert in den Vereinigten Staaten und anderen Ländern und Regionen.
+
+
     ### Credits
 
-    Vorläufer von [Marvin Sextro](https://marvinsextro.de) 
+    Datenschutzerklärung maßgeblich erarbeitet von [Marvin Sextro](https://marvinsextro.de) (siehe [hier](https://github.com/covidpass-org/covidpass))
     
     Mit Auszügen aus: https://www.e-recht24.de/impressum-generator.html 
     
