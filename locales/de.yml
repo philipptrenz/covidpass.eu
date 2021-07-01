@@ -9,9 +9,7 @@ index:
       Deinen Computer nicht verlassen. Die Verarbeitung der Informationen geschieht
       ausschließlich in Deinem Browser. Zur Erstellung des Passes wird lediglich ein
       kryptografischer Hash an unseren Server gesendet und dort signiert. Das bedeutet
-      wir haben erst gar keine Möglichkeit Deine Daten zu lesen oder zu speichern. Bitte 
-      nutze auch Du den Wallet Pass verantwortungsvoll, er ist nur für Dich persönlich 
-      bestimmt.
+      wir haben erst gar keine Möglichkeit Deine Daten zu lesen oder zu speichern.
     - Zum Schutz Deiner Privatsphäre bitten wir auch Dich deinen Pass nicht an Dritte weiterzugeben.
     inputText: Ich habe die Datenschutz-Bestimmungen gelesen und stimme der Verarbeitung meiner Daten zu
     icons:
