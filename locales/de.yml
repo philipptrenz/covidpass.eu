@@ -11,7 +11,7 @@ index:
       kryptografischer Hash an unseren Server gesendet und dort signiert. Das bedeutet
       wir haben erst gar keine Möglichkeit Deine Daten zu lesen oder zu speichern.
     - Zum Schutz Deiner Privatsphäre bitten wir auch Dich deinen Pass nicht an Dritte weiterzugeben.
-    inputText: Ich habe die Datenschutz-Bestimmungen gelesen und stimme der Verarbeitung meiner Daten zu
+    inputText: Ich habe die <a href='/de/privacy' target='_blank'>Datenschutz-Bestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten zu
     icons:
       noStorage: Lokale Verarbeitung
       openSource: Open Source
@@ -87,7 +87,7 @@ impress:
 
     ### Kontakt
 
-    [covidpass@philipptrenz.de](mailto:covidpass@philipptrenz.de)
+    [covidpass@donatuswolf.de](mailto:covidpass@donatuswolf.de)
 
     ### EU-Streitbeilegung
 
@@ -146,7 +146,7 @@ privacy:
 
     Deutschland
 
-    E-Mail: [covidpass@philipptrenz.de](mailto:covidpass@philipptrenz.de)
+    E-Mail: [covidpass@donatuswolf.de](mailto:covidpass@donatuswolf.de)
 
     ### Vereinfachte Erklärung des Prozesses
 

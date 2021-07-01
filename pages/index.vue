@@ -48,12 +48,12 @@
         <div class="flex flex-row ">
           <span class="flex flex-row justify-center" :class="!consentGiven && hintNotConsented ? 'text-error': ''">
             <input type="checkbox" v-model="consentGiven" :class="!consentGiven && hintNotConsented ? 'border-error': 'border-primary'" class="flex-shrink-0 check-background h-6 w-6 text-gray border-2 rounded-md bg-white checked:bg-primary appearance-none focus:outline-none">
-            <span class="ml-2">{{ $t('index.consent.inputText') }}</span>
+            <span class="ml-2 md" v-html="this.$t('index.consent.inputText')"></span>
           </span>
         </div>
 
         <button class="bg-primary bg-opacity-20 text-primary text-xl font-medium rounded-lg py-5 px-3 focus:outline-none" >
-          <span>
+          <span >
             <svg class="inline-block" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M20 8.5H8V20.5H20V8.5ZM8 6.5C6.89543 6.5 6 7.39543 6 8.5V20.5C6 21.6046 6.89543 22.5 8 22.5H20C21.1046 22.5 22 21.6046 22 20.5V8.5C22 7.39543 21.1046 6.5 20 6.5H8ZM12 13C12 12.7239 12.2239 12.5 12.5 12.5H15.5C15.7761 12.5 16 12.7239 16 13V16C16 16.2761 15.7761 16.5 15.5 16.5H12.5C12.2239 16.5 12 16.2761 12 16V13ZM26.5 26.5C26.2239 26.5 26 26.7239 26 27V30C26 30.2761 26.2239 30.5 26.5 30.5H29.5C29.7761 30.5 30 30.2761 30 30V27C30 26.7239 29.7761 26.5 29.5 26.5H26.5ZM26.5 38.5C26.2239 38.5 26 38.7239 26 39V42C26 42.2761 26.2239 42.5 26.5 42.5H29.5C29.7761 42.5 30 42.2761 30 42V39C30 38.7239 29.7761 38.5 29.5 38.5H26.5ZM32 33C32 32.7239 32.2239 32.5 32.5 32.5H35.5C35.7761 32.5 36 32.7239 36 33V36C36 36.2761 35.7761 36.5 35.5 36.5H32.5C32.2239 36.5 32 36.2761 32 36V33ZM38.5 38.5C38.2239 38.5 38 38.7239 38 39V42C38 42.2761 38.2239 42.5 38.5 42.5H41.5C41.7761 42.5 42 42.2761 42 42V39C42 38.7239 41.7761 38.5 41.5 38.5H38.5ZM38 27C38 26.7239 38.2239 26.5 38.5 26.5H41.5C41.7761 26.5 42 26.7239 42 27V30C42 30.2761 41.7761 30.5 41.5 30.5H38.5C38.2239 30.5 38 30.2761 38 30V27ZM8 28.5H20V40.5H8V28.5ZM6 28.5C6 27.3954 6.89543 26.5 8 26.5H20C21.1046 26.5 22 27.3954 22 28.5V40.5C22 41.6046 21.1046 42.5 20 42.5H8C6.89543 42.5 6 41.6046 6 40.5V28.5ZM12.5 32.5C12.2239 32.5 12 32.7239 12 33V36C12 36.2761 12.2239 36.5 12.5 36.5H15.5C15.7761 36.5 16 36.2761 16 36V33C16 32.7239 15.7761 32.5 15.5 32.5H12.5ZM40 8.5H28V20.5H40V8.5ZM28 6.5C26.8954 6.5 26 7.39543 26 8.5V20.5C26 21.6046 26.8954 22.5 28 22.5H40C41.1046 22.5 42 21.6046 42 20.5V8.5C42 7.39543 41.1046 6.5 40 6.5H28ZM32 13C32 12.7239 32.2239 12.5 32.5 12.5H35.5C35.7761 12.5 36 12.7239 36 13V16C36 16.2761 35.7761 16.5 35.5 16.5H32.5C32.2239 16.5 32 16.2761 32 16V13Z" fill="#27215B"/>
             </svg>
