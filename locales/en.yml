@@ -9,7 +9,7 @@ index:
       your computer. The processing of the information happens exclusively in your 
       browser. To create the Pass, only a cryptographic hash is sent to our server 
       and signed there. This means we have no possibility to read or save your data.
-    - To protect your privacy, we also ask you not to share your Pass with others.
+    - To protect your privacy, we also ask you not to share your COVID Pass with others.
     inputText: I have read the <a href='/privacy' target='_blank'>privacy policy</a> and consent to the processing of my data
     icons:
       noStorage: Local Processing
@@ -71,7 +71,10 @@ about:
   title: About us
   md: "Hi, we are [Donatus](https://www.linkedin.com/in/donatuswolf/) and [Philipp](https://www.linkedin.com/in/philipp-trenz-a544a8182/). Two developer and designer with a 💙 for innovative solutions and intuitive user experience to overcome social challenges and (re)enable participation.
 
+
     COVID has been a major constraint on all of our lives over the past few months. Gradually, some normality is now returning. With this tool, we want to make a small contribution to making everyday life and travel a little easier.
+
+    ***
 
     Thanks to [Ann-Kathrin](https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208), who contributed the logo we use."
 impress:

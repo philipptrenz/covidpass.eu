@@ -10,7 +10,7 @@ index:
       ausschließlich in Deinem Browser. Zur Erstellung des Passes wird lediglich ein
       kryptografischer Hash an unseren Server gesendet und dort signiert. Das bedeutet
       wir haben erst gar keine Möglichkeit Deine Daten zu lesen oder zu speichern.
-    - Zum Schutz Deiner Privatsphäre bitten wir auch Dich deinen Pass nicht an Dritte weiterzugeben.
+    - Zum Schutz Deiner Privatsphäre bitten wir auch Dich deinen COVID Pass nicht an Dritte weiterzugeben.
     inputText: Ich habe die <a href='/de/privacy' target='_blank'>Datenschutz-Bestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten zu
     icons:
       noStorage: Lokale Verarbeitung
@@ -69,9 +69,12 @@ labels:
   reportIssue: Fehler melden
 about:
   title: Über uns
-  md: "Hallo, wir sind [Donatus](https://www.linkedin.com/in/donatuswolf/) und [Philipp](https://www.linkedin.com/in/philipp-trenz-a544a8182/). Zwei Entwickler und Designer mit einem 💙  für innovative Lösungen und intuitive User Experience, um soziale Herausforderungen zu meistern und Teilhabe (wieder) zu ermöglichen.
+  md: "Hi, wir sind [Donatus](https://www.linkedin.com/in/donatuswolf/) und [Philipp](https://www.linkedin.com/in/philipp-trenz-a544a8182/). Zwei Entwickler und Designer mit einem 💙  für innovative Lösungen und intuitive User Experience, um soziale Herausforderungen zu meistern und Teilhabe (wieder) zu ermöglichen.
+
 
     COVID hat unser aller Leben in den letzten Monaten stark beeinträchtigt. Allmählich kehrt nun eine gewisse Normalität zurück. Mit diesem Tool wollen wir einen kleinen Beitrag dazu leisten, den Alltag und das Reisen ein wenig leichter zu machen.
+
+    ***
 
     Vielen Dank an [Ann-Kathrin](https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208), die das Logo zur Verfügung gestellt hat."
 impress:
