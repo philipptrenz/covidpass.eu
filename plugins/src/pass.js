@@ -79,23 +79,9 @@ exports.createPass = async function(data) {
     return toBuffer(zip);
   }
 
-  function createPassGeneric(payload) {
+  function createPassSecondaryAndAuxiliaryFields(payload) {
     if (payload.certificateType == consts.CERTIFICATE_TYPE.VACCINATION) {
       return {
-        headerFields: [
-          {
-            key: "type",
-            label: window.$nuxt.$t('pass.certificateType'),
-            value: payload.certificateType
-          }
-        ],
-        primaryFields: [
-          {
-            key: "name",
-            label: window.$nuxt.$t('pass.name'),
-            value: payload.name
-          }
-        ],
         secondaryFields: [
           {
             key: "dose",
@@ -121,51 +107,10 @@ exports.createPass = async function(data) {
             value: payload.dateOfBirth,
             textAlignment: "PKTextAlignmentRight"
           }
-        ],
-        backFields: [
-          {
-            key: "uvci",
-            label: window.$nuxt.$t('pass.uniqueCertificateIdentifier'),
-            value: payload.uvci
-          },
-          {
-            key: "issuer",
-            label: window.$nuxt.$t('pass.certificateIssuer'),
-            value: payload.certificateIssuer
-          },
-          {
-            key: "country",
-            label: window.$nuxt.$t('pass.countryOfVaccination'),
-            value: payload.countryOfVaccination
-          },
-          {
-            key: "manufacturer",
-            label: window.$nuxt.$t('pass.manufacturer'),
-            value: payload.manufacturer
-          },
-          {
-            key: "disclaimer",
-            label: window.$nuxt.$t('pass.disclaimer.label'),
-            value: window.$nuxt.$t('pass.disclaimer.value'),
-          }
         ]
       }
-    } else if (payload.certificateType == consts.CERTIFICATE_TYPE.TEST){
+    } else if (payload.certificateType == consts.CERTIFICATE_TYPE.TEST) {
       return {
-        headerFields: [
-          {
-            key: "type",
-            label: window.$nuxt.$t('pass.certificateType'),
-            value: payload.certificateType
-          }
-        ],
-        primaryFields: [
-          {
-            key: "name",
-            label: window.$nuxt.$t('pass.name'),
-            value: payload.name
-          }
-        ],
         secondaryFields: [
         
         ],
@@ -176,27 +121,10 @@ exports.createPass = async function(data) {
             value: payload.dateOfBirth,
             textAlignment: "PKTextAlignmentRight"
           }
-        ],
-        backFields: [
-
         ]
       }
-    } else if (payload.certificateType == consts.CERTIFICATE_TYPE.RECOVERY){
+    } else if (payload.certificateType == consts.CERTIFICATE_TYPE.RECOVERY) {
       return {
-        headerFields: [
-          {
-            key: "type",
-            label: window.$nuxt.$t('pass.certificateType'),
-            value: payload.certificateType
-          }
-        ],
-        primaryFields: [
-          {
-            key: "name",
-            label: window.$nuxt.$t('pass.name'),
-            value: payload.name
-          }
-        ],
         secondaryFields: [
         
         ],
@@ -207,9 +135,6 @@ exports.createPass = async function(data) {
             value: payload.dateOfBirth,
             textAlignment: "PKTextAlignmentRight"
           }
-        ],
-        backFields: [
-          
         ]
       }
     }
@@ -244,7 +169,7 @@ exports.createPass = async function(data) {
 
   const passName = "COVID Pass"
   const serialNumber = payload.uvci + randomId(8) // TODO: Create serialNumber from hash 
-  const passGenericData = createPassGeneric(payload)
+  const passSpecificFields = createPassSecondaryAndAuxiliaryFields(payload)
 
   const pass = {
     passTypeIdentifier: window.$nuxt.$config.passIdentifier,
@@ -261,7 +186,46 @@ exports.createPass = async function(data) {
     serialNumber: serialNumber,
     barcodes: [qrCode],
     barcode: qrCode,
-    generic: passGenericData
+    generic: {
+      headerFields: [
+        {
+          key: "type",
+          label: window.$nuxt.$t('pass.certificateType.label'),
+          value: window.$nuxt.$t(`pass.certificateType.${ payload.certificateType.toLowerCase() }`)
+        }
+      ],
+      primaryFields: [
+        {
+          key: "name",
+          label: window.$nuxt.$t('pass.name'),
+          value: payload.name
+        }
+      ],
+      secondaryFields: passSpecificFields.secondaryFields,
+      auxiliaryFields: passSpecificFields.auxiliaryFields,
+      backFields: [
+        {
+          key: "uvci",
+          label: window.$nuxt.$t('pass.uniqueCertificateIdentifier'),
+          value: payload.uvci
+        },
+        {
+          key: "issuer",
+          label: window.$nuxt.$t('pass.certificateIssuer'),
+          value: payload.certificateIssuer
+        },
+        {
+          key: "country",
+          label: window.$nuxt.$t('pass.country'),
+          value: payload.country
+        },
+        {
+          key: "disclaimer",
+          label: window.$nuxt.$t('pass.disclaimer.label'),
+          value: window.$nuxt.$t('pass.disclaimer.value'),
+        }
+      ]
+    }
 
   };
 

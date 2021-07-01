@@ -67,17 +67,28 @@ exports.Payload = class {
     }
 
     this.certificateType = consts.CERTIFICATE_TYPE.VACCINATION
+
+    /* General data */
+
+    this.uvci = v["ci"]
+    this.certificateIssuer = v["is"]
+
+    const countryCodes = valueSets.countryCodes["valueSetValues"]
+    const countryCode = v["co"]
+    if(!(countryCode in countryCodes)) {
+      throw new Error('Invalid country code')
+    }
+    this.country = countryCodes[countryCode].display
+
+    /* Vacc specific data */
     
     const doseIndex = v["dn"]
     const totalDoses = v["sd"]
     this.dose = doseIndex + '/' + totalDoses
-    
     this.dateOfVaccination = v["dt"]
-    this.uvci = v["ci"]
-    this.certificateIssuer = v["is"]
 
     const medicalProducts = valueSets.medicalProducts["valueSetValues"]
-    const countryCodes = valueSets.countryCodes["valueSetValues"]
+    
     const manufacturers = valueSets.manufacturers["valueSetValues"]
 
     const medicalProductKey = v["mp"]
@@ -87,17 +98,12 @@ exports.Payload = class {
 
     this.medicalProductKey = medicalProductKey
 
-    const countryCode = v["co"]
-    if(!(countryCode in countryCodes)) {
-      throw new Error('Invalid country code')
-    }
-
     const manufacturerKey = v["ma"]
     if(!(manufacturerKey in manufacturers)) {
       throw new Error('Invalid manufacturer')
     }
 
-    this.countryOfVaccination = countryCodes[countryCode].display
+    
     this.vaccineName = medicalProducts[medicalProductKey].display
     this.manufacturer = manufacturers[manufacturerKey].display
   }
@@ -107,6 +113,20 @@ exports.Payload = class {
       throw new Error('Failed to read test information')
     }
     this.certificateType = consts.CERTIFICATE_TYPE.TEST
+
+    /* General data */
+
+    this.uvci = t["ci"]
+    this.certificateIssuer = t["is"]
+
+    const countryCodes = valueSets.countryCodes["valueSetValues"]
+    const countryCode = t["co"]
+    if(!(countryCode in countryCodes)) {
+      throw new Error('Invalid country code')
+    }
+    this.country = countryCodes[countryCode].display
+    
+    /* Test specific data */
 
     /*
      TODO: Fill data, example:
@@ -133,6 +153,20 @@ exports.Payload = class {
     }
 
     this.certificateType = consts.CERTIFICATE_TYPE.RECOVERY
+
+    /* General data */
+
+    this.uvci = r["ci"]
+    this.certificateIssuer = r["is"]
+
+    const countryCodes = valueSets.countryCodes["valueSetValues"]
+    const countryCode = r["co"]
+    if(!(countryCode in countryCodes)) {
+      throw new Error('Invalid country code')
+    }
+    this.country = countryCodes[countryCode].display
+    
+    /* Recovery specific data */
 
     /*
      TODO: Fill data, example:

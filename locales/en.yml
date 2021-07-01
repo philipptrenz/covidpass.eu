@@ -35,7 +35,11 @@ index:
       when locked</i>."
     shareButtonText: Tell your friends
 pass:
-  certificateType: Certificate Type
+  certificateType: 
+    label: Certificate Type
+    vaccination: Vaccination
+    recovery: Recovery
+    test: Test
   name: Name
   dose: Dose
   dateOfVaccination: Date of Vaccination
@@ -43,11 +47,11 @@ pass:
   dateOfBirth: Date of Birth
   uniqueCertificateIdentifier: Unique Certificate Identifier (UVCI)
   certificateIssuer:  Certificate Issuer
-  countryOfVaccination: Country of Vaccination
+  country: Issuing country
   manufacturer: Manufacturer
   disclaimer:
     label: Disclaimer
-    value: This certificate is only valid in combination with the ID card of the certificate holder and expires one year + 14 days after the last dose. The validity of this certificate was not checked by COVID Pass.
+    value: This certificate is only valid in combination with the ID card of the certificate holder. The validity of this certificate was not checked by COVID Pass.
 labels:
   next: Next
   backToHome: Back to home
