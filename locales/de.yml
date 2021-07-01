@@ -37,19 +37,31 @@ index:
     & Passcode</i> > <i>Im Sperrzustand Zugriff erlauben</i> ändern."
     shareButtonText: Erzähle es weiter
 pass:
-  certificateType: Zertifikatstyp
+  certificateType: 
+    label: Zertifikatstyp
+    vaccination: Impfung
+    recovery: Genesung
+    test: Test
   name: Name
+  dateOfBirth: Geburtsdatum
   dose: Dosis
   dateOfVaccination: Impfdatum
-  vaccine: Impfung
-  dateOfBirth: Geburtsdatum
+  vaccine: Impfstoff
+  positiveTested: Positiv getestet
+  validFrom: Gültig ab
+  validUntil: Gültig bis
+  testType: Art des Tests
+  testResult: Testergebnis
+  testingTime: Testzeitpunkt
   uniqueCertificateIdentifier: Eindeutiger Zertifikatsidentifizierer (UVCI)
   certificateIssuer: Zertifikatsaussteller
-  countryOfVaccination: Land der Impfung
-  manufacturer: Hersteller
+  country: Ausstellendes Land
+  credits:
+    label: Erstellt durch
+    value: https://covidpass.eu
   disclaimer:
-    label: Haftungsausschluss
-    value: Dieses Zertifikat ist nur in Verbindung mit dem Personalausweis des Zertifikatsinhabers gültig und läuft ein Jahr + 14 Tage nach der letzten Dosis ab. Die Gültigkeit dieses Zertifikats wurde von COVID Pass nicht überprüft.
+    label: Hinweis
+    value: Dieses Zertifikat ist nur in Verbindung mit dem Personalausweis des Zertifikatsinhabers gültig. Die Gültigkeit dieses Zertifikats wurde von COVID Pass nicht überprüft.
 labels:
   next: Weiter
   backToHome: Zurück zur Startseite

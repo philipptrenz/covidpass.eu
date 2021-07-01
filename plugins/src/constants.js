@@ -3,5 +3,12 @@ exports.VALUE_TYPES = {
     medicalProducts: 'vaccine-medicinal-product.json',
     countryCodes: 'country-2-codes.json',
     manufacturers: 'vaccine-mah-manf.json',
+    testTypes: 'test-type.json',
+    testResults: 'test-result.json'
 }
 exports.NAME = 'COVID Pass'
+exports.CERTIFICATE_TYPE = {
+    VACCINATION: 'Vaccination',
+    TEST: 'Test',
+    RECOVERY: 'Recovery',
+}

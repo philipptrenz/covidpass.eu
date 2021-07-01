@@ -1,12 +1,15 @@
 'use strict';
 
 const utils = require('./utils')
+const consts = require('./constants')
 
-const { Payload } = require('./payload')
+const { Payload, CertificateType } = require('./payload')
 const { toBuffer } = require('do-not-zip')
 const crypto = require('crypto')
 
 exports.createPass = async function(data) {
+
+  /* Functions */
 
   function randomId(length) {
     var result           = '';
@@ -76,6 +79,100 @@ exports.createPass = async function(data) {
     return toBuffer(zip);
   }
 
+  function createPassSecondaryAndAuxiliaryFields(payload) {
+    if (payload.certificateType == consts.CERTIFICATE_TYPE.VACCINATION) {
+      return {
+        secondaryFields: [
+          {
+            key: "dose",
+            label:  window.$nuxt.$t('pass.dose'),
+            value: payload.dose
+          },
+          {
+            key: "dov",
+            label: window.$nuxt.$t('pass.dateOfVaccination'),
+            value: payload.dateOfVaccination,
+            textAlignment: "PKTextAlignmentRight"
+          }
+        ],
+        auxiliaryFields: [
+          {
+            key: "vaccine",
+            label: window.$nuxt.$t('pass.vaccine'),
+            value: payload.vaccineName
+          },
+          {
+            key: "dob",
+            label: window.$nuxt.$t('pass.dateOfBirth'),
+            value: payload.dateOfBirth,
+            textAlignment: "PKTextAlignmentRight"
+          }
+        ]
+      }
+    } else if (payload.certificateType == consts.CERTIFICATE_TYPE.TEST) {
+      return {
+        secondaryFields: [
+          {
+            key: "testType",
+            label: window.$nuxt.$t('pass.testType'),
+            value: payload.testType,
+          },
+          {
+            key: "testResult",
+            label: window.$nuxt.$t('pass.testResult'),
+            value: payload.testResult,
+            textAlignment: "PKTextAlignmentRight"
+          }
+        ],
+        auxiliaryFields: [
+          {
+            key: "testingTime",
+            label: window.$nuxt.$t('pass.testingTime'),
+            value: payload.testingTime,
+          },
+          {
+            key: "dob",
+            label: window.$nuxt.$t('pass.dateOfBirth'),
+            value: payload.dateOfBirth,
+            textAlignment: "PKTextAlignmentRight"
+          }
+        ]
+      }
+    } else if (payload.certificateType == consts.CERTIFICATE_TYPE.RECOVERY) {
+      return {
+        secondaryFields: [
+          {
+            key: "validFrom",
+            label:  window.$nuxt.$t('pass.validFrom'),
+            value: payload.validFromDate
+          },
+          {
+            key: "validUntil",
+            label: window.$nuxt.$t('pass.validUntil'),
+            value: payload.validUntilDate,
+            textAlignment: "PKTextAlignmentRight"
+          }
+        ],
+        auxiliaryFields: [
+          {
+            key: "firstPositiveTested",
+            label: window.$nuxt.$t('pass.positiveTested'),
+            value: payload.positiveTestedDate
+          },
+          {
+            key: "dob",
+            label: window.$nuxt.$t('pass.dateOfBirth'),
+            value: payload.dateOfBirth,
+            textAlignment: "PKTextAlignmentRight"
+          }
+        ]
+      }
+    }
+
+  }
+
+  /* Execution */
+
   let valueSets
 
   try {
@@ -90,7 +187,7 @@ exports.createPass = async function(data) {
   try {
     payload = new Payload(data, valueSets)
   } catch (e) {
-    console.error(e)
+    console.error("Extracting payload failed:", e)
     return undefined
   }
 
@@ -101,6 +198,8 @@ exports.createPass = async function(data) {
   }
 
   const passName = "COVID Pass"
+  const serialNumber = payload.uvci + randomId(8) // TODO: Create serialNumber from hash 
+  const passSpecificFields = createPassSecondaryAndAuxiliaryFields(payload)
 
   const pass = {
     passTypeIdentifier: window.$nuxt.$config.passIdentifier,
@@ -114,15 +213,15 @@ exports.createPass = async function(data) {
     labelColor: payload.labelColor,
     foregroundColor: payload.foregroundColor,
     backgroundColor: payload.backgroundColor,
-    serialNumber: payload.uvci + randomId(8),
+    serialNumber: serialNumber,
     barcodes: [qrCode],
     barcode: qrCode,
     generic: {
       headerFields: [
         {
           key: "type",
-          label: window.$nuxt.$t('pass.certificateType'),
-          value: payload.certificateType
+          label: window.$nuxt.$t('pass.certificateType.label'),
+          value: window.$nuxt.$t(`pass.certificateType.${ payload.certificateType.toLowerCase() }`)
         }
       ],
       primaryFields: [
@@ -132,32 +231,8 @@ exports.createPass = async function(data) {
           value: payload.name
         }
       ],
-      secondaryFields: [
-        {
-          key: "dose",
-          label:  window.$nuxt.$t('pass.dose'),
-          value: payload.dose
-        },
-        {
-          key: "dov",
-          label: window.$nuxt.$t('pass.dateOfVaccination'),
-          value: payload.dateOfVaccination,
-          textAlignment: "PKTextAlignmentRight"
-        }
-      ],
-      auxiliaryFields: [
-        {
-          key: "vaccine",
-          label: window.$nuxt.$t('pass.vaccine'),
-          value: payload.vaccineName
-        },
-        {
-          key: "dob",
-          label: window.$nuxt.$t('pass.dateOfBirth'),
-          value: payload.dateOfBirth,
-          textAlignment: "PKTextAlignmentRight"
-        }
-      ],
+      secondaryFields: passSpecificFields.secondaryFields,
+      auxiliaryFields: passSpecificFields.auxiliaryFields,
       backFields: [
         {
           key: "uvci",
@@ -171,18 +246,18 @@ exports.createPass = async function(data) {
         },
         {
           key: "country",
-          label: window.$nuxt.$t('pass.countryOfVaccination'),
-          value: payload.countryOfVaccination
-        },
-        {
-          key: "manufacturer",
-          label: window.$nuxt.$t('pass.manufacturer'),
-          value: payload.manufacturer
+          label: window.$nuxt.$t('pass.country'),
+          value: payload.country
         },
         {
           key: "disclaimer",
           label: window.$nuxt.$t('pass.disclaimer.label'),
           value: window.$nuxt.$t('pass.disclaimer.value'),
+        },
+        {
+          key: "credits",
+          label: window.$nuxt.$t('pass.credits.label'),
+          value: window.$nuxt.$t('pass.credits.value'),
         }
       ]
     }
