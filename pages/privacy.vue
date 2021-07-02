@@ -12,8 +12,6 @@
     </h1>
     
     <div v-html="$md.render(this.$t('privacy.md'))" class="md"></div>
-    
-    <NuxtLink :to="localePath('/')" class="underline text-sm">{{ $t('labels.backToHome') }}</NuxtLink>
 
   </div>
 </template>

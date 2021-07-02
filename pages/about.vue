@@ -14,8 +14,6 @@
     
     <div v-html="$md.render(this.$t('about.md'))" class="md"></div>
     
-    
-
   </div>
 </template>
 
