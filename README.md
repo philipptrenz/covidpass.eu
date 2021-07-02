@@ -1,21 +1,21 @@
 [![COVID Pass og image](static/og-image.png)](https://covidpass.eu)
 
-This web application offers the possibility to scan the EU-wide vaccination, test and recovery certificates (namely [EU Digital COVID Certificate](https://github.com/eu-digital-green-certificates/dgc-overview)) as QR code and generate an [Apple Wallet® pass](https://support.apple.com/en-us/HT204003) from it, so they are easily accessible for validation on iPhone®, and Apple Watch®.
+This web application offers the possibility to scan the EU-wide vaccination, test and recovery certificates (namely [EU Digital COVID Certificate](https://github.com/eu-digital-green-certificates/dgc-overview)) as QR code and generate an [Apple Wallet pass](https://support.apple.com/en-us/HT204003) from it, so they are easily accessible for validation on iPhone, and Apple Watch.
 
 ## Discussion
 
-Since the QR codes store sensitive personal information as well as health data, processing of the data is done entirely within the users browser. Only a hash over the data is sent to the server to sign it with a certificate issued by Apple®, for which a Apple® Developer Program Membership is required.
+Since the QR codes store sensitive personal information as well as health data, processing of the data is done entirely within the users browser. Only a hash over the data is sent to the server to sign it with a certificate issued by Apple, for which a Apple Developer Program Membership is required.
 
-Providing Apple Wallet® passes from the official COVID apps, like [Corona-Warn](https://github.com/corona-warn-app), has already been discussed and seems to have been discarded due to security concerns and lack of specification of this requirement to developers (see [here](https://github.com/eu-digital-green-certificates/dgca-wallet-app-ios/issues/69) or [here](https://github.com/corona-warn-app/cwa-app-ios/issues/2965)).
+Providing Apple Wallet passes from the official COVID apps, like [Corona-Warn](https://github.com/corona-warn-app), has already been discussed and seems to have been discarded due to security concerns and lack of specification of this requirement to developers (see [here](https://github.com/eu-digital-green-certificates/dgca-wallet-app-ios/issues/69) or [here](https://github.com/corona-warn-app/cwa-app-ios/issues/2965)).
 
-While we very much understand these decisions for the official COVID apps, we believe that with proper education, users can assess these risks for themselves. As furthermore named [here](https://github.com/eu-digital-green-certificates/dgca-wallet-app-ios/issues/69#issuecomment-861384615), there are countless apps which can be utilized to generate Apple Wallet® passes. However, they also use external servers and it is intransparent how data, this case very sensitive data, is handled. 
+While we very much understand these decisions for the official COVID apps, we believe that with proper education, users can assess these risks for themselves. As furthermore named [here](https://github.com/eu-digital-green-certificates/dgca-wallet-app-ios/issues/69#issuecomment-861384615), there are countless apps which can be utilized to generate Apple Wallet passes. However, they also use external servers and it is intransparent how data, this case very sensitive data, is handled. 
 
 Therefore, this project offers a transparent and secure way to create passes.
 If you disagree, feel free to open an issue and let's discuss it.
 
 ## Principles
 
-This project attempts a compromise to enable the user experience of Apple Wallet® passes while protecting sensitive information in the best possible way. For this it follows the following principles:
+This project attempts a compromise to enable the user experience of Apple Wallet passes while protecting sensitive information in the best possible way. For this it follows the following principles:
 
 * Data economy
   * The sensitive data is only used within the users browser
@@ -79,3 +79,8 @@ $ docker-compose up -d
 ```
 
 Except when accessed from `localhost`, the container must be run behind a reverse proxy (e.g. nginx), which provides SSL and redirects all traffic to HTTPS!
+
+
+## Trademark notice
+
+Apple, Apple Wallet, iPhone and Apple Watch are trademarks of Apple Inc., registered in the U.S. and other countries and regions.
