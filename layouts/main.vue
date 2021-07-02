@@ -19,7 +19,9 @@
       
       <div class="flex-1 hidden sm:flex flex-row justify-center align-middle pl-2">
         <div class="h-full fixed float-right">
-          <img class="h-full md:pt-8 lg:pt-16 object-cover object-left-bottom" src="/mockup-wallet-desktop.png">
+          <transition name="slide">
+            <img class="h-full md:pt-8 lg:pt-16 object-cover object-left-bottom" src="/mockup-wallet-desktop.png" v-on:load="onLoaded" v-show="loaded">
+          </transition>
         </div>
       </div>
       
@@ -27,3 +29,44 @@
     
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+export default Vue.extend({
+  data() {
+    return {
+      loaded: false
+    }
+  },
+  methods: {
+    onLoaded() {
+      this.loaded = true
+    }
+  }
+  
+})
+</script>
+
+<style scoped>
+.slide-leave-active,
+.slide-enter-active {
+  transition: 1s;
+}
+.slide-enter {
+  transform: translate(100%, 0);
+}
+.slide-leave-to {
+  transform: translate(-100%, 0);
+}
+
+.slideback-leave-active,
+.slideback-enter-active {
+  transition: 1s;
+}
+.slideback-enter {
+  transform: translate(-100%, 0);
+}
+.slideback-leave-to {
+  transform: translate(100%, 0);
+}
+</style>
