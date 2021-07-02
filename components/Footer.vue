@@ -1,22 +1,15 @@
 <template>
   <div class="w-full flex flex-row justify-center text-xs font-light">
-    <div class="w-full max-w-md flex flex-row flex-wrap justify-around px-6">
+    <div class="w-full max-w-md px-6">
 
-      <div> 
-        <NuxtLink :to="localePath('/about')" class="px-1">{{ $t('about.title') }}</NuxtLink> 
+      <div class="flex flex-row justify-center align-middle space-x-1 md:space-x-2 lg:space-x-3"> 
+        <NuxtLink :to="localePath('/about')">{{ $t('about.title') }}</NuxtLink> 
         <span>|</span> 
-        <NuxtLink :to="localePath('/impress')" class="px-1">{{ $t('impress.title') }}</NuxtLink>
+        <NuxtLink :to="localePath('/impress')">{{ $t('impress.title') }}</NuxtLink>
         <span>|</span> 
-        <NuxtLink :to="localePath('/privacy')" class="px-1">{{ $t('privacy.title') }}</NuxtLink>
+        <NuxtLink :to="localePath('/privacy')">{{ $t('privacy.title') }}</NuxtLink>  
         <span>|</span> 
-      </div>
-
-      <div>
-        <a class="px-1" href="https://github.com/philipptrenz/covidpass" target="_blank">Github</a>
-        <span>|</span> 
-        <a class="px-1" href="https://github.com/philipptrenz/covidpass/issues/new" target="_blank">{{ $t('labels.reportIssue') }}</a> |
-
-        <select id="select" ref="select" v-model="$i18n.locale" class="uppercase appearance-none bg-transparent border-none rounded-none pr-4 focus:outline-none px-1">
+        <select id="select" ref="select" v-model="$i18n.locale" class="uppercase appearance-none bg-transparent border-none rounded-none pr-4 focus:outline-none mx-3">
           <option
             class="appearance-none bg-none"
             v-for="lang in $i18n.locales"
@@ -24,7 +17,15 @@
             :value="lang"
             >{{ lang }}</option
           >
-        </select>
+        </select>      
+      </div>
+
+      <div class="flex flex-row justify-center align-middle pt-1 space-x-1 md:space-x-2 lg:space-x-3">
+        <a href="https://github.com/philipptrenz/covidpass" target="_blank">Github</a>
+        <span>|</span> 
+        <a href="https://github.com/philipptrenz/covidpass/issues/new" target="_blank">{{ $t('labels.reportIssue') }}</a> 
+        <span>|</span>   
+        <a href="https://ko-fi.com/covidpass" target="_blank">{{ $t('labels.support') }}</a>
       </div>
 
     </div>

@@ -67,6 +67,7 @@ labels:
   loading: Laden ...
   tryAgain: Erneut versuchen
   reportIssue: Fehler melden
+  support: Unterstützen
 about:
   title: Über uns
   md: "Hi, wir sind [Donatus](https://www.linkedin.com/in/donatuswolf/) und [Philipp](https://www.linkedin.com/in/philipp-trenz-a544a8182/). Zwei Entwickler und Designer mit einem 💙  für innovative Lösungen und intuitive User Experience, um soziale Herausforderungen zu meistern und Teilhabe (wieder) zu ermöglichen.
@@ -91,7 +92,7 @@ impress:
 
     ### Kontakt
 
-    [covidpass@donatuswolf.de](mailto:covidpass@donatuswolf.de)
+    [info@covidpass.eu](mailto:info@covidpass.eu)
 
     ### EU-Streitbeilegung
 
@@ -154,7 +155,7 @@ privacy:
 
     Deutschland
 
-    E-Mail: [covidpass@donatuswolf.de](mailto:covidpass@donatuswolf.de)
+    E-Mail: [info@covidpass.eu](mailto:info@covidpass.eu)
 
     ### Vereinfachte Erklärung des Prozesses
 
