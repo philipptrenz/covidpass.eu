@@ -1,7 +1,7 @@
 ---
 index:
   title: Your COVID Pass
-  subtitle: Just a click away in your Apple Wallet
+  subtitle: just a click away in your Apple Wallet
   consent:
     paragraphs:
     - Your QR code contains personal 
@@ -10,7 +10,7 @@ index:
       browser. To create the Pass, only a cryptographic hash is sent to our server 
       and signed there. This means we have no possibility to read or save your data.
     - To protect your privacy, we also ask you not to share your COVID Pass with others.
-    inputText: I have read the <a href='/privacy'>privacy policy</a> and consent to the processing of my data
+    inputText: I have read the <a href='/privacy'>Privacy Policy</a> and consent to the processing of my data
     icons:
       noStorage: Local Processing
       openSource: Open Source
@@ -75,9 +75,13 @@ about:
 
     COVID has been a major constraint on all of our lives over the past few months. Gradually, some normality is now returning. With this tool, we want to make a small contribution to making everyday life and travel a little easier.
 
-    ***
 
-    Thanks to [Ann-Kathrin](https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208), who contributed the logo."
+    Thanks to [Ann-Kathrin](https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208), who contributed the logo.
+    
+
+    We created COVID Pass within our spare time and pay the server costs out of our own pocket. If you find this project useful, please feel free to support us."
+    
+  supportButton: Support us on Ko-fi
 impress:
   title: Impressum
   md: "### Information according to § 5 TMG
