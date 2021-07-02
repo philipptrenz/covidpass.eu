@@ -25,8 +25,9 @@ export default {
       { property: 'og:url', content: 'covidpass.eu' },
       { property: 'og:site_name', content: 'COVID Pass' },
       { property: 'og:image', content: '/og-image.png' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:image', content: '/og-image.png' },
+      { property: 'og:image:width', content: '1280' },
+      { property: 'og:image:height', content: '640' },
+      { name: 'twitter:card', content: 'summary' },
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
