@@ -75,11 +75,6 @@ export default {
     'nuxt-i18n',
   ],
 
-  tailwindcss: {
-    //mode: 'jit', // enable just-in-time mode
-    jit: true
-  },
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',

@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   theme: {
     colors: {
       transparent: 'transparent',
