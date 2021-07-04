@@ -14,8 +14,10 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Scan your vaccination, test and recovery certificates in QR code representation and save them to your Apple Wallet' },
       { name: 'application-name', content: 'COVID Pass'},
+      { name: 'keywords', content: 'Apple Wallet, EU Digital COVID Certificate, EU Green Certificate, Vaccination, Recovery, Test, Impfung, Genesung'},
+      { name: 'author', content: 'Donatus Wolf, Philipp Trenz'},
       { name: 'theme-color', content: tailwind.theme.colors.primary },
       { name: 'msapplication-TileColor', content: tailwind.theme.colors.primary },
       { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
@@ -28,6 +30,8 @@ export default {
       { property: 'og:image:width', content: '1280' },
       { property: 'og:image:height', content: '640' },
       { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:description', content: 'Scan your vaccination, test and recovery certificates in QR code representation and save them to your Apple Wallet' },
+      { name: 'twitter:creator', content: '@donatuswolf' },
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
