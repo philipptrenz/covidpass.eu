@@ -1,7 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import forge from 'node-forge';
+import crypto from 'crypto';
 import fs from 'fs';
+
+import img from '../plugins/src/img'
 
 const ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['http://localhost:3000']
 
@@ -14,13 +17,26 @@ const APPLE_CA_CERTIFICATE = forge.pki.certificateFromPem(fs.readFileSync('./key
  * 
  */
 
+function getBufferHash(buffer) {
+    // creating hash
+    const sha = crypto.createHash('sha1');
+    sha.update(buffer);
+    return sha.digest('hex');
+}
+
+const imgHashes = {
+    icon: getBufferHash(img.icon),
+    icon2x: getBufferHash(img.icon2x),
+    logo: getBufferHash(img.logo),
+    logo2x: getBufferHash(img.logo2x),
+}
+
 const app = express()
 
 app.use(cors({
     origin: function(origin, callback) {
-        if (!origin) return callback(null, true)
         if (ALLOWED_ORIGINS.indexOf(origin) === -1) {
-            console.warn("Received request on /api/sign from origin", origin)
+            console.warn("Received request on /api/sign from unallowed origin", origin)
             var msg = 'The CORS policy for this site does not allow access from the specified Origin.'
             return callback(new Error(msg), false)
         }
@@ -33,7 +49,21 @@ app.post('/sign', async (req, res) => {
 
     let manifestJson = req.body
 
-    if (!'PassJsonHash' in manifestJson) {
+    if ( !('pass.json' in manifestJson) ||
+         !('icon.png' in manifestJson) ||
+         !('icon@2x.png' in manifestJson) ||
+         !('logo.png' in manifestJson) ||
+         !('logo@2x.png' in manifestJson) ) {
+        console.warn("Received request with invalid payload, key(s) missing:", manifestJson)
+        res.status(400).send('Could not decode payload')
+        return
+    }
+
+    if ( manifestJson['icon.png'] != imgHashes.icon ||
+         manifestJson['icon@2x.png'] != imgHashes.icon2x ||
+         manifestJson['logo.png'] != imgHashes.logo ||
+         manifestJson['logo@2x.png'] != imgHashes.logo2x ) {
+        console.warn("Received request with invalid payload, hashes not matching:", manifestJson)
         res.status(400).send('Could not decode payload')
         return
     }
