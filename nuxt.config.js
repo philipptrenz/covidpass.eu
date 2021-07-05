@@ -24,7 +24,7 @@ export default {
       { property: 'og:title', content: 'COVID Pass' },
       { property: 'og:description', content: 'Your digital COVID pass just one click away' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'covidpass.eu' },
+      { property: 'og:url', content: 'https://covidpass.eu' },
       { property: 'og:site_name', content: 'COVID Pass' },
       { property: 'og:image', content: '/og-image.png' },
       { property: 'og:image:width', content: '1280' },
