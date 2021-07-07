@@ -4,8 +4,33 @@ const consts = require('./constants')
 exports.Payload = class {
 
   /*
-   * For key descriptions, see: https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/main/DCC.Types.schema.json
+   * For key descriptions, see: https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/main/DCC.combined-schema.json
    */
+
+  isValidDate(d) {
+    return d instanceof Date && !isNaN(d);
+  }
+
+  formatDateString(dateString) {
+    try {
+      const d = new Date(dateString)
+
+      if (!this.isValidDate(d))
+        throw Error("No valid date")
+
+      const locale = window.$nuxt.$i18n.locale
+      const localeDateString = d.toLocaleDateString(locale, {
+         year: 'numeric', month: 'numeric', day: 'numeric'
+      });
+
+      if (!localeDateString)
+        throw Error("Localized date string is emty")
+
+      return localeDateString
+    } catch (error) {
+      return dateString
+    }
+  }
 
   constructor(body, valueSets) {
 
@@ -45,7 +70,7 @@ exports.Payload = class {
       throw new Error('Failed to read date of birth')
     }
 
-    this.dateOfBirth = dob
+    this.dateOfBirth = this.formatDateString(dob)
 
 
     const innerData = decoded["-260"]["1"]
@@ -89,7 +114,7 @@ exports.Payload = class {
     const doseIndex = v["dn"]
     const totalDoses = v["sd"]
     this.dose = doseIndex + '/' + totalDoses
-    this.dateOfVaccination = v["dt"]
+    this.dateOfVaccination = this.formatDateString(v["dt"])
 
     const medicalProducts = valueSets.medicalProducts["valueSetValues"]
     
@@ -146,7 +171,7 @@ exports.Payload = class {
 
     this.testType = testTypes[testTypeId].display
     this.testResult = testResults[testResultId].display
-    this.testingTime = t["sc"] // Date/Time of Sample Collection
+    this.testingTime = this.formatDateString(t["sc"])
 
     console.log(this.testType, this.testResult)
   }
@@ -172,8 +197,8 @@ exports.Payload = class {
 
     /* Recovery specific data */
     
-    this.positiveTestedDate = r["fr"]
-    this.validFromDate = r["df"]
-    this.validUntilDate = r["du"]
+    this.positiveTestedDate = this.formatDateString(r["fr"])
+    this.validFromDate = this.formatDateString(r["df"])
+    this.validUntilDate = this.formatDateString(r["du"])
   }
 }
