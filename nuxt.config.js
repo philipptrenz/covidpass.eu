@@ -88,7 +88,7 @@ export default {
   axios: {},
 
   i18n: {
-    locales: ['en', 'de', ],
+    locales: ['en', 'de', 'fr', ],
     defaultLocale: 'en',
     vueI18n: i18n,
   },
