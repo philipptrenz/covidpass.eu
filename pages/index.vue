@@ -162,7 +162,10 @@
             </span>
           </div>
         </div>
+
       </div>
+
+      <KofiButton v-if="state == 3" class="block" />
 
     </div>
 
