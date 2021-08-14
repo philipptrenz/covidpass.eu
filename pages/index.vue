@@ -144,7 +144,7 @@
         </div>
 
         <div class="flex flex-row align-middle justify-center">
-          <a ref="download" @click="downloaded" >
+          <a ref="download" @click="downloaded" target="_system">
             <img :src="walletBadgeIcon" width="220" height="68" />
           </a>
         </div>
