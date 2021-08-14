@@ -54,7 +54,7 @@ app.post('/sign', async (req, res) => {
          !('icon@2x.png' in manifestJson) ||
          !('logo.png' in manifestJson) ||
          !('logo@2x.png' in manifestJson) ) {
-        console.warn("Received request with invalid payload, key(s) missing:", manifestJson)
+        console.warn("Received request with invalid payload")
         res.status(400).send('Could not decode payload')
         return
     }
@@ -63,7 +63,7 @@ app.post('/sign', async (req, res) => {
          manifestJson['icon@2x.png'] != imgHashes.icon2x ||
          manifestJson['logo.png'] != imgHashes.logo ||
          manifestJson['logo@2x.png'] != imgHashes.logo2x ) {
-        console.warn("Received request with invalid payload, hashes not matching:", manifestJson)
+        console.warn("Received request with invalid payload, hashes not matching")
         res.status(400).send('Could not decode payload')
         return
     }
