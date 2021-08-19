@@ -91,6 +91,11 @@ export default {
     locales: ['en', 'de', 'fr', 'es' ],
     defaultLocale: 'en',
     vueI18n: i18n,
+    detectBrowserLanguage: { 
+      alwaysRedirect: false, 
+      fallbackLocale: 'en', 
+      useCookie: false
+    }
   },
 
   // See https://github.com/markdown-it/markdown-it
