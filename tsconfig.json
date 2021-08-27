@@ -28,6 +28,7 @@
       "@types/node",
       "@nuxtjs/axios",
       "nuxt-i18n",
+      "nuxt-user-agent",
     ]
   },
   "exclude": [

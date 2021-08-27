@@ -83,6 +83,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
+    'nuxt-user-agent',
   ],
 
   axios: {},
