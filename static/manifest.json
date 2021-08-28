@@ -15,5 +15,8 @@
     ],
     "theme_color": "#27215b",
     "background_color": "#27215b",
-    "display": "standalone"
+    "display": "standalone",
+    "permissions": [
+        "clipboardWrite"
+    ]
 }
