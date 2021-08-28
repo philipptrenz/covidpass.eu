@@ -21,7 +21,7 @@
 
             <p>{{ $t('browserAlert.notSafari') }}</p>
 
-            <div class="pt-4"> 
+            <div class="pt-4" v-if="accessToClipboardGranted"> 
               <button @click="copyToClipboard()" class="w-full focus:outline-none">
                 <div class="flex justify-center w-full bg-primary bg-opacity-20 text-primary text-xl font-medium rounded-lg py-2 px-3 focus:outline-none" >
                   <span class="mx-auto" > 
@@ -112,9 +112,7 @@ export default Vue.extend({
     }
   },
   mounted() {
-
-    console.log(navigator.permissions)
-    if (navigator.permissions && typeof navigator.permissions.query === 'function') {
+    if ( navigator.permissions && navigator.permissions.query) {
       navigator.permissions.query({name: "clipboard-write"}).then(result => {
         if (result.state == "granted" || result.state == "prompt") {
           this.accessToClipboardGranted = true;
