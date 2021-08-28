@@ -35,6 +35,12 @@ index:
       under <i>Settings</i> > <i>Touch / Face ID & Passcode</i> > <i>Allow access
       when locked</i>."
     shareButtonText: Tell your friends
+browserAlert:
+  notSafari: It seems like you are not using the Safari browser on your iPhone. Unfortunately, downloading the pass is only possible there. Please open this website again in Safari to make sure everything works properly.
+  copyLink: Copy link
+  notIphone: It seems that you have not opened our website on an iPhone. Unfortunately, downloading the pass is only possible there. Please open this website again in Safari on your iPhone to make sure everything works properly.
+  shareLink: Send to iPhone
+  android: It seems that you have not opened our website on an iPhone. Unfortunately, the download of the passport is only possible there. Android does not have a native way to manage passes.
 pass:
   certificateType: 
     label: Certificate Type

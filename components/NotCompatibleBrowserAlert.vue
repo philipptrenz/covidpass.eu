@@ -19,9 +19,7 @@
               </button>
             </div>
 
-            <p>
-              Es scheint so, also ob Du nicht den Safari-Browser auf deinem iPhone nutzt. Leider ist der Download des Passes nur dort möglich. Bitte öffne diese Website noch einmal in Safari, damit alles einwandfrei funktioniert.
-            </p>
+            <p>{{ $t('browserAlert.notSafari') }}</p>
 
             <div class="pt-4"> 
               <button @click="copyToClipboard()" class="w-full focus:outline-none">
@@ -31,7 +29,7 @@
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M37.935 9.56491C35.5919 7.22176 31.7929 7.22176 29.4497 9.56491L20.9645 18.0502C18.6213 20.3933 18.6213 24.1923 20.9645 26.5355C21.355 26.926 21.9882 26.926 22.3787 26.5355C22.7692 26.1449 22.7692 25.5118 22.3787 25.1213C20.8166 23.5592 20.8166 21.0265 22.3787 19.4644L30.864 10.9791C32.4261 9.41702 34.9587 9.41702 36.5208 10.9791C38.0829 12.5412 38.0829 15.0739 36.5208 16.636L32.9853 20.1715C32.5948 20.562 32.5948 21.1952 32.9853 21.5857C33.3758 21.9762 34.009 21.9762 34.3995 21.5857L37.935 18.0502C40.2782 15.707 40.2782 11.9081 37.935 9.56491ZM11.065 36.435C13.4081 38.7781 17.2071 38.7781 19.5503 36.435L28.0355 27.9497C30.3787 25.6065 30.3787 21.8076 28.0355 19.4644C27.645 19.0739 27.0118 19.0739 26.6213 19.4644C26.2308 19.8549 26.2308 20.4881 26.6213 20.8786C28.1834 22.4407 28.1834 24.9734 26.6213 26.5355L18.136 35.0208C16.5739 36.5829 14.0413 36.5829 12.4792 35.0208C10.9171 33.4587 10.9171 30.926 12.4792 29.3639L16.0147 25.8284C16.4052 25.4378 16.4052 24.8047 16.0147 24.4142C15.6242 24.0236 14.991 24.0236 14.6005 24.4142L11.065 27.9497C8.72183 30.2928 8.72183 34.0918 11.065 36.435Z" fill="#27215B"/>
                     </svg>
 
-                    Link kopieren
+                    {{ $t('browserAlert.copyLink') }}
                   </span>
                 </div>
               </button>
@@ -53,9 +51,7 @@
               </button>
             </div>
 
-            <p>
-              Es scheint so, also ob Du unsere Website nicht auf einem iPhone geöffnet hast. Leider ist der Downlod des Passes nur dort möglich. Android hat keine native Möglichkeit Pässe zu verwalten.
-            </p>
+            <p>{{ $t('browserAlert.android') }}</p>
 
           </div>
 
@@ -74,9 +70,7 @@
               </button>
             </div>
             
-            <p>
-              Es scheint so, also ob Du unsere Website nicht auf einem iPhone geöffnet hast. Leider ist der Download des Passes nur dort möglich. Bitte öffne diese Website noch einmal in Safari auf deinem iPhone, damit alles einwandfrei funktioniert.
-            </p>
+            <p>{{ $t('browserAlert.notIphone') }}</p>
             
             <div v-if="canShare" class="pt-4"> 
               <button @click="share()" class="w-full focus:outline-none">
@@ -86,7 +80,7 @@
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M25.2071 3.29289C24.8166 2.90237 24.1834 2.90237 23.7929 3.29289L17.4289 9.65685C17.0384 10.0474 17.0384 10.6805 17.4289 11.0711C17.8195 11.4616 18.4526 11.4616 18.8431 11.0711L23.5 6.41421V22C23.5 22.5523 23.9477 23 24.5 23C25.0523 23 25.5 22.5523 25.5 22V6.41421L30.1569 11.0711C30.5474 11.4616 31.1805 11.4616 31.5711 11.0711C31.9616 10.6805 31.9616 10.0474 31.5711 9.65685L25.2071 3.29289ZM14.5 19C14.5 17.3431 15.8431 16 17.5 16H20.1C20.6523 16 21.1 15.5523 21.1 15C21.1 14.4477 20.6523 14 20.1 14H17.5C14.7386 14 12.5 16.2386 12.5 19V33C12.5 35.7614 14.7386 38 17.5 38H31.5C34.2614 38 36.5 35.7614 36.5 33V19C36.5 16.2386 34.2614 14 31.5 14H28.9C28.3477 14 27.9 14.4477 27.9 15C27.9 15.5523 28.3477 16 28.9 16H31.5C33.1569 16 34.5 17.3431 34.5 19V33C34.5 34.6569 33.1569 36 31.5 36H17.5C15.8431 36 14.5 34.6569 14.5 33V19Z" fill="#27215B"/>
                     </svg>
 
-                    An iPhone senden
+                    {{ $t('browserAlert.shareLink') }}
                   </span>
                 </div>
               </button>

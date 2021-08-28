@@ -35,6 +35,12 @@ index:
     kannst Du diese Einstellung unter <i>Einstellungen</i> > <i>Touch / Face ID 
     & Passcode</i> > <i>Im Sperrzustand Zugriff erlauben</i> ändern."
     shareButtonText: Erzähle es weiter
+browserAlert:
+  notSafari: Es scheint so, also ob Du nicht den Safari-Browser auf Deinem iPhone nutzt. Leider ist der Download des Passes nur dort möglich. Bitte öffne diese Website noch einmal in Safari, damit alles einwandfrei funktioniert.
+  copyLink: Link kopieren
+  notIphone: Es scheint so, also ob Du unsere Website nicht auf einem iPhone geöffnet hast. Leider ist der Download des Passes nur dort möglich. Bitte öffne diese Website noch einmal in Safari auf Deinem iPhone, damit alles einwandfrei funktioniert.
+  shareLink: An iPhone senden
+  android: Es scheint so, also ob Du unsere Website nicht auf einem iPhone geöffnet hast. Leider ist der Downlod des Passes nur dort möglich. Android hat keine native Möglichkeit Pässe zu verwalten.
 pass:
   certificateType: 
     label: Zertifikatstyp
