@@ -122,8 +122,6 @@ export default Vue.extend({
           console.warn("no access for writing to clipboard!")
         }
       });
-    } else {
-      this.accessToClipboardGranted = true;
     }
 
     this.canShare = typeof navigator.share === 'function';
@@ -154,7 +152,7 @@ export default Vue.extend({
     },
     async share() {
       try {
-        await navigator.share(this.shareData)
+        await navigator.share(this.shareData);
         console.log("successfully shared");
       } catch(err) {
         console.error('Sharing failed: ' + err);
