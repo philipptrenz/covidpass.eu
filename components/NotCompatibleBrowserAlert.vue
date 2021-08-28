@@ -143,10 +143,9 @@ export default Vue.extend({
       navigator.permissions.query({name: "clipboard-write"}).then(result => {
         if (result.state == "granted" || result.state == "prompt") {
           navigator.clipboard.writeText(this.currentUrl).then(function() {
-            console.log("URL successfully saved to clipboard")
+            console.log("URL successfully saved to clipboard");
           }, function() {
-            console.log("saving URL to clipboard failed")
-            // TODO: Prompt user
+            console.log("saving URL to clipboard failed");
           });
         } else {
           console.error("no access for writing to clipboard!")
@@ -156,9 +155,9 @@ export default Vue.extend({
     async share() {
       try {
         await navigator.share(this.shareData)
-        console.log("successfully shared")
+        console.log("successfully shared");
       } catch(err) {
-        console.error('Sharing failed: ' + err)
+        console.error('Sharing failed: ' + err);
       }
 
     }
