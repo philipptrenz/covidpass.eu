@@ -1,5 +1,5 @@
 <template>
-  <div class="m-auto flex flex-col space-y-6 max-w-lg bg-white p-6 rounded-2xl">
+  <div class="m-auto flex flex-col space-y-6 max-w-lg bg-white p-6 rounded-2xl" id="content">
 
     <div class="flex flex-row justify-start">
       <Logo class="pr-2 flex-shrink-0"/>
@@ -279,16 +279,19 @@ export default Vue.extend({
     toStep(step: State) {
       if (this.state > step) {
         this.state = step;
+        this.scrollToTop();
       }
         
     },
     onboarded() {
       this.state = State.ONBOARDED;
+      this.scrollToTop();
     },
     consented() {
-      if (this.consentGiven)
+      if (this.consentGiven) {
         this.state = State.CONSENTED;
-      else 
+        this.scrollToTop();
+      } else 
         this.hintNotConsented = true;
     },
     onDecode(rawData: string) {
@@ -347,6 +350,7 @@ export default Vue.extend({
           link.setAttribute('download', `covidpass-${ this.randomId(8) }.pkpass`);
 
           this.state = State.SCANNED;
+          this.scrollToTop();
         }
       } catch (e) {
         console.error('Error:', e.message)
@@ -354,6 +358,7 @@ export default Vue.extend({
     },
     downloaded() {
       this.state = State.DOWNLOADED
+      this.scrollToTop();
     },
     async tellYourFriends() {
       const shareData = {
@@ -376,6 +381,9 @@ export default Vue.extend({
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
       }
       return result;
+    },
+    scrollToTop() {
+      document.getElementById("content")?.scrollIntoView({ behavior: "smooth" });
     }
   }
 })
