@@ -322,6 +322,7 @@ export default Vue.extend({
         console.warn("qr code reader error:", error)
       } finally {
         this.qrScannerLoading = false;
+        this.scrollToTop();
       }
     },
     async reloadQRScanner () {
