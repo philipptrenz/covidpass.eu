@@ -190,7 +190,7 @@
 
       </div>
 
-      <div v-if="state == 3" @click="tellYourFriends" class="cursor-pointer bg-primary bg-opacity-20 text-primary text-xl rounded-lg p-4 focus:outline-none" >
+      <div v-if="state == 4" @click="tellYourFriends" class="cursor-pointer bg-primary bg-opacity-20 text-primary text-xl rounded-lg p-4 focus:outline-none" >
         <div class="flex justify-center align-middle">
           <div class="inline-block my-auto">
             <span class="inline-block font-medium align-middle px-2">
