@@ -112,7 +112,7 @@
             v-if="!qrScannerDestroyed"
             @decode="onDecode" 
             @init="onInit" 
-            :camera="state == 1 ? 'auto' : 'off'"
+            :camera="state == 2 ? 'auto' : 'off'"
             :track="undefined"
             class="min-h-sm ">
 
