@@ -165,7 +165,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col bg-primary text-white text-xl rounded-lg p-4 focus:outline-none space-y-4 ">
+      <div class="flex flex-col bg-primary text-white text-xl rounded-lg p-4 focus:outline-none ">
         
         <h1 class="">
           <span class="pl-2 inline-block align-middle font-semibold">
@@ -176,16 +176,46 @@
           </span>
         </h1>
 
-
-
-        <div class="pb-24">
-          <p class="font-light text-xs leading-5" v-html="$t('index.addToWallet.note')"></p>
-        </div>
-
-        <div class="flex flex-row align-middle justify-center">
+        <div class="flex flex-row align-middle justify-center py-14">
           <a ref="download" @click="downloaded" target="_system">
             <img :src="walletBadgeIcon" width="220" height="68" />
           </a>
+        </div>
+
+        <div>
+          <p class="font-light text-xs leading-5" v-html="$t('index.addToWallet.note')"></p>
+
+          <div class="flex flex-row flex-wrap ">
+            <img class="pr-2 mt-4" width="160" height="30" src="icons/ios-settings.svg">
+
+            <div class="bg-white rounded-lg flex-grow flex flex-row justify-between align-middle px-3 mt-4" style="min-width: 180px; height: 30px;">
+              <span class="inline-block text-black text-xs" style="padding: 7.5px 0;">Wallet</span>
+              <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3197 4.58833C16.5058 4.52016 17.6906 4.52562 18.8767 4.52562C18.8849 4.52562 24.8871 4.52562 24.8871 4.52562C26.0964 4.52562 27.2812 4.52016 28.4666 4.58833C29.5443 4.64968 30.5941 4.78057 31.6391 5.07301C33.8389 5.68788 35.7599 6.97217 37.1485 8.79294C38.5289 10.6021 39.276 12.8169 39.276 15.091C39.276 17.3678 38.5289 19.5812 37.1485 21.3904C35.7599 23.2105 33.8389 24.4955 31.6391 25.1104C30.5941 25.4028 29.5443 25.533 28.4666 25.595C27.2812 25.6632 26.0964 25.6571 24.9103 25.6571C24.9021 25.6571 18.8985 25.6577 18.8985 25.6577C17.6906 25.6571 16.5058 25.6632 15.3197 25.595C14.2426 25.533 13.1928 25.4028 12.1478 25.1104C9.94803 24.4955 8.02705 23.2105 6.63846 21.3904C5.25806 19.5812 4.51025 17.3678 4.51025 15.0917C4.51025 12.8169 5.25806 10.6021 6.63846 8.79294C8.02705 6.97217 9.94803 5.68788 12.1478 5.07301C13.1928 4.78057 14.2426 4.64968 15.3197 4.58833Z" fill="#787880" fill-opacity="0.16"/>
+                <g filter="url(#filter0_dd)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0765 24.2943C20.159 24.2943 24.2792 20.1741 24.2792 15.0916C24.2792 10.009 20.159 5.88885 15.0765 5.88885C9.99397 5.88885 5.87378 10.009 5.87378 15.0916C5.87378 20.1741 9.99397 24.2943 15.0765 24.2943Z" fill="white"/>
+                </g>
+                <defs>
+                <filter id="filter0_dd" x="0.420326" y="2.48045" width="29.3123" height="29.3123" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="2.04505"/>
+                <feGaussianBlur stdDeviation="0.340841"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="2.04505"/>
+                <feGaussianBlur stdDeviation="2.72673"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
+                </filter>
+                </defs>
+              </svg>
+            </div>
+
+          </div>
+
         </div>
 
       </div>
