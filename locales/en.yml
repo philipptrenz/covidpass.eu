@@ -44,7 +44,7 @@ index:
     passTitle: COVID Pass
     successMessage: QR-Code successfully scanned
     note: "<b>Note:</b> To protect your data, please make sure that your Pass is not
-      visible when your phone is locked. If necessary, you can change this setting
+      visible when your phone is locked. If necessary, you can deactivate this setting
       under <i>Settings</i> > <i>Touch / Face ID & Passcode</i> > <i>Allow access
       when locked</i>."
     shareButtonText: Tell your friends
