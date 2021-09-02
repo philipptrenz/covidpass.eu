@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-if="doShow" class="fixed top-0 left-0 w-full h-full bg-primary bg-opacity-25 z-50 flex transition duration-500 ease-in-out">
+    <div v-if="doShow" class="fixed top-0 left-0 w-full h-full bg-primary bg-opacity-25 z-50 flex transition duration-500 ease-in-out" @click.self="hideAlert()">
       <div class="ml-4 mr-2 p-6 sm:px-0 py-6 px-4 w-full self-end">
         <div class="mx-auto self-end flex flex-col space-y-6 max-w-lg bg-white p-6 rounded-2xl ">
 
@@ -156,6 +156,9 @@ export default Vue.extend({
         console.error('Sharing failed: ' + err);
       }
 
+    },
+    hideAlert() {
+      this.doShow = false;
     }
   },
   computed: {
