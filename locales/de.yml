@@ -12,7 +12,6 @@ index:
       vaccinated: geimpft
       tested: getestet
       recovered: genesen
-    buttonText: Weiter
   consent:
     paragraphs:
     - Dein QR-Code enthält neben persönlichen 

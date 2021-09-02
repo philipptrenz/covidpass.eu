@@ -1,25 +1,25 @@
 about:
-  md: Bonjour, nous sommes Donatus et Philipp. Deux développeurs et designers avec
-    une 💙 pour des solutions innovantes et une expérience utilisateur intuitive pour
-    surmonter les défis sociaux et (re)permettre la participation. Le COVID a été
-    une contrainte majeure pour toutes nos vies au cours des derniers mois. Progressivement,
-    une certaine normalité revient maintenant. Avec cet outil, nous voulons apporter
-    une petite contribution pour rendre la vie quotidienne et les voyages un peu plus
-    faciles. Merci à Ann-Kathrin, qui a fourni le logo.
-  supportButton: Achetez-nous un café
-  title: A propos de nous
+  md: Merhaba, biz Donatus ve Philipp'iz. Sosyal zorlukların üstesinden gelmek ve
+    katılımı (yeniden) etkinleştirmek için yenilikçi çözümler ve sezgisel kullanıcı
+    deneyimi için bir 💙 ile iki geliştirici ve tasarımcı. COVID, son birkaç aydır
+    tüm hayatımızın üzerinde büyük bir kısıtlama oldu. Yavaş yavaş, bir miktar normallik
+    şimdi geri dönüyor. Bu araçla, günlük hayatı ve seyahat etmeyi biraz daha kolaylaştırmaya
+    küçük bir katkıda bulunmak istiyoruz. Logoya katkıda bulunan Ann-Kathrin'e teşekkürler.
+    Boş zamanlarımızda COVID Pass oluşturduk ve sunucu masraflarını kendi cebimizden
+    ödedik. Bu projeyi faydalı bulursanız, lütfen bize destek vermekten çekinmeyin.
+  supportButton: Ko-fi'de bizi destekleyin
+  title: Hakkımızda
 browserAlert:
-  android: Il semble que vous n'ayez pas ouvert notre site Web sur un iPhone. Malheureusement,
-    le téléchargement du passeport n'est possible que là-bas. Android n'a pas de moyen
-    natif de gérer les passes.
-  copyLink: Copier le lien
-  notIphone: Il semble que vous n'ayez pas ouvert notre site Web sur un iPhone. Malheureusement,
-    le téléchargement de la passe n'est possible que là-bas. Veuillez ouvrir ce site
-    à nouveau sur Safari sur votre iPhone pour vous assurer que tout fonctionne correctement.
-  notSafari: Il semble que vous n'utilisiez pas le navigateur Safari sur votre iPhone.
-    Malheureusement, le téléchargement de la passe n'est possible que là-bas. Veuillez
-    ouvrir ce site à nouveau sur Safari pour vous assurer que tout fonctionne correctement.
-  shareLink: Envoyer à iPhone
+  android: Web sitemizi bir iPhone'da açmadınız. Ne yazık ki, pasaportun indirilmesi
+    sadece orada mümkündür. Android, geçişleri yönetmek için yerli bir yolu yok.
+  copyLink: Bağlantıyı kopyala
+  notIphone: Web sitemizi bir iPhone'da açmadınız. Ne yazık ki, geçişi indirmek sadece
+    orada mümkündür. Lütfen her şeyin doğru çalıştığından emin olmak için iPhone'unuzdaki
+    Safari'de tekrar bu web sitesini açın.
+  notSafari: Safari tarayıcısını iPhone'unuzda kullanmıyor gibi görünüyor. Ne yazık
+    ki, geçişi indirmek sadece orada mümkündür. Lütfen her şeyin doğru çalıştığından
+    emin olmak için bu web sitesini Safari'de tekrar açın.
+  shareLink: İPhone'a gönder
 impress:
   md: '### Information according to § 5 TMG
 
@@ -85,92 +85,85 @@ impress:
   title: Impressum
 index:
   addToWallet:
-    note: "Pour protéger vos données, veuillez vous assurer que votre Pass n'est pas\
-      \ visible lorsque votre téléphone est verrouillé. Si nécessaire, vous pouvez\
-      \ modifier ce paramètre sous Paramètres > Touch / Face ID & Passcode > Autoriser\
-      \ l'accès\n      when locked"
+    note: Verilerinizi korumak için lütfen telefonunuz kilitliyken Geçişinizin görünmediğinden
+      emin olun. Gerekirse bu ayarı Ayarlar > Dokunma / Yüz Kimliği ve Parola > Kilitliyken
+      erişime izin ver altında değiştirebilirsiniz.
     passTitle: COVID Pass
-    shareButtonText: Dites-le à vos amis
-    successMessage: QR-Code scanné avec succès
+    shareButtonText: Arkadaşlarına söyle
+    successMessage: QR Kodu başarıyla tarandı
   consent:
-    buttonText: Scanner le QR-Code
+    buttonText: QR Kodunu Tara
     icons:
-      noProfit: No Profit
-      noStorage: Traitement local
-      openSource: Open Source
-    inputText: J'ai lu la Politique de confidentialité et je consens au traitement
-      de mes données.
+      noProfit: Kar yok
+      noStorage: Yerel İşleme
+      openSource: Açık kaynak
+    inputText: Gizlilik Politikasını okudum ve verilerimin işlenmesine izin veriyorum
     paragraphs:
-    - Votre QR code contient des données personnelles ainsi que des données de santé
-      confidentielles. Pour protéger vos données, elles ne seront  sauvegardées que
-      dans votre ordinateur. Le traitement de l'information se fait exclusivement
-      dans votre  navigateur. Pour créer le passe, un hachage cryptographique est
-      seulement envoyé à notre serveur et est signé. Cela signifie que nous n'avons
-      aucune possibilité de lire ou d'enregistrer vos données.
-    - Pour protéger votre vie privée, nous vous demandons également de ne pas partager
-      votre Pass COVID avec d'autres personnes.
+    - QR kodunuz kişisel ve hassas sağlık verilerini içerir. Bu verileri korumak için
+      bilgisayarınızdan ayrılmayacaktır. Bilgilerin işlenmesi yalnızca tarayıcınızda
+      gerçekleşir. Geçişi oluşturmak için sunucumuza yalnızca bir kriptografik karma
+      gönderilir ve orada imzalanır. Bu, verilerinizi okuma veya kaydetme imkanımız
+      olmadığı anlamına gelir.
+    - Gizliliğinizi korumak için ayrıca COVID Pass'ınızı başkalarıyla paylaşmamanızı
+      rica ediyoruz.
   onboarding:
     icons:
-      recovered: rétabli
-      tested: testé
-      vaccinated: vacciné
+      recovered: geri kazanılmış
+      tested: test edilmiş
+      vaccinated: aşılanmış
     paragraphs:
-    - Peu importe si vous allez au cinéma, un concert ou un réartage - de nos jours,
-      vous devez montrer à la carte verte de Covid européenne à de plus en plus d'endroits
-      pour prouver que vous êtes vacciné, testé ou récupéré. Avec notre site Web,
-      il n'y a pas besoin d'une application supplémentaire, il suffit de numériser
-      votre code une fois et de l'ajouter à votre portefeuille Apple. Et la prochaine
-      fois que vous êtes en ligne pour montrer votre code QR, vous n'avez plus besoin
-      de le rechercher - il est juste là, avec un double appuyez sur votre bouton
-      de verrouillage.
+    - Filmlere, bir konser ya da bir rötuşa giderseniz, günümüzde Avrupa Covid Green
+      Pass'ı aşılanmış, test edilmiş veya kurtarıldığınızı kanıtlayacak daha fazla
+      yerde göstermek zorundasınız. Web sitemizle ek bir uygulamaya gerek yok, sadece
+      kodunuzu bir kez tarayın ve Apple Cüzdanınıza ekleyin. Ve bir dahaki sefere
+      QR kodunuzu göstermek için sıraladasınız, artık aramak zorunda değilsiniz -
+      tam orada, kilitleme düğmesinde çift dokunma ile.
   scan:
-    errorHint: Ce QR-Code n'est pas valide
+    errorHint: Bu QR Kodu geçerli değil
     errors:
-      NotAllowedError: Veuillez accorder une autorisation d'accès à la caméra
-      NotFoundError: Impossible d'ouvrir la caméra
-      NotReadableError: La caméra semble être déjà utilisée
-      NotSupportedError: Cette fonctionnalité n'est malheureusement pas prise en charge
-      OverconstrainedError: Les caméras installées ne conviennent pas
-      StreamApiNotSupportedError: Malheureusement, votre navigateur ne prend pas en
-        charge cette fonctionnalité
-    hint: Scanner le QR-Code
-  subtitle: En un clic seulement dans votre Apple Wallet
-  title: Votre COVID Pass
+      NotAllowedError: Lütfen kamera erişim izni verin
+      NotFoundError: kamera açılamadı
+      NotReadableError: Kamera zaten kullanımda görünüyor
+      NotSupportedError: Maalesef bu özellik desteklenmiyor
+      OverconstrainedError: Kurulu kameralar uygun değil
+      StreamApiNotSupportedError: Maalesef tarayıcınız bu özelliği desteklemiyor
+    hint: QR Kodunu Tara
+  subtitle: Apple Cüzdanınızda sadece bir tık uzakta
+  title: COVID Kartınız
 labels:
-  backToHome: Retour à la page d'accueil
-  loading: Chargement ...
-  next: Suivant
-  reportIssue: Signaler un problème
-  support: Soutenez-nous
-  tryAgain: Essayer à nouveau
+  backToHome: Eve geri dön
+  loading: Yükleniyor ...
+  next: Sonraki
+  reportIssue: Sorun bildir
+  support: Bizi destekle
+  tryAgain: Tekrar deneyin
 pass:
-  certificateIssuer: Émetteur du certificat
+  certificateIssuer: Sertifika Veren
   certificateType:
-    label: Type de certificat
-    recovery: Récupération
-    test: Test
-    vaccination: Vaccination
-  country: Pays d'émission
+    label: Sertifika Türü
+    recovery: Kurtarma
+    test: Ölçek
+    vaccination: aşı
+  country: Sağlayan ülke
   credits:
-    label: Généré par
+    label: tarafından oluşturuldu
     value: https://covidpass.eu
-  dateOfBirth: Date de naissance
-  dateOfVaccination: Date de la vaccination
+  dateOfBirth: Doğum tarihi
+  dateOfVaccination: Aşı Tarihi
   disclaimer:
-    label: Disclaimer
-    value: Ce certificat est uniquement valable en combinaison avec la carte d'identité
-      du détenteur du certificat. La validité de ce certificat n'a pas été vérifiée
-      par COVID Pass.
-  dose: Dose
-  name: Nom
-  positiveTested: Testé positif
-  testResult: Résultat du test
-  testType: Type de test
-  testingTime: Heure du test
-  uniqueCertificateIdentifier: Identificateur unique de certificat (UVCI)
-  vaccine: Vaccin
-  validFrom: Valide à partir de
-  validUntil: Valable jusqu'à
+    label: sorumluluk reddi
+    value: Bu sertifika sadece sertifika sahibinin kimlik kartı ile birlikte geçerlidir.
+      Bu sertifikanın geçerliliği COVID Pass tarafından kontrol edilmedi.
+  dose: Doz
+  name: isim
+  positiveTested: Pozitif test edildi
+  testResult: Test sonucu
+  testType: Test Türü
+  testingTime: Test Süresi
+  uniqueCertificateIdentifier: Benzersiz Sertifika Tanımlayıcısı (UVCI)
+  vaccine: Aşı
+  validFrom: Kadar geçerli
+  validUntil: 'Şu tarihe kadar geçerlidir:'
 privacy:
   md: 'Our privacy policy is based on the terms used by the European legislator for
     the adoption of the General Data Protection Regulation (GDPR).
