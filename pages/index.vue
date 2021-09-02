@@ -263,6 +263,7 @@ export default Vue.extend({
       qrScannerDestroyed: false,
       qrScannerError: <string|null>null,
       scanHint: this.$t('index.scan.hint'),
+      initial: true
     }
   },
   computed: {
@@ -322,7 +323,11 @@ export default Vue.extend({
         console.warn("qr code reader error:", error)
       } finally {
         this.qrScannerLoading = false;
-        this.scrollToTop();
+        if (this.initial) {
+          this.initial = false;
+        } else {
+          this.scrollToTop();
+        }
       }
     },
     async reloadQRScanner () {
