@@ -14,7 +14,6 @@ index:
       vaccinated: vaccinated
       tested: tested
       recovered: recovered
-    buttonText: Next
   consent:
     paragraphs:
     - Your QR code contains personal 

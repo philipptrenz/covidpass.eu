@@ -43,7 +43,7 @@
             <path d="M12 18L24 30L36 18" stroke="#27215B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
 
-          {{ $t('index.onboarding.buttonText') }}
+          {{ $t('labels.next') }}
         </span>
       </button>
     </div>

@@ -1,25 +1,26 @@
 about:
-  md: Bonjour, nous sommes Donatus et Philipp. Deux développeurs et designers avec
-    une 💙 pour des solutions innovantes et une expérience utilisateur intuitive pour
-    surmonter les défis sociaux et (re)permettre la participation. Le COVID a été
-    une contrainte majeure pour toutes nos vies au cours des derniers mois. Progressivement,
-    une certaine normalité revient maintenant. Avec cet outil, nous voulons apporter
-    une petite contribution pour rendre la vie quotidienne et les voyages un peu plus
-    faciles. Merci à Ann-Kathrin, qui a fourni le logo.
-  supportButton: Achetez-nous un café
-  title: A propos de nous
+  md: Ciao, siamo Donatus e Philipp. Due sviluppatori e designer con un 💙 per soluzioni
+    innovative e un'esperienza utente intuitiva per superare le sfide sociali e consentire
+    (di nuovo) la partecipazione. COVID ha influenzato molto tutte le nostre vite
+    negli ultimi mesi. A poco a poco, una certa normalità sta tornando. Con questo
+    strumento vogliamo dare un piccolo contributo per rendere la vita quotidiana e
+    i viaggi un po' più facili. Molte grazie a Ann-Kathrin per aver fornito il logo.
+    Abbiamo creato COVID Pass nel nostro tempo libero e paghiamo i costi del server
+    di tasca nostra. Se trovate questo progetto utile, apprezzeremo un po' di supporto.
+  supportButton: Sostienici su Ko-fi
+  title: Chi siamo
 browserAlert:
-  android: Il semble que vous n'ayez pas ouvert notre site Web sur un iPhone. Malheureusement,
-    le téléchargement du passeport n'est possible que là-bas. Android n'a pas de moyen
-    natif de gérer les passes.
-  copyLink: Copier le lien
-  notIphone: Il semble que vous n'ayez pas ouvert notre site Web sur un iPhone. Malheureusement,
-    le téléchargement de la passe n'est possible que là-bas. Veuillez ouvrir ce site
-    à nouveau sur Safari sur votre iPhone pour vous assurer que tout fonctionne correctement.
-  notSafari: Il semble que vous n'utilisiez pas le navigateur Safari sur votre iPhone.
-    Malheureusement, le téléchargement de la passe n'est possible que là-bas. Veuillez
-    ouvrir ce site à nouveau sur Safari pour vous assurer que tout fonctionne correctement.
-  shareLink: Envoyer à iPhone
+  android: Sembra che tu non abbia aperto il nostro sito web su un iPhone. Sfortunatamente,
+    il download del passaporto è possibile solo lì. Android non ha un modo nativo
+    per gestire i pass.
+  copyLink: Copia link
+  notIphone: Sembra che tu non abbia aperto il nostro sito web su un iPhone. Sfortunatamente,
+    il download del passaggio è possibile solo lì. Si prega di aprire di nuovo questo
+    sito Web in Safari sul tuo iPhone per assicurarti che tutto funzioni correttamente.
+  notSafari: Sembra che tu non stia usando il browser Safari sul tuo iPhone. Sfortunatamente,
+    il download del passaggio è possibile solo lì. Si prega di aprire di nuovo questo
+    sito Web in Safari per assicurarsi che tutto funzioni correttamente.
+  shareLink: Invia a iPhone.
 impress:
   md: '### Information according to § 5 TMG
 
@@ -85,92 +86,88 @@ impress:
   title: Impressum
 index:
   addToWallet:
-    note: "Pour protéger vos données, veuillez vous assurer que votre Pass n'est pas\
-      \ visible lorsque votre téléphone est verrouillé. Si nécessaire, vous pouvez\
-      \ modifier ce paramètre sous Paramètres > Touch / Face ID & Passcode > Autoriser\
-      \ l'accès\n      when locked"
+    note: Per proteggere i tuoi dati, assicurati che il tuo codice di accesso non
+      sia visibile quando il telefono è bloccato. Se necessario, puoi cambiare questa
+      impostazione in Settings > Touch / Face ID & Passcode > Allow access when locked.
     passTitle: COVID Pass
-    shareButtonText: Dites-le à vos amis
-    successMessage: QR-Code scanné avec succès
+    shareButtonText: Dillo ai tuoi amici
+    successMessage: Codice QR scansionato con successo
   consent:
-    buttonText: Scanner le QR-Code
+    buttonText: Scansione del codice QR
     icons:
-      noProfit: No Profit
-      noStorage: Traitement local
+      noProfit: Nessun profitto
+      noStorage: Elaborazione locale
       openSource: Open Source
-    inputText: J'ai lu la Politique de confidentialité et je consens au traitement
-      de mes données.
+    inputText: Ho letto l'informativa sulla privacy e acconsento al trattamento dei
+      miei dati.
     paragraphs:
-    - Votre QR code contient des données personnelles ainsi que des données de santé
-      confidentielles. Pour protéger vos données, elles ne seront  sauvegardées que
-      dans votre ordinateur. Le traitement de l'information se fait exclusivement
-      dans votre  navigateur. Pour créer le passe, un hachage cryptographique est
-      seulement envoyé à notre serveur et est signé. Cela signifie que nous n'avons
-      aucune possibilité de lire ou d'enregistrer vos données.
-    - Pour protéger votre vie privée, nous vous demandons également de ne pas partager
-      votre Pass COVID avec d'autres personnes.
+    - Il tuo codice QR contiene dati sanitari sensibili e dati personali. Per proteggerli,
+      questi dati non lasceranno il vostro computer. Il trattamento delle informazioni
+      avviene esclusivamente nel suo browser. Per creare il passaporto, sarà inviato
+      solo un hash crittografico al nostro server e firmato lì. Questo significa che
+      non abbiamo la possibilità di leggere o salvare i tuoi dati.
+    - Per proteggere la tua privacy, ti chiediamo anche di non condividere il tuo
+      COVID Pass con terzi.
   onboarding:
     icons:
-      recovered: rétabli
-      tested: testé
-      vaccinated: vacciné
+      recovered: recuperato
+      tested: testato
+      vaccinated: vaccinato
     paragraphs:
-    - Peu importe si vous allez au cinéma, un concert ou un réartage - de nos jours,
-      vous devez montrer à la carte verte de Covid européenne à de plus en plus d'endroits
-      pour prouver que vous êtes vacciné, testé ou récupéré. Avec notre site Web,
-      il n'y a pas besoin d'une application supplémentaire, il suffit de numériser
-      votre code une fois et de l'ajouter à votre portefeuille Apple. Et la prochaine
-      fois que vous êtes en ligne pour montrer votre code QR, vous n'avez plus besoin
-      de le rechercher - il est juste là, avec un double appuyez sur votre bouton
-      de verrouillage.
+    - Non importa se vai al cinema, un concerto o un reaturato - al giorno d'oggi
+      devi mostrare che il Passo Green Covidi europeo a più posti per dimostrare che
+      sei vaccinato, testato o recuperato. Con il nostro sito Web non è necessaria
+      una app aggiuntiva, eseguire la scansione del tuo codice una volta e aggiungerla
+      al tuo portafoglio Apple. E la prossima volta che sei in linea per mostrare
+      il tuo codice QR, non devi più cercarlo - è proprio lì, con un doppio tocco
+      sul pulsante di blocco.
   scan:
-    errorHint: Ce QR-Code n'est pas valide
+    errorHint: Questo codice QR non è corretto
     errors:
-      NotAllowedError: Veuillez accorder une autorisation d'accès à la caméra
-      NotFoundError: Impossible d'ouvrir la caméra
-      NotReadableError: La caméra semble être déjà utilisée
-      NotSupportedError: Cette fonctionnalité n'est malheureusement pas prise en charge
-      OverconstrainedError: Les caméras installées ne conviennent pas
-      StreamApiNotSupportedError: Malheureusement, votre navigateur ne prend pas en
-        charge cette fonctionnalité
-    hint: Scanner le QR-Code
-  subtitle: En un clic seulement dans votre Apple Wallet
-  title: Votre COVID Pass
+      NotAllowedError: Si prega di consentire l'accesso alla telecamera
+      NotFoundError: Nessuna telecamera è stata trovata
+      NotReadableError: La tua macchina fotografica sembra essere usata altrove
+      NotSupportedError: Purtroppo questa funzione non è supportata
+      OverconstrainedError: Il tuo dispositivo purtroppo non è adatto
+      StreamApiNotSupportedError: Il tuo browser non supporta questa funzione
+    hint: Scannerizzare il codice QR
+  subtitle: con un solo clic su Apple Wallet
+  title: Il tuo COVID Pass
 labels:
-  backToHome: Retour à la page d'accueil
-  loading: Chargement ...
-  next: Suivant
-  reportIssue: Signaler un problème
-  support: Soutenez-nous
-  tryAgain: Essayer à nouveau
+  backToHome: Torna alla pagina iniziale
+  loading: Caricamento ...
+  next: Vai a
+  reportIssue: segnalare i bug
+  support: Sostienici
+  tryAgain: Prova di nuovo
 pass:
-  certificateIssuer: Émetteur du certificat
+  certificateIssuer: Autoritá rilasciante del certificato
   certificateType:
-    label: Type de certificat
-    recovery: Récupération
+    label: Tipo di certificato
+    recovery: Guarigione
     test: Test
-    vaccination: Vaccination
-  country: Pays d'émission
+    vaccination: Vaccinazione
+  country: Paese espositore
   credits:
-    label: Généré par
+    label: Creato da
     value: https://covidpass.eu
-  dateOfBirth: Date de naissance
-  dateOfVaccination: Date de la vaccination
+  dateOfBirth: Data di nascita
+  dateOfVaccination: Data della vaccinazione
   disclaimer:
-    label: Disclaimer
-    value: Ce certificat est uniquement valable en combinaison avec la carte d'identité
-      du détenteur du certificat. La validité de ce certificat n'a pas été vérifiée
-      par COVID Pass.
+    label: Nota
+    value: Questo certificato è valido solo in combinazione con la carta d'identità
+      del titolare del certificato. La validità di questo certificato non è stata
+      verificata da COVID Pass.
   dose: Dose
-  name: Nom
-  positiveTested: Testé positif
-  testResult: Résultat du test
-  testType: Type de test
-  testingTime: Heure du test
-  uniqueCertificateIdentifier: Identificateur unique de certificat (UVCI)
-  vaccine: Vaccin
-  validFrom: Valide à partir de
-  validUntil: Valable jusqu'à
+  name: Nome
+  positiveTested: Testato positivo
+  testResult: Risultato del test
+  testType: Tipo di test
+  testingTime: Data del test
+  uniqueCertificateIdentifier: Identificatore unico di certificato (UVCI)
+  vaccine: Vaccino
+  validFrom: Valido da
+  validUntil: Valido fino a
 privacy:
   md: 'Our privacy policy is based on the terms used by the European legislator for
     the adoption of the General Data Protection Regulation (GDPR).

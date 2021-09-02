@@ -92,7 +92,7 @@ export default {
   axios: {},
 
   i18n: {
-    locales: ['en', 'de' /*, 'fr', 'es'*/ ],
+    locales: ['en', 'de' , 'fr', 'es', 'it', 'ru', 'tr' ],
     defaultLocale: 'en',
     vueI18n: i18n,
     detectBrowserLanguage: { 
