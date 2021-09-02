@@ -365,6 +365,7 @@ export default Vue.extend({
     downloaded() {
       this.state = State.DOWNLOADED
       this.scrollToTop();
+      this.$nuxt.$emit('downloaded', true);
     },
     async tellYourFriends() {
       const shareData = {

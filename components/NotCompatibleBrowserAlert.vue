@@ -111,6 +111,11 @@ export default Vue.extend({
       canShare: false
     }
   },
+  created() {
+    this.$nuxt.$on('downloaded', ($event: Event) => {
+      this.setDoShow();
+    })
+  },
   mounted() {
     if ( navigator.permissions && navigator.permissions.query) {
       navigator.permissions.query({name: "clipboard-write"}).then(result => {
@@ -127,7 +132,7 @@ export default Vue.extend({
     this.isIPhoneAndNotSafari = this.$ua.isFromIphone() && this.$ua.browser() != 'Safari';
     this.isAndroid = this.$ua.isFromAndroidMobile() || this.$ua.isFromAndroidTablet();
     this.isNotIPhone = !this.$ua.isFromIphone();
-    this.doShow = this.isIPhoneAndNotSafari || this.isNotIPhone || this.isAndroid;
+    this.setDoShow();
     
     console.log("is iPhone and not Safari:", this.isIPhoneAndNotSafari);
     console.log("is Android:", this.isAndroid);
@@ -135,6 +140,9 @@ export default Vue.extend({
     
   },
   methods: {
+    setDoShow() {
+      this.doShow = this.isIPhoneAndNotSafari || this.isNotIPhone || this.isAndroid;
+    },
     copyToClipboard() {
       navigator.permissions.query({name: "clipboard-write"}).then(result => {
         if (result.state == "granted" || result.state == "prompt") {
