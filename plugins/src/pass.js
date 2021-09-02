@@ -38,8 +38,6 @@ exports.createPass = async function(data) {
     // Adding required files
     // Create pass.json
     zip.push({ path: 'pass.json', data: Buffer.from(JSON.stringify(pass)) })
-    const passHash = getBufferHash(Buffer.from(JSON.stringify(pass)))
-
     zip.push({ path: 'icon.png', data: payload.icon })
     zip.push({ path: 'icon@2x.png', data: payload.icon2x })
     zip.push({ path: 'logo.png', data: payload.logo })

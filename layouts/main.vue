@@ -1,6 +1,9 @@
 <template>
   <div class="min-h-screen bg-primary font-light">
 
+
+    <NotCompatibleBrowserAlert />
+
     <div class="sm:hidden" style="height: 75vh;">
       <div class="w-full pt-6 bg-primary" >
         <img class="min-w-full" src="/mockup-wallet-mobile.png">

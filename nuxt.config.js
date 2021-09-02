@@ -37,7 +37,7 @@ export default {
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       { rel: 'icon" type="image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'icon" type="image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-      { rel: 'manifest', href: '/site.webmanifest' },
+      { rel: 'manifest', href: '/manifest.json' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: tailwind.theme.colors.primary },
     ]
   },
@@ -83,14 +83,23 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
+    { 
+      src: 'nuxt-user-agent',
+      ssr: false
+    }
   ],
 
   axios: {},
 
   i18n: {
-    locales: ['en', 'de', ],
+    locales: ['en', 'de' /*, 'fr', 'es'*/ ],
     defaultLocale: 'en',
     vueI18n: i18n,
+    detectBrowserLanguage: { 
+      alwaysRedirect: false, 
+      fallbackLocale: 'en', 
+      useCookie: false
+    }
   },
 
   // See https://github.com/markdown-it/markdown-it

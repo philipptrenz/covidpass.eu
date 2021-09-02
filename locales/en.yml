@@ -2,6 +2,19 @@
 index:
   title: Your COVID Pass
   subtitle: just a click away in your Apple Wallet
+  onboarding:
+    paragraphs:
+    - No matter if you go to movies, a concert or a reaturant – nowadays you have to show 
+      the European COVID Green Pass at more and more places to prove that you are vaccinated, 
+      tested or recovered. With our website there is no need for an additional app, just 
+      scan your code once and add it to your Apple wallet. And next time you’re in line to 
+      show your QR code, you don’t have to search for it anymore – it’s right there, with a 
+      double tap on your lock button.
+    icons:
+      vaccinated: vaccinated
+      tested: tested
+      recovered: recovered
+    buttonText: Next
   consent:
     paragraphs:
     - Your QR code contains personal 
@@ -31,10 +44,16 @@ index:
     passTitle: COVID Pass
     successMessage: QR-Code successfully scanned
     note: "<b>Note:</b> To protect your data, please make sure that your Pass is not
-      visible when your phone is locked. If necessary, you can change this setting
+      visible when your phone is locked. If necessary, you can deactivate this setting
       under <i>Settings</i> > <i>Touch / Face ID & Passcode</i> > <i>Allow access
       when locked</i>."
     shareButtonText: Tell your friends
+browserAlert:
+  notSafari: It seems like you are not using the Safari browser on your iPhone. Unfortunately, downloading the pass is only possible there. Please open this website again in Safari to make sure everything works properly.
+  copyLink: Copy link
+  notIphone: It seems that you have not opened our website on an iPhone. Unfortunately, downloading the pass is only possible there. Please open this website again in Safari on your iPhone to make sure everything works properly.
+  shareLink: Send to iPhone
+  android: It seems that you have not opened our website on an iPhone. Unfortunately, the download of the passport is only possible there. Android does not have a native way to manage passes.
 pass:
   certificateType: 
     label: Certificate Type
@@ -81,7 +100,7 @@ about:
 
     We created COVID Pass within our spare time and pay the server costs out of our own pocket. If you find this project useful, please feel free to support us."
     
-  supportButton: Support us on Ko-fi
+  supportButton: Buy us a coffee
 impress:
   title: Impressum
   md: "### Information according to § 5 TMG

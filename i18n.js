@@ -7,12 +7,16 @@ function load(filepath) {
 
 const en = load('./locales/en.yml')
 const de = load('./locales/de.yml')
+//const fr = load('./locales/fr.yml')
+//const es = load('./locales/es.yml')
 
 export default {
   locale: 'en',
   fallbackLocale: 'en',
   messages: { 
     en, 
-    de 
+    de,
+    //fr,
+    //es,
   }
 }

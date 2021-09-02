@@ -24,6 +24,7 @@
     "node-forge": "^0.10.0",
     "nuxt": "^2.15.3",
     "nuxt-i18n": "^6.27.1",
+    "nuxt-user-agent": "^1.2.2",
     "passbook": "^2.3.0",
     "vue-qrcode-reader": "2.3.18"
   },

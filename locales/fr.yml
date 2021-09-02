@@ -1,0 +1,84 @@
+---
+index:
+  title: Votre pass COVID
+  subtitle: à portée de clic dans votre Apple Wallet
+  consent:
+    paragraphs:
+    - Votre QR code contient des données personnelles 
+      ainsi que des données de santé sensibles. Pour protéger ces données, il ne quittera pas
+      votre ordinateur. Le traitement de l'information se fait exclusivement dans votre 
+      navigateur. Pour créer le Pass, seul un hash cryptographique est envoyé à notre serveur 
+      et y est signé. Cela signifie que nous n'avons aucune possibilité de lire ou d'enregistrer vos données.
+    - Pour protéger votre vie privée, nous vous demandons également de ne pas partager votre COVID Pass avec d'autres personnes.
+    inputText: J'ai lu la <a href='/privacy'>Politique de confidentialité</a> et je consens au traitement de mes données.
+    icons:
+      noStorage: Traitement local
+      openSource: Open Source
+      noProfit: No Profit
+    buttonText: Scanner le QR-Code
+  scan:
+    hint: Scanner le QR-Code
+    errorHint: Ce QR-Code n'est pas valide
+    errors:
+      NotAllowedError: Veuillez accorder une autorisation d'accès à la caméra
+      NotFoundError: Impossible d'ouvrir la caméra
+      NotSupportedError: Cette fonctionnalité n'est malheureusement pas prise en charge
+      NotReadableError: La caméra semble être déjà utilisée
+      OverconstrainedError: Les caméras installées ne conviennent pas
+      StreamApiNotSupportedError: Malheureusement, votre navigateur ne prend pas en charge cette
+        fonctionnalité
+  addToWallet:
+    passTitle: COVID Pass
+    successMessage: QR-Code scanné avec succès
+    note: "<b>Note:</b> Pour protéger vos données, veuillez vous assurer que votre Pass n'est pas
+      visible lorsque votre téléphone est verrouillé. Si nécessaire, vous pouvez modifier ce paramètre
+      sous <i>Paramètres</i> > <i>Touch / Face ID & Passcode</i> > <i>Autoriser l'accès
+      when locked</i>."
+    shareButtonText: Dites-le à vos amis
+pass:
+  certificateType: 
+    label: Type de certificat
+    vaccination: Vaccination
+    recovery: Récupération
+    test: Test
+  name: Nom
+  dateOfBirth: Date de naissance
+  dose: Dose
+  dateOfVaccination: Date de la vaccination
+  vaccine: Vaccin
+  positiveTested: Testé positif
+  validFrom: Valide à partir de
+  validUntil: Valable jusqu'à
+  testType: Type de test
+  testResult: Résultat du test
+  testingTime: Heure du test
+  uniqueCertificateIdentifier: Identificateur unique de certificat (UVCI)
+  certificateIssuer:  Émetteur du certificat
+  country: Pays d'émission
+  credits:
+    label: Généré par
+    value: https://covidpass.eu
+  disclaimer:
+    label: Disclaimer
+    value: Ce certificat est uniquement valable en combinaison avec la carte d'identité du détenteur du certificat. La validité de ce certificat n'a pas été vérifiée par COVID Pass.
+labels:
+  next: Suivant
+  backToHome: Retour à la page d'accueil
+  loading: Chargement ...
+  tryAgain: Essayer à nouveau
+  reportIssue: Signaler un problème
+  support: Soutenez-nous
+about:
+  title: A propos de nous
+  md: "Bonjour, nous sommes [Donatus](https://www.linkedin.com/in/donatuswolf/) et [Philipp](https://www.linkedin.com/in/philipp-trenz-a544a8182/). Deux développeurs et designers avec une 💙 pour des solutions innovantes et une expérience utilisateur intuitive pour surmonter les défis sociaux et (re)permettre la participation.
+
+
+    Le COVID a été une contrainte majeure pour toutes nos vies au cours des derniers mois. Progressivement, une certaine normalité revient maintenant. Avec cet outil, nous voulons apporter une petite contribution pour rendre la vie quotidienne et les voyages un peu plus faciles.
+
+
+    Merci à [Ann-Kathrin] (https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208), qui a fourni le logo.
+    
+
+    Nous avons créé COVID Pass pendant notre temps libre et nous payons les coûts du serveur de notre propre poche. Si vous trouvez ce projet utile, n'hésitez pas à nous soutenir."
+    
+  supportButton: Achetez-nous un café

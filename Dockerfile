@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:12
 
 RUN mkdir -p /var/www/nuxt
 WORKDIR /var/www/nuxt

@@ -1,5 +1,5 @@
 <template>
-  <div class="m-auto flex flex-col space-y-6 max-w-lg bg-white p-6 rounded-2xl">
+  <div class="m-auto flex flex-col space-y-6 max-w-lg bg-white p-6 rounded-2xl" id="content">
 
     <div class="flex flex-row justify-start">
       <Logo class="pr-2 flex-shrink-0"/>
@@ -9,7 +9,46 @@
       </div>
     </div>
 
-    <div v-if="state == 0">
+    <div v-if="state == 0" class="-mt-2">        
+      <div>
+        
+        <div class="flex flex-row justify-around break-normal space-x-4 pb-8">
+          
+          <Icon :text="$t('index.onboarding.icons.vaccinated')">
+            <svg width="50" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M41.6169 3.6403C41.2264 3.24978 40.5932 3.24978 40.2027 3.6403C39.8122 4.03083 39.8122 4.66399 40.2027 5.05452L41.6169 6.46874L35.9601 12.1256L31.7175 7.88296C31.3269 7.49244 30.6938 7.49244 30.3033 7.88296C29.9127 8.27349 29.9127 8.90665 30.3033 9.29717L31.7175 10.7114L14.0398 28.3891C13.2588 29.1701 13.2588 30.4364 14.0398 31.2175L11.9185 33.3388C11.1374 34.1198 11.1374 35.3862 11.9185 36.1672L6.26159 41.8241C5.87107 42.2146 5.87107 42.8478 6.26159 43.2383C6.65212 43.6288 7.28528 43.6288 7.67581 43.2383L13.3327 37.5814C14.1137 38.3625 15.38 38.3625 16.1611 37.5814L18.2824 35.4601L18.2825 35.4601C19.0635 36.2412 20.3298 36.2412 21.1109 35.4601L38.7885 17.7825L40.2028 19.1967C40.5933 19.5872 41.2264 19.5872 41.617 19.1967C42.0075 18.8061 42.0075 18.173 41.617 17.7825L37.3743 13.5398L43.0311 7.88295L44.4454 9.29716C44.8359 9.68768 45.469 9.68768 45.8596 9.29716C46.2501 8.90663 46.2501 8.27347 45.8596 7.88294L43.7383 5.76163L41.6169 3.6403ZM33.1317 12.1256L35.249 14.2429L35.253 14.2469L35.257 14.2509L37.3743 16.3683L19.6967 34.0459L15.454 29.8033L33.1317 12.1256ZM15.454 32.6317L13.3327 34.753L14.7469 36.1672L16.8682 34.0459L15.454 32.6317Z" fill="white"/>
+            </svg>
+          </Icon>
+
+          <Icon :text="$t('index.onboarding.icons.tested')">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M37.4142 13.4142C36.8425 13.9859 34.9828 15.3063 33.0132 16.3003C32.1639 16.7288 31.3956 17.0439 30.7877 17.2123C30.9561 16.6044 31.2712 15.8361 31.6997 14.9868C32.6937 13.0172 34.0141 11.1575 34.5858 10.5858C35.3668 9.80474 36.6332 9.80474 37.4142 10.5858C38.1953 11.3668 38.1953 12.6332 37.4142 13.4142ZM30.0701 19.3441C32.5323 19.3218 37.5105 16.1464 38.8284 14.8284C40.3905 13.2663 40.3905 10.7337 38.8284 9.17157C37.2663 7.60948 34.7337 7.60948 33.1716 9.17157C31.8536 10.4895 28.6782 15.4677 28.6559 17.9299L8.29289 38.2929C7.90237 38.6834 7.90237 39.3166 8.29289 39.7071C8.68342 40.0976 9.31658 40.0976 9.70711 39.7071L30.0701 19.3441Z" fill="white"/>
+            </svg>
+          </Icon>
+
+          <Icon :text="$t('index.onboarding.icons.recovered')">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15 10C14.4477 10 14 10.4477 14 11V20H18V16C18 14.8954 18.8954 14 20 14H28C29.1046 14 30 14.8954 30 16V20H34V11C34 10.4477 33.5523 10 33 10H15ZM28 20V16H20V20H28ZM19 22H13H11C10.4477 22 10 22.4477 10 23V32H38V23C38 22.4477 37.5523 22 37 22H35H29H19ZM12 11V20H11C9.34315 20 8 21.3431 8 23V33V37C8 37.5523 8.44772 38 9 38C9.55228 38 10 37.5523 10 37V34H38V37C38 37.5523 38.4477 38 39 38C39.5523 38 40 37.5523 40 37V33V23C40 21.3431 38.6569 20 37 20H36V11C36 9.34315 34.6569 8 33 8H15C13.3431 8 12 9.34315 12 11Z" fill="white"/>
+            </svg>
+          </Icon>
+
+        </div>
+      </div>
+
+      <p v-for=" p in $t('index.onboarding.paragraphs')" v-bind:key="p" class="" v-html="p" />
+
+      <button class="w-full bg-primary bg-opacity-20 text-primary text-xl font-medium rounded-lg py-5 px-3 focus:outline-none mt-8" @click="onboarded()">
+        <span >
+          <svg class="inline-block pr-1" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 18L24 30L36 18" stroke="#27215B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          {{ $t('index.onboarding.buttonText') }}
+        </span>
+      </button>
+    </div>
+
+    <div v-if="state == 1">
       <form @submit.prevent="consented" class="flex flex-col space-y-6 pt-2">
         
         <div>
@@ -66,14 +105,14 @@
       </form>
     </div>
 
-    <div v-show="state == 1">
+    <div v-show="state == 2">
       <div class="bg-primary bg-opacity-20 text-primary text-xl rounded-lg focus:outline-none text-center font-medium">
         <client-only>
           <qrcode-stream 
             v-if="!qrScannerDestroyed"
             @decode="onDecode" 
             @init="onInit" 
-            :camera="state == 1 ? 'auto' : 'off'"
+            :camera="state == 2 ? 'auto' : 'off'"
             :track="undefined"
             class="min-h-sm ">
 
@@ -111,9 +150,9 @@
       </div>
     </div>
 
-    <div v-show="state == 2 || state == 3" class="space-y-6">
+    <div v-show="state == 3 || state == 4" class="space-y-6">
 
-      <div v-if="state == 2" class="bg-primary bg-opacity-20 text-primary text-xl rounded-lg py-5 px-3 focus:outline-none">
+      <div v-if="state == 3" class="bg-primary bg-opacity-20 text-primary text-xl rounded-lg py-5 px-3 focus:outline-none">
         <div class="flex justify-center align-middle">
           <div class="inline-block my-auto ">
             <span class="inline-block font-medium align-middle">
@@ -126,7 +165,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col bg-primary text-white text-xl rounded-lg p-4 focus:outline-none space-y-4 ">
+      <div class="flex flex-col bg-primary text-white text-xl rounded-lg p-4 focus:outline-none ">
         
         <h1 class="">
           <span class="pl-2 inline-block align-middle font-semibold">
@@ -137,21 +176,51 @@
           </span>
         </h1>
 
-
-
-        <div class="pb-24">
-          <p class="font-light text-xs leading-5" v-html="$t('index.addToWallet.note')"></p>
-        </div>
-
-        <div class="flex flex-row align-middle justify-center">
-          <a ref="download" @click="downloaded" >
+        <div class="flex flex-row align-middle justify-center py-14">
+          <a ref="download" @click="downloaded" target="_system">
             <img :src="walletBadgeIcon" width="220" height="68" />
           </a>
         </div>
 
+        <div>
+          <p class="font-light text-xs leading-5" v-html="$t('index.addToWallet.note')"></p>
+
+          <div class="flex flex-row flex-wrap ">
+            <img class="pr-2 mt-4" width="160" height="30" src="icons/ios-settings.svg">
+
+            <div class="bg-white rounded-lg flex-grow flex flex-row justify-between align-middle px-3 mt-4" style="min-width: 180px; height: 30px;">
+              <span class="inline-block text-black text-xs" style="padding: 7.5px 0;">Wallet</span>
+              <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3197 4.58833C16.5058 4.52016 17.6906 4.52562 18.8767 4.52562C18.8849 4.52562 24.8871 4.52562 24.8871 4.52562C26.0964 4.52562 27.2812 4.52016 28.4666 4.58833C29.5443 4.64968 30.5941 4.78057 31.6391 5.07301C33.8389 5.68788 35.7599 6.97217 37.1485 8.79294C38.5289 10.6021 39.276 12.8169 39.276 15.091C39.276 17.3678 38.5289 19.5812 37.1485 21.3904C35.7599 23.2105 33.8389 24.4955 31.6391 25.1104C30.5941 25.4028 29.5443 25.533 28.4666 25.595C27.2812 25.6632 26.0964 25.6571 24.9103 25.6571C24.9021 25.6571 18.8985 25.6577 18.8985 25.6577C17.6906 25.6571 16.5058 25.6632 15.3197 25.595C14.2426 25.533 13.1928 25.4028 12.1478 25.1104C9.94803 24.4955 8.02705 23.2105 6.63846 21.3904C5.25806 19.5812 4.51025 17.3678 4.51025 15.0917C4.51025 12.8169 5.25806 10.6021 6.63846 8.79294C8.02705 6.97217 9.94803 5.68788 12.1478 5.07301C13.1928 4.78057 14.2426 4.64968 15.3197 4.58833Z" fill="#787880" fill-opacity="0.16"/>
+                <g filter="url(#filter0_dd)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0765 24.2943C20.159 24.2943 24.2792 20.1741 24.2792 15.0916C24.2792 10.009 20.159 5.88885 15.0765 5.88885C9.99397 5.88885 5.87378 10.009 5.87378 15.0916C5.87378 20.1741 9.99397 24.2943 15.0765 24.2943Z" fill="white"/>
+                </g>
+                <defs>
+                <filter id="filter0_dd" x="0.420326" y="2.48045" width="29.3123" height="29.3123" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="2.04505"/>
+                <feGaussianBlur stdDeviation="0.340841"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="2.04505"/>
+                <feGaussianBlur stdDeviation="2.72673"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
+                </filter>
+                </defs>
+              </svg>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div v-if="state == 3" @click="tellYourFriends" class="cursor-pointer bg-primary bg-opacity-20 text-primary text-xl rounded-lg p-4 focus:outline-none" >
+      <div v-if="state == 4" @click="tellYourFriends" class="cursor-pointer bg-primary bg-opacity-20 text-primary text-xl rounded-lg p-4 focus:outline-none" >
         <div class="flex justify-center align-middle">
           <div class="inline-block my-auto">
             <span class="inline-block font-medium align-middle px-2">
@@ -162,7 +231,10 @@
             </span>
           </div>
         </div>
+
       </div>
+
+      <KofiButton v-if="state == 4" class="block" />
 
     </div>
 
@@ -174,9 +246,10 @@ import Vue from 'vue';
 
 enum State {
   NONE = 0,
-  CONSENTED = 1,
-  SCANNED = 2,
-  DOWNLOADED = 3,
+  ONBOARDED = 1,
+  CONSENTED = 2,
+  SCANNED = 3,
+  DOWNLOADED = 4,
 }
 
 export default Vue.extend({
@@ -190,6 +263,7 @@ export default Vue.extend({
       qrScannerDestroyed: false,
       qrScannerError: <string|null>null,
       scanHint: this.$t('index.scan.hint'),
+      initial: true
     }
   },
   computed: {
@@ -206,13 +280,19 @@ export default Vue.extend({
     toStep(step: State) {
       if (this.state > step) {
         this.state = step;
+        this.scrollToTop();
       }
         
     },
+    onboarded() {
+      this.state = State.ONBOARDED;
+      this.scrollToTop();
+    },
     consented() {
-      if (this.consentGiven)
+      if (this.consentGiven) {
         this.state = State.CONSENTED;
-      else 
+        this.scrollToTop();
+      } else 
         this.hintNotConsented = true;
     },
     onDecode(rawData: string) {
@@ -243,6 +323,11 @@ export default Vue.extend({
         console.warn("qr code reader error:", error)
       } finally {
         this.qrScannerLoading = false;
+        if (this.initial) {
+          this.initial = false;
+        } else {
+          this.scrollToTop();
+        }
       }
     },
     async reloadQRScanner () {
@@ -271,6 +356,7 @@ export default Vue.extend({
           link.setAttribute('download', `covidpass-${ this.randomId(8) }.pkpass`);
 
           this.state = State.SCANNED;
+          this.scrollToTop();
         }
       } catch (e) {
         console.error('Error:', e.message)
@@ -278,6 +364,8 @@ export default Vue.extend({
     },
     downloaded() {
       this.state = State.DOWNLOADED
+      this.scrollToTop();
+      this.$nuxt.$emit('downloaded', true);
     },
     async tellYourFriends() {
       const shareData = {
@@ -300,6 +388,9 @@ export default Vue.extend({
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
       }
       return result;
+    },
+    scrollToTop() {
+      document.getElementById("content")?.scrollIntoView({ behavior: "smooth" });
     }
   }
 })
