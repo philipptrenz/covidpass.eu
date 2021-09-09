@@ -132,7 +132,7 @@ index:
       StreamApiNotSupportedError: К сожалению, ваш браузер не поддерживает эту функцию
     hint: Сканирование QR-кода
   subtitle: всего в одном клике от вашего Apple Wallet
-  title: Ваш пропуск COVID
+  title: Ваш COVID Pass
 labels:
   backToHome: Назад к дому
   loading: Загрузка ...

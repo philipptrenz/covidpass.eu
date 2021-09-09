@@ -129,7 +129,7 @@ index:
       StreamApiNotSupportedError: Maalesef tarayıcınız bu özelliği desteklemiyor
     hint: QR Kodunu Tara
   subtitle: Apple Cüzdanınızda sadece bir tık uzakta
-  title: COVID Kartınız
+  title: COVID Pass
 labels:
   backToHome: Eve geri dön
   loading: Yükleniyor ...
