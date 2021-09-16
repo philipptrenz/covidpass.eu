@@ -12,6 +12,7 @@ const es = load('./locales/es.yml')
 const it = load('./locales/it.yml')
 const ru = load('./locales/ru.yml')
 const tr = load('./locales/tr.yml')
+const ar = load('./locales/ar.yml')
 
 export default {
   locale: 'en',
@@ -23,6 +24,7 @@ export default {
     es,
     it, 
     ru,
-    tr
+    tr, 
+    ar
   }
 }

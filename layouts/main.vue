@@ -1,6 +1,5 @@
 <template>
-  <div class="min-h-screen bg-primary font-light">
-
+  <div class="min-h-screen bg-primary font-light" :class="{'direction-rtl': $i18n.locale == 'ar'}">
 
     <NotCompatibleBrowserAlert />
 

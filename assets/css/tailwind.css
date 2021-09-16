@@ -33,3 +33,7 @@ p > a {
   border: none;
   padding-top: 1rem;
 }
+
+.direction-rtl {
+  direction: rtl;
+}

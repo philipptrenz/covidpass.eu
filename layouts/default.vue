@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-primary font-light flex flex-col align-middle justify-center">
+  <div class="min-h-screen bg-primary font-light flex flex-col align-middle justify-center" :class="{'direction-rtl': $i18n.locale == 'ar'}">
 
     <div class="h-full sm:min-h-screen flex flex-row px-4 sm:px-0 space-x-6">
       <div class="py-8 pl-4 flex-1 flex flex-col justify-center pr-2">
