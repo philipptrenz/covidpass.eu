@@ -94,11 +94,12 @@ export default {
   i18n: {
     locales: ['en', 'de' , 'fr', 'es', 'it', 'ru', 'tr', 'ar' ],
     defaultLocale: 'en',
+    strategy: 'prefix',
     vueI18n: i18n,
     detectBrowserLanguage: { 
-      alwaysRedirect: false, 
       fallbackLocale: 'en', 
-      useCookie: false
+      redirectOn: 'root', 
+      useCookie: false,
     }
   },
 
