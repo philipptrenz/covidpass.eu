@@ -98,8 +98,8 @@ export default {
     vueI18n: i18n,
     detectBrowserLanguage: { 
       fallbackLocale: 'en', 
-      redirectOn: 'root', 
       useCookie: false,
+      onlyOnRoot: true,
     }
   },
 
