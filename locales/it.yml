@@ -16,80 +16,16 @@ browserAlert:
   copyLink: Copia link
   notIphone: Sembra che tu non abbia aperto il nostro sito web su un iPhone. Sfortunatamente,
     il download del passaggio è possibile solo lì. Si prega di aprire di nuovo questo
-    sito Web in Safari sul tuo iPhone per assicurarti che tutto funzioni correttamente.
+    sito Web in Safari sul tuo iPhone per assicurarsi che tutto funzioni correttamente.
   notSafari: Sembra che tu non stia usando il browser Safari sul tuo iPhone. Sfortunatamente,
     il download del passaggio è possibile solo lì. Si prega di aprire di nuovo questo
     sito Web in Safari per assicurarsi che tutto funzioni correttamente.
   shareLink: Invia a iPhone.
-impress:
-  md: '### Information according to § 5 TMG
-
-    Donatus Wolf and Philipp Trenz
-
-    Kiepenheuerallee 5
-
-    14469 Potsdam
-
-    Germany
-
-    ### Contact
-
-    [info@covidpass.eu](mailto:info@covidpass.eu)
-
-    ### EU Dispute Resolution
-
-    The European Commission provides a platform for online dispute resolution (OS):
-    https://ec.europa.eu/consumers/odr. You can find our e-mail address in the imprint
-    above.
-
-    ### Consumer dispute resolution / universal arbitration board
-
-    We are not willing or obliged to participate in dispute resolution proceedings
-    before a consumer arbitration board.
-
-    ### Liability for contents
-
-    As a service provider, we are responsible for our own content on these pages in
-    accordance with § 7 paragraph 1 TMG under the general laws. According to §§ 8
-    to 10 TMG, we are not obligated to monitor transmitted or stored information or
-    to investigate circumstances that indicate illegal activity. Obligations to remove
-    or block the use of information under the general laws remain unaffected. However,
-    liability in this regard is only possible from the point in time at which a concrete
-    infringement of the law becomes known. If we become aware of any such infringements,
-    we will remove the relevant content immediately.
-
-    ### Liability for links
-
-    Our offer contains links to external websites of third parties, on whose contents
-    we have no influence. Therefore, we cannot assume any liability for these external
-    contents. The respective provider or operator of the sites is always responsible
-    for the content of the linked sites. The linked pages were checked for possible
-    legal violations at the time of linking. Illegal contents were not recognizable
-    at the time of linking. However, a permanent control of the contents of the linked
-    pages is not reasonable without concrete evidence of a violation of the law. If
-    we become aware of any infringements, we will remove such links immediately.
-
-    ### Trademark notice
-
-    Apple, Apple Wallet, iPhone and Apple Watch are trademarks of Apple Inc., registered
-    in the U.S. and other countries and regions.
-
-    ### Credits
-
-    Logo by [Ann-Kathrin Bernhard](https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208)
-
-    Mockup generated with [mockuuups.studio](https://mockuuups.studio)
-
-    With excerpts from: https://www.e-recht24.de/impressum-generator.html
-
-    Translated with www.DeepL.com/Translator (free version)'
-  title: Impressum
 index:
   addToWallet:
     note: Per proteggere i tuoi dati, assicurati che il tuo codice di accesso non
       sia visibile quando il telefono è bloccato. Se necessario, puoi cambiare questa
       impostazione in Settings > Touch / Face ID & Passcode > Allow access when locked.
-    passTitle: COVID Pass
     shareButtonText: Dillo ai tuoi amici
     successMessage: Codice QR scansionato con successo
   consent:
@@ -101,26 +37,26 @@ index:
     inputText: Ho letto l'informativa sulla privacy e acconsento al trattamento dei
       miei dati.
     paragraphs:
-    - Il tuo codice QR contiene dati sanitari sensibili e dati personali. Per proteggerli,
-      questi dati non lasceranno il vostro computer. Il trattamento delle informazioni
-      avviene esclusivamente nel suo browser. Per creare il passaporto, sarà inviato
-      solo un hash crittografico al nostro server e firmato lì. Questo significa che
-      non abbiamo la possibilità di leggere o salvare i tuoi dati.
-    - Per proteggere la tua privacy, ti chiediamo anche di non condividere il tuo
-      COVID Pass con terzi.
+      '1': Il tuo codice QR contiene dati sanitari sensibili e dati personali. Per
+        proteggerli, questi dati non lasceranno il vostro computer. Il trattamento
+        delle informazioni avviene esclusivamente nel suo browser. Per creare il passaporto,
+        sarà inviato solo un hash crittografico al nostro server e firmato lì. Questo
+        significa che non abbiamo la possibilità di leggere o salvare i tuoi dati.
+      '2': Per proteggere la tua privacy, ti chiediamo anche di non condividere il
+        tuo COVID Pass con terzi.
   onboarding:
     icons:
       recovered: recuperato
       tested: testato
       vaccinated: vaccinato
     paragraphs:
-    - Non importa se vai al cinema, un concerto o un reaturato - al giorno d'oggi
-      devi mostrare che il Passo Green Covidi europeo a più posti per dimostrare che
-      sei vaccinato, testato o recuperato. Con il nostro sito Web non è necessaria
-      una app aggiuntiva, eseguire la scansione del tuo codice una volta e aggiungerla
-      al tuo portafoglio Apple. E la prossima volta che sei in linea per mostrare
-      il tuo codice QR, non devi più cercarlo - è proprio lì, con un doppio tocco
-      sul pulsante di blocco.
+      '1': Non importa se vai al cinema, un concerto o un ristorante - al giorno d'oggi
+        devi mostrare che il Passo Green Covidi europeo a più posti per dimostrare
+        che sei vaccinato, testato o recuperato. Con il nostro sito Web non è necessario
+        un'app aggiuntiva, basta eseguire la scansione del tuo codice una volta e
+        aggiungerla al tuo portafoglio Apple iOS. E la prossima volta che sei in linea
+        per mostrare il tuo codice QR, non devi più cercarlo - è proprio lì, con un
+        doppio tocco sul pulsante di blocco.
   scan:
     errorHint: Questo codice QR non è corretto
     errors:
@@ -150,7 +86,6 @@ pass:
   country: Paese espositore
   credits:
     label: Creato da
-    value: https://covidpass.eu
   dateOfBirth: Data di nascita
   dateOfVaccination: Data della vaccinazione
   disclaimer:
@@ -168,202 +103,3 @@ pass:
   vaccine: Vaccino
   validFrom: Valido da
   validUntil: Valido fino a
-privacy:
-  md: 'Our privacy policy is based on the terms used by the European legislator for
-    the adoption of the General Data Protection Regulation (GDPR).
-
-    ### General information
-
-    * The whole process of generating the pass file happens locally in your browser.
-    For the signing step, only a hashed representation of your data is sent to the
-    server.
-
-    * Your data is not stored beyond the active browser session and the site does
-    not use cookies.
-
-    * No data is sent to third parties.
-
-    * We transmit your data securely over https.
-
-    * Our server is hosted in Nuremberg, Germany.
-
-    * The source code of this site is available on [GitHub](http://github.com/philipptrenz/covidpass).
-
-    * By default, Apple Wallet passes are accessible from the lock screen. This can
-    be changed in the [settings](https://support.apple.com/de-de/guide/iphone/iph9a2a69136/ios).
-
-    * The server provider processes data to provide this site. In order to better
-    understand what measures they take to protect your data, please also read their
-    [privacy policy](https://www.hetzner.com/de/rechtliches/datenschutz/) and the
-    [data privacy FAQ](https://docs.hetzner.com/general/general-terms-and-conditions/data-privacy-faq/).
-
-    ### Contact
-
-    Donatus Wolf and Philipp Trenz
-
-    Kiepenheuerallee 5
-
-    14469 Potsdam
-
-    Germany
-
-    Email: [info@covidpass.eu](mailto:info@covidpass.eu)
-
-    ### Simplified explanation of the process
-
-    This process is only started after accepting this policy and clicking on the Add
-    to Wallet button.
-
-    First, the following steps happen locally in your browser:
-
-    * Scanning and extracting the QR code data from your selected certificate via
-    the camera of your device
-
-    * Decoding your personal and health-related data from the QR code payload
-
-    * Assembling an incomplete pass file out of your data
-
-    * Generating a hashes of the data stored in the pass file
-
-    * Sending only the hashes to our server
-
-
-    Second, the following steps happen on our server:
-
-    * Receiving and checking the hashes which were generated locally
-
-    * Signing the file containing the hashes
-
-    * Sending the signature back
-
-
-    Finally, the following steps happen locally in your browser:
-
-    * Assembling the signed pass file out of the incomplete file generated locally
-    and the signature
-
-    * Saving the file on your device
-
-    ### Locally processed data
-
-    The following data is processed on in your browser to generate the pass file.
-
-    Processed personal data contained in the QR code:
-
-    * Your first and last name
-
-    * Your date of birth
-
-
-    For each vaccination certificate contained in the QR code, the following data
-    is processed:
-
-    * Targeted disease
-
-    * Vaccine medical product
-
-    * Manufacturer/Marketing Authorization Holder
-
-    * Dose number
-
-    * Total series of doses
-
-    * Date of vaccination
-
-    * Country of vaccination
-
-    * Certificate issuer
-
-    * Unique certificate identifier (UVCI)
-
-
-    For each test certificate contained in the QR code, the following data is processed:
-
-    * Targeted disease
-
-    * Test type
-
-    * NAA Test name
-
-    * RAT Test name and manufacturer
-
-    * Date/Time of Sample Collection
-
-    * Test Result
-
-    * Testing Centre
-
-    * Country of test
-
-    * Certificate Issuer
-
-    * Unique Certificate Identifier (UVCI)
-
-
-    For each recovery certificate contained in the QR code, the following data is
-    processed:
-
-    * Targeted disease
-
-    * Date of first positive NAA test result
-
-    * Country of test
-
-    * Certificate Issuer
-
-    * Certificate valid from
-
-    * Certificate valid until
-
-    * Unique Certificate Identifier (UVCI)
-
-
-    The [Digital Covid Certificate Schema](https://github.com/ehn-dcc-development/ehn-dcc-schema)
-    contains a detailed specification of which data can be contained in the QR code.
-
-    ### Server provider
-
-    Our server provider is Hetzner Online GmbH. The following data may be collected
-    and stored in the server log files:
-
-    * The browser types and versions used
-
-    * The operating system used by the accessing system
-
-    * The website from which an accessing system reaches our website (so-called referrers)
-
-    * The date and time of access
-
-    * The pseudonymised IP addresses
-
-    ### Your rights
-
-    In accordance with the GDPR you have the following rights:
-
-    * Right of access to your data: You have the right to know what data has been
-    collected about you and how it was processed.
-
-    * Right to be forgotten: Erasure of your personal data.
-
-    * Right of rectification: You have the right to correct inaccurate data.
-
-    * Right of data portability: You have the right to transfer your data from one
-    processing system into another.
-
-    ### Third parties linked
-
-    * GitHub: [Privacy Policy](https://docs.github.com/en/github/site-policy/github-privacy-statement)
-
-    * PayPal: [Privacy Policy](https://www.paypal.com/de/webapps/mpp/ua/privacy-full?locale.x=en_EN)
-
-    * Apple may sync your passes via iCloud: [Privacy Policy](https://www.apple.com/legal/privacy/en-ww/)
-
-    ### Credits
-
-    Privacy policy authoritatively prepared by [Marvin Sextro](https://marvinsextro.de)
-    (see [here](https://github.com/covidpass-org/covidpass))
-
-    With excerpts from: https://www.e-recht24.de/impressum-generator.html
-
-    Translated with www.DeepL.com/Translator (free version)'
-  title: Privacy Policy
