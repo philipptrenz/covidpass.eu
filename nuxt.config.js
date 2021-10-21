@@ -87,13 +87,20 @@ export default {
       src: 'nuxt-user-agent',
       ssr: false
     },
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
   ],
 
   axios: {},
 
   sitemap: {
     gzip: true,
+  },
+
+  robots: {
+    Sitemap: (req) => `https://${req.headers.host}/sitemap.xml`,
+    UserAgent: '*',
+    Allow: '*',
   },
 
   i18n: {
