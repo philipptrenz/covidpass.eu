@@ -1,8 +1,10 @@
 <template>
   <div class="m-auto flex flex-col space-y-6 max-w-lg bg-white p-6 rounded-2xl" id="content">
 
-    <div class="flex flex-row justify-start">
-      <Logo class="pr-2 flex-shrink-0"/>
+    <div v-if="state != 1" class="flex flex-row justify-start">
+      <div class="w-10">
+        <Logo class="pr-2 flex-shrink-0"/>
+      </div>
       <div class="inline-block text-2xl text-primary">
         <h1> 
           <span class="font-medium">{{ $t('index.title') }}</span><br/>
@@ -10,6 +12,23 @@
         </h1>
       </div>
     </div>
+
+    <div v-else class="text-2xl text-primary flex flex-row align-middle justify-start">
+      <div class="w-10">
+        <button @click="state = 0" class="inline-block pr-2">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 24L12 16L20 8" stroke="#27215B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="inline-block text-2xl text-primary">
+        <h1> 
+          <span class="font-medium">{{ $t('index.title') }}</span><br/>
+          <span class="">{{ $t('index.subtitle') }}</span>
+        </h1>
+      </div>
+    </div>
+    
 
     <div v-if="state == 0" class="-mt-2">        
       <div>
