@@ -334,7 +334,7 @@ export default Vue.extend({
       this.qrScannerError = null;
       try {
         await promise
-      } catch (error) {
+      } catch (error: any) {
         const errorString = <string>this.$t( 'index.scan.errors.' + error.name )
         if (errorString) {
           this.qrScannerError = errorString
@@ -379,7 +379,7 @@ export default Vue.extend({
           this.state = State.SCANNED;
           this.scrollToTop();
         }
-      } catch (e) {
+      } catch (e: any) {
         console.error('Error:', e.message)
       }
     },
