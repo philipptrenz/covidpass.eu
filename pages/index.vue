@@ -4,8 +4,10 @@
     <div class="flex flex-row justify-start">
       <Logo class="pr-2 flex-shrink-0"/>
       <div class="inline-block text-2xl text-primary">
-        <h1 class="font-medium">{{ $t('index.title') }}</h1>
-        <h2 class="">{{ $t('index.subtitle') }}</h2>
+        <h1> 
+          <span class="font-medium">{{ $t('index.title') }}</span><br/>
+          <span class="">{{ $t('index.subtitle') }}</span>
+        </h1>
       </div>
     </div>
 

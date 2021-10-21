@@ -11,12 +11,12 @@
       
       <div
         class="flex-1 justify-self-end hidden sm:flex lg:hidden flex-row justify-center align-middle pl-2 bg-contain bg-no-repeat bg-right-bottom mt-28"
-        style="background-image: url('/mockup-wallet-mobile.png');">
+        style="background-image: url('/ios-apple-wallet-covid-pass.sm.png');">
       </div>
 
       <div 
         class="flex-1 justify-self-end hidden lg:flex flex-row justify-center align-middle pl-2 bg-contain bg-no-repeat bg-bottom mt-28"
-        style="background-image: url('/mockup-wallet-desktop.png');">
+        style="background-image: url('/ios-apple-wallet-covid-pass.lg.png');">
       </div>
       
     </div>
