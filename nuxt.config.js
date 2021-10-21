@@ -100,7 +100,7 @@ export default {
   robots: {
     Sitemap: (req) => `https://${req.headers.host}/sitemap.xml`,
     UserAgent: '*',
-    Allow: '*',
+    Disallow: (req) => req.headers.host.startsWith('dev.') ? '/': '',
   },
 
   i18n: {
