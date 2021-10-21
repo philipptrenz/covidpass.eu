@@ -86,10 +86,15 @@ export default {
     { 
       src: 'nuxt-user-agent',
       ssr: false
-    }
+    },
+    '@nuxtjs/sitemap'
   ],
 
   axios: {},
+
+  sitemap: {
+    gzip: true,
+  },
 
   i18n: {
     locales: ['en', 'de' , 'fr', 'es', 'it', 'ru', 'tr', 'ar' ],
