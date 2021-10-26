@@ -15,14 +15,14 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Scan your vaccination, test and recovery certificates in QR code representation and save them to your Apple Wallet' },
-      { name: 'application-name', content: 'COVID Pass'},
-      { name: 'keywords', content: 'Apple Wallet, EU Digital COVID Certificate, EU Green Certificate, Vaccination, Recovery, Test, Impfung, Genesung'},
+      { name: 'application-name', content: 'COVID Pass in your iOS Apple Wallet'},
+      { name: 'keywords', content: 'Apple Wallet, iOS Wallet, iPhone Wallet, EU Digital COVID Certificate, COVID, covid pass, green pass, EU Green Certificate, Vaccination, Recovery, Test'},
       { name: 'author', content: 'Donatus Wolf, Philipp Trenz'},
       { name: 'theme-color', content: tailwind.theme.colors.primary },
       { name: 'msapplication-TileColor', content: tailwind.theme.colors.primary },
       { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
       { property: 'og:title', content: 'COVID Pass' },
-      { property: 'og:description', content: 'Your digital COVID pass just one click away' },
+      { property: 'og:description', content: 'Your digital COVID pass in your iPhone Apple Wallet' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://covidpass.eu' },
       { property: 'og:site_name', content: 'COVID Pass' },
@@ -86,19 +86,32 @@ export default {
     { 
       src: 'nuxt-user-agent',
       ssr: false
-    }
+    },
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
   ],
 
   axios: {},
 
+  sitemap: {
+    gzip: true,
+  },
+
+  robots: {
+    Sitemap: (req) => `https://${req.headers.host}/sitemap.xml`,
+    UserAgent: '*',
+    Disallow: (req) => req.headers.host.startsWith('dev.') ? '/': '',
+  },
+
   i18n: {
-    locales: ['en', 'de' , 'fr', 'es', 'it', 'ru', 'tr' ],
+    locales: ['en', 'de' , 'fr', 'es', 'it', 'ru', 'tr', 'ar' ],
     defaultLocale: 'en',
+    strategy: 'prefix',
     vueI18n: i18n,
     detectBrowserLanguage: { 
-      alwaysRedirect: false, 
       fallbackLocale: 'en', 
-      useCookie: false
+      useCookie: false,
+      onlyOnRoot: true,
     }
   },
 

@@ -1,13 +1,34 @@
 <template>
   <div class="m-auto flex flex-col space-y-6 max-w-lg bg-white p-6 rounded-2xl" id="content">
 
-    <div class="flex flex-row justify-start">
-      <Logo class="pr-2 flex-shrink-0"/>
+    <div v-if="state != 1" class="flex flex-row justify-start">
+      <div class="w-10">
+        <Logo class="pr-2 flex-shrink-0"/>
+      </div>
       <div class="inline-block text-2xl text-primary">
-        <h1 class="font-medium">{{ $t('index.title') }}</h1>
-        <h2 class="">{{ $t('index.subtitle') }}</h2>
+        <h1> 
+          <span class="font-medium">{{ $t('index.title') }}</span><br/>
+          <span class="">{{ $t('index.subtitle') }}</span>
+        </h1>
       </div>
     </div>
+
+    <div v-else class="text-2xl text-primary flex flex-row align-middle justify-start">
+      <div class="w-10">
+        <button @click="state = 0" class="inline-block pr-2">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 24L12 16L20 8" stroke="#27215B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="inline-block text-2xl text-primary">
+        <h1> 
+          <span class="font-medium">{{ $t('index.title') }}</span><br/>
+          <span class="">{{ $t('index.subtitle') }}</span>
+        </h1>
+      </div>
+    </div>
+    
 
     <div v-if="state == 0" class="-mt-2">        
       <div>
@@ -67,7 +88,7 @@
               </Icon>
             </a>
             
-            <a href="https://github.com/philipptrenz/covidpass/" target="_blank" class="cursor-pointer flex-1">
+            <a href="http://ko-fi.com/covidpass" target="_blank" class="cursor-pointer flex-1">
               <Icon :text="$t('index.consent.icons.noProfit')">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7313 10.269C24.0155 9.72882 21.2006 10.0061 18.6424 11.0657C16.0843 12.1253 13.8978 13.9197 12.3594 16.222C11.5777 17.3919 10.9813 18.6662 10.5836 20H19C19.5523 20 20 20.4477 20 21C20 21.5523 19.5523 22 19 22H10.1436C10.0484 22.6597 10 23.328 10 24C10 24.672 10.0484 25.3403 10.1436 26H19C19.5523 26 20 26.4477 20 27C20 27.5523 19.5523 28 19 28H10.5836C10.9813 29.3338 11.5777 30.6081 12.3594 31.778C13.8978 34.0803 16.0843 35.8747 18.6424 36.9343C21.2006 37.994 24.0155 38.2712 26.7313 37.731C29.447 37.1908 31.9416 35.8574 33.8995 33.8995C34.29 33.509 34.9232 33.509 35.3137 33.8995C35.7042 34.29 35.7042 34.9232 35.3137 35.3137C33.0761 37.5514 30.2251 39.0752 27.1214 39.6926C24.0177 40.3099 20.8007 39.9931 17.8771 38.7821C14.9534 37.5711 12.4546 35.5203 10.6965 32.8891C9.69211 31.386 8.95526 29.732 8.50806 28H5C4.44772 28 4 27.5523 4 27C4 26.4477 4.44772 26 5 26H8.12548C8.0422 25.339 8 24.6711 8 24C8 23.3289 8.0422 22.661 8.12548 22H5C4.44772 22 4 21.5523 4 21C4 20.4477 4.44772 20 5 20H8.50807C8.95526 18.2681 9.69211 16.614 10.6965 15.1109C12.4546 12.4797 14.9534 10.4289 17.8771 9.21794C20.8007 8.00693 24.0177 7.69008 27.1214 8.30744C30.2251 8.92481 33.0761 10.4487 35.3137 12.6863C35.7042 13.0768 35.7042 13.71 35.3137 14.1005C34.9232 14.491 34.29 14.491 33.8995 14.1005C31.9416 12.1426 29.447 10.8092 26.7313 10.269Z" fill="white"/>
@@ -172,7 +193,7 @@
             <svg class="inline-block" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2801 11.0823L33.3333 15.6231L35.3865 11.0823L37.9468 12.5604L35.0408 16.6088L40 16.1164V19.0728L35.0407 18.5804L37.9468 22.6293L35.3864 24.1074L33.3333 19.5662L31.2802 24.1074L28.7198 22.6293L31.6259 18.5804L26.6666 19.0728V16.1164L31.6258 16.6088L28.7198 12.5604L31.2801 11.0823Z" fill="white"/>
             </svg>
-            {{ $t('index.addToWallet.passTitle') }}
+            {{ 'COVID Pass' }}
           </span>
         </h1>
 
@@ -313,7 +334,7 @@ export default Vue.extend({
       this.qrScannerError = null;
       try {
         await promise
-      } catch (error) {
+      } catch (error: any) {
         const errorString = <string>this.$t( 'index.scan.errors.' + error.name )
         if (errorString) {
           this.qrScannerError = errorString
@@ -358,7 +379,7 @@ export default Vue.extend({
           this.state = State.SCANNED;
           this.scrollToTop();
         }
-      } catch (e) {
+      } catch (e: any) {
         console.error('Error:', e.message)
       }
     },

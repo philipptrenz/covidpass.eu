@@ -1,106 +1,29 @@
----
-index:
-  title: Dein COVID Pass
-  subtitle: nur einen Klick entfernt im Apple Wallet
-  onboarding:
-    paragraphs:
-    - Egal, ob Du ins Kino, ein Konzert oder ein Restaurant gehst - aktuell musst Du an immer mehr Orten den europäischen COVID 
-      Green Pass vorzeigen. Mit unserer Website brauchst Du keine zusätzliche App, sondern scannst Deinen Code 
-      nur einmal und fügst ihn in Dein Apple Wallet hinzu. Und wenn Du das nächste Mal in der Schlange stehst, um Deinen QR-Code 
-      vorzuzeigen, musst Du nicht mehr danach suchen - er ist gleich da, mit einem Doppeltipp auf Deiner Sperrtaste.
-    icons:
-      vaccinated: geimpft
-      tested: getestet
-      recovered: genesen
-  consent:
-    paragraphs:
-    - Dein QR-Code enthält neben persönlichen 
-      Daten auch sensible Gesundheitsdaten. Um diese zu schützen, werden diese Daten
-      Deinen Computer nicht verlassen. Die Verarbeitung der Informationen geschieht
-      ausschließlich in Deinem Browser. Zur Erstellung des Passes wird lediglich ein
-      kryptografischer Hash an unseren Server gesendet und dort signiert. Das bedeutet
-      wir haben erst gar keine Möglichkeit Deine Daten zu lesen oder zu speichern.
-    - Zum Schutz Deiner Privatsphäre bitten wir auch Dich Deinen COVID Pass nicht an Dritte weiterzugeben.
-    inputText: Ich habe die <a href='/de/privacy'>Datenschutz-Bestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten zu
-    icons:
-      noStorage: Lokale Verarbeitung
-      openSource: Open Source
-      noProfit: Kein Profit
-    buttonText: QR-Code scannen
-  scan:
-    hint: Scanne den QR-Code
-    errorHint: Dieser QR-Code ist nicht korrekt
-    errors:
-      NotAllowedError: Bitte erlaube den Zugriff auf die Kamera
-      NotFoundError: Es konnte keine Kamera gefunden werden
-      NotSupportedError: Diese Funktion wird leider nicht unterstützt
-      NotReadableError: Deine Kamera scheint anderweitig verwendet zu werden
-      OverconstrainedError: Dein Gerät ist leider nicht geeignet
-      StreamApiNotSupportedError: Dein Browser unterstützt diese Funktion leider nicht
-  addToWallet:
-    passTitle: COVID Pass
-    successMessage: QR-Code erfolgreich gescannt
-    note: "<b>Hinweis:</b> Um Deine Daten zu schützen, stellen bitte sicher, dass 
-    Dein Pass nicht sichtbar ist, wenn Dein Telefon gesperrt ist. Falls nötig, 
-    kannst Du diese Einstellung unter <i>Einstellungen</i> > <i>Touch / Face ID 
-    & Passcode</i> > <i>Im Sperrzustand Zugriff erlauben</i> ändern."
-    shareButtonText: Erzähle es weiter
-browserAlert:
-  notSafari: Es scheint so, also ob Du nicht den Safari-Browser auf Deinem iPhone nutzt. Leider ist der Download des Passes nur dort möglich. Bitte öffne diese Website noch einmal in Safari, damit alles einwandfrei funktioniert.
-  copyLink: Link kopieren
-  notIphone: Es scheint so, also ob Du unsere Website nicht auf einem iPhone geöffnet hast. Leider ist der Download des Passes nur dort möglich. Bitte öffne diese Website noch einmal in Safari auf Deinem iPhone, damit alles einwandfrei funktioniert.
-  shareLink: An iPhone senden
-  android: Es scheint so, also ob Du unsere Website nicht auf einem iPhone geöffnet hast. Leider ist der Downlod des Passes nur dort möglich. Android hat keine native Möglichkeit Pässe zu verwalten.
-pass:
-  certificateType: 
-    label: Zertifikatstyp
-    vaccination: Impfung
-    recovery: Genesung
-    test: Test
-  name: Name
-  dateOfBirth: Geburtsdatum
-  dose: Dosis
-  dateOfVaccination: Impfdatum
-  vaccine: Impfstoff
-  positiveTested: Positiv getestet
-  validFrom: Gültig ab
-  validUntil: Gültig bis
-  testType: Art des Tests
-  testResult: Testergebnis
-  testingTime: Testzeitpunkt
-  uniqueCertificateIdentifier: Eindeutiger Zertifikatsidentifizierer (UVCI)
-  certificateIssuer: Zertifikatsaussteller
-  country: Ausstellendes Land
-  credits:
-    label: Erstellt durch
-    value: https://covidpass.eu
-  disclaimer:
-    label: Hinweis
-    value: Dieses Zertifikat ist nur in Verbindung mit dem Personalausweis des Zertifikatsinhabers gültig. Die Gültigkeit dieses Zertifikats wurde von COVID Pass nicht überprüft.
-labels:
-  next: Weiter
-  backToHome: Zurück zur Startseite
-  loading: Laden ...
-  tryAgain: Erneut versuchen
-  reportIssue: Fehler melden
-  support: Unterstützen
 about:
+  md: Hi, wir sind Donatus und Philipp. Zwei Entwickler und Designer mit einem 💙  für
+    innovative Lösungen und intuitive User Experience, um soziale Herausforderungen
+    zu meistern und Teilhabe (wieder) zu ermöglichen. COVID hat unser aller Leben
+    in den letzten Monaten stark beeinträchtigt. Allmählich kehrt nun eine gewisse
+    Normalität zurück. Mit diesem Tool wollen wir einen kleinen Beitrag dazu leisten,
+    den Alltag und das Reisen ein wenig leichter zu machen. Vielen Dank an Ann-Kathrin,
+    die das Logo zur Verfügung stellt. Wir haben COVID Pass für iOS in unserer Freizeit
+    erstellt und bezahlen die Serverkosten aus eigener Tasche. Wenn Du dieses Projekt
+    nützlich findest, freuen wir uns über eine kleine Unterstützung.
+  supportButton: Unterstütze uns auf Ko-fi
   title: Über uns
-  md: "Hi, wir sind [Donatus](https://www.linkedin.com/in/donatuswolf/) und [Philipp](https://www.linkedin.com/in/philipp-trenz-a544a8182/). Zwei Entwickler und Designer mit einem 💙  für innovative Lösungen und intuitive User Experience, um soziale Herausforderungen zu meistern und Teilhabe (wieder) zu ermöglichen.
-
-
-    COVID hat unser aller Leben in den letzten Monaten stark beeinträchtigt. Allmählich kehrt nun eine gewisse Normalität zurück. Mit diesem Tool wollen wir einen kleinen Beitrag dazu leisten, den Alltag und das Reisen ein wenig leichter zu machen.
-
-
-    Vielen Dank an [Ann-Kathrin](https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208), die das Logo zur Verfügung stellt.
-    
-    
-    Wir haben COVID Pass in unserer Freizeit erstellt und bezahlen die Serverkosten aus eigener Tasche. Wenn Du dieses Projekt nützlich findest, freuen wir uns über eine kleine Unterstützung.
-    "
-  supportButton: Spendiere uns einen Kaffee
+browserAlert:
+  android: Es scheint so, also ob Du unsere Website nicht auf einem iPhone geöffnet
+    hast. Leider ist der Downlod des Passes nur dort möglich. Android hat keine native
+    Möglichkeit Pässe zu verwalten.
+  copyLink: Link kopieren
+  notIphone: Es scheint so, also ob Du unsere Website nicht auf einem iPhone geöffnet
+    hast. Leider ist der Download des Passes nur dort möglich. Bitte öffne diese Website
+    noch einmal in Safari auf Deinem iPhone, damit alles einwandfrei funktioniert.
+  notSafari: Es scheint so, also ob Du nicht den Safari-Browser auf Deinem iPhone
+    nutzt. Leider ist der Download des Passes nur dort möglich. Bitte öffne diese
+    Website noch einmal in Safari, damit alles einwandfrei funktioniert.
+  shareLink: An iPhone senden
 impress:
-  title: Impressum
-  md: "### Informationen nach § 5 TMG
+  md: '### Informationen nach § 5 TMG
 
     Donatus Wolf und Philipp Trenz
 
@@ -116,42 +39,150 @@ impress:
 
     ### EU-Streitbeilegung
 
-    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr. Die E-Mail-Adresse finden Sie im obigen Impressum.
+    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS)
+    bereit: https://ec.europa.eu/consumers/odr. Die E-Mail-Adresse finden Sie im obigen
+    Impressum.
 
     ### Verbraucherstreitbeilegung / Allgemeine Schlichtungsstelle
 
-    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+    Verbraucherschlichtungsstelle teilzunehmen.
 
     ### Haftung für Inhalte
 
-    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen
+    Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind
+    wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte
+    fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine
+    rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung
+    der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+    Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer
+    konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen
+    werden wir diese Inhalte umgehend entfernen.
 
     ### Haftung für Links
 
-    Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+    Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir
+    keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine
+    Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige
+    Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden
+    zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige
+    Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche
+    Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung
+    nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige
+    Links umgehend entfernen.
 
     ### Hinweis zu Warenzeichen
-    
-    Apple, Apple Wallet, iPhone und Apple Watch sind Warenzeichen von Apple Inc., registriert in den Vereinigten Staaten und anderen Ländern und Regionen.
+
+    Apple, Apple Wallet, iPhone und Apple Watch sind Warenzeichen von Apple Inc.,
+    registriert in den Vereinigten Staaten und anderen Ländern und Regionen.
 
     ### Credits
 
     Logo von [Ann-Kathrin Bernhard](https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208)
 
     Mockup generiert mit [mockuuups.studio](https://mockuuups.studio)
-    
-    Mit Auszügen aus: https://www.e-recht24.de/impressum-generator.html 
-    
-    Übersetzt mit www.DeepL.com/Translator (freie Version)"
+
+    Mit Auszügen aus: https://www.e-recht24.de/impressum-generator.html
+
+    Übersetzt mit www.DeepL.com/Translator (freie Version)'
+  title: Impressum
+index:
+  addToWallet:
+    note: Um Deine Daten zu schützen, stellen bitte sicher, dass Dein Pass nicht sichtbar
+      ist, wenn Dein iPhone gesperrt ist. Falls nötig, kannst Du diese Einstellung
+      unter Einstellungen > Touch / Face ID & Passcode > Im Sperrzustand Zugriff erlauben
+      ändern.
+    shareButtonText: Erzähle es weiter
+    successMessage: QR-Code erfolgreich gescannt
+  consent:
+    buttonText: QR-Code scannen
+    icons:
+      noProfit: Kein Profit
+      noStorage: Lokale Verarbeitung
+      openSource: Open Source
+    inputText: Ich habe die Datenschutz-Bestimmungen gelesen und stimme der Verarbeitung
+      meiner Daten zu
+    paragraphs:
+      '1': Dein QR-Code enthält neben persönlichen Daten auch sensible Gesundheitsdaten.
+        Um diese zu schützen, werden diese Daten Deinen Computer nicht verlassen.
+        Die Verarbeitung der Informationen geschieht ausschließlich in Deinem Browser.
+        Zur Erstellung des Passes wird lediglich ein kryptografischer Hash an unseren
+        Server gesendet und dort signiert. Das bedeutet wir haben erst gar keine Möglichkeit
+        Deine Daten zu lesen oder zu speichern.
+      '2': Zum Schutz Deiner Privatsphäre bitten wir Dich außerdem, Deinen COVID Pass
+        nicht an Dritte weiterzugeben.
+  onboarding:
+    icons:
+      recovered: genesen
+      tested: getestet
+      vaccinated: geimpft
+    paragraphs:
+      '1': Egal, ob Du ins Kino, ein Konzert oder ein Restaurant gehst - aktuell musst
+        Du an immer mehr Orten den europäischen COVID Green Pass vorzeigen, um nachzuweisen,
+        dass Du geimpft, getestet oder genesen bist. Mit unserer Website brauchst
+        Du keine zusätzliche App, sondern scannst Deinen Code nur einmal und fügst
+        ihn in Dein iOS Apple Wallet hinzu. Und wenn Du das nächste Mal in der Schlange
+        stehst, um Deinen QR-Code vorzuzeigen, musst Du nicht mehr danach suchen -
+        er ist gleich da, mit einem Doppeltipp auf Deiner Sperrtaste.
+  scan:
+    errorHint: Dieser QR-Code ist nicht korrekt
+    errors:
+      NotAllowedError: Bitte erlaube den Zugriff auf die Kamera
+      NotFoundError: Es konnte keine Kamera gefunden werden
+      NotReadableError: Deine Kamera scheint anderweitig verwendet zu werden
+      NotSupportedError: Diese Funktion wird leider nicht unterstützt
+      OverconstrainedError: Dein Gerät ist leider nicht geeignet
+      StreamApiNotSupportedError: Dein Browser unterstützt diese Funktion leider nicht
+    hint: Scanne den QR-Code
+  subtitle: nur einen Klick entfernt im iOS Apple Wallet
+  title: Dein COVID Pass
+labels:
+  backToHome: Zurück zur Startseite
+  loading: Laden ...
+  next: Weiter
+  reportIssue: Fehler melden
+  support: Unterstützen
+  tryAgain: Erneut versuchen
+pass:
+  certificateIssuer: Zertifikatsaussteller
+  certificateType:
+    label: Zertifikatstyp
+    recovery: Genesung
+    test: Test
+    vaccination: Impfung
+  country: Ausstellendes Land
+  credits:
+    label: Erstellt durch
+  dateOfBirth: Geburtsdatum
+  dateOfVaccination: Impfdatum
+  disclaimer:
+    label: Hinweis
+    value: Dieses Zertifikat ist nur in Verbindung mit dem Personalausweis des Zertifikatsinhabers
+      gültig. Die Gültigkeit dieses Zertifikats wurde von COVID Pass nicht überprüft.
+  dose: Dosis
+  name: Name
+  positiveTested: Positiv getestet
+  testResult: Testergebnis
+  testType: Art des Tests
+  testingTime: Testzeitpunkt
+  uniqueCertificateIdentifier: Eindeutiger Zertifikatsidentifizierer (UVCI)
+  vaccine: Impfstoff
+  validFrom: Gültig ab
+  validUntil: Gültig bis
 privacy:
-  title: Datenschutz
-  md: "Unsere Datenschutzerklärung basiert auf den Begriffen, die der europäische Gesetzgeber bei der Verabschiedung der Datenschutz-Grundverordnung (DSGVO) verwendet hat.
+  md: 'Unsere Datenschutzerklärung basiert auf den Begriffen, die der europäische
+    Gesetzgeber bei der Verabschiedung der Datenschutz-Grundverordnung (DSGVO) verwendet
+    hat.
 
     ### Allgemeine Informationen
 
-    * Der gesamte Prozess der Erzeugung der Pass-Datei geschieht lokal in Ihrem Browser. Für den Signierschritt wird nur eine gehashte Darstellung Ihrer Daten an den Server gesendet.
+    * Der gesamte Prozess der Erzeugung der Pass-Datei geschieht lokal in Ihrem Browser.
+    Für den Signierschritt wird nur eine gehashte Darstellung Ihrer Daten an den Server
+    gesendet.
 
-    * Ihre Daten werden nicht über die aktive Browsersitzung hinaus gespeichert und die Seite verwendet keine Cookies.
+    * Ihre Daten werden nicht über die aktive Browsersitzung hinaus gespeichert und
+    die Seite verwendet keine Cookies.
 
     * Es werden keine Daten an Dritte weitergegeben.
 
@@ -159,11 +190,17 @@ privacy:
 
     * Unser Server wird in Nürnberg, Deutschland, gehostet.
 
-    * Der Quellcode dieser Seite ist auf [GitHub](http://github.com/philipptrenz/covidpass) verfügbar.
+    * Der Quellcode dieser Seite ist auf [GitHub](http://github.com/philipptrenz/covidpass)
+    verfügbar.
 
-    * Standardmäßig sind die Apple-Wallet-Pässe über den Sperrbildschirm zugänglich. Dies kann in den [Einstellungen](https://support.apple.com/de-de/guide/iphone/iph9a2a69136/ios) geändert werden.
+    * Standardmäßig sind die Apple-Wallet-Pässe über den Sperrbildschirm zugänglich.
+    Dies kann in den [Einstellungen](https://support.apple.com/de-de/guide/iphone/iph9a2a69136/ios)
+    geändert werden.
 
-    * Der Serveranbieter verarbeitet Daten, um diese Seite bereitzustellen. Um besser zu verstehen, welche Maßnahmen er zum Schutz Ihrer Daten ergreift, lesen Sie bitte auch seine [Datenschutzrichtlinie](https://www.hetzner.com/de/rechtliches/datenschutz/) und die [Datenschutz-FAQ](https://docs.hetzner.com/general/general-terms-and-conditions/data-privacy-faq/).
+    * Der Serveranbieter verarbeitet Daten, um diese Seite bereitzustellen. Um besser
+    zu verstehen, welche Maßnahmen er zum Schutz Ihrer Daten ergreift, lesen Sie bitte
+    auch seine [Datenschutzrichtlinie](https://www.hetzner.com/de/rechtliches/datenschutz/)
+    und die [Datenschutz-FAQ](https://docs.hetzner.com/general/general-terms-and-conditions/data-privacy-faq/).
 
     ### Kontakt
 
@@ -179,11 +216,13 @@ privacy:
 
     ### Vereinfachte Erklärung des Prozesses
 
-    Dieser Prozess wird erst nach dem Akzeptieren dieser Richtlinie und dem Klick auf die Schaltfläche Zu Wallet hinzufügen gestartet.
+    Dieser Prozess wird erst nach dem Akzeptieren dieser Richtlinie und dem Klick
+    auf die Schaltfläche Zu Wallet hinzufügen gestartet.
 
     Zunächst finden die folgenden Schritte lokal in Ihrem Browser statt:
 
-    * Scannen und Extrahieren der QR-Code-Daten Ihres ausgewählten Zertifikats über die Kamera Ihres Geräts
+    * Scannen und Extrahieren der QR-Code-Daten Ihres ausgewählten Zertifikats über
+    die Kamera Ihres Geräts
 
     * Dekodierung Ihrer persönlichen und gesundheitsbezogenen Daten aus den QR-Code-Nutzdaten
 
@@ -205,13 +244,15 @@ privacy:
 
     Schließlich finden die folgenden Schritte lokal in Ihrem Browser statt:
 
-    * Zusammensetzen der signierten Pass-Datei aus der unvollständigen, lokal erzeugten Datei und der Signatur
+    * Zusammensetzen der signierten Pass-Datei aus der unvollständigen, lokal erzeugten
+    Datei und der Signatur
 
     * Abspeichern der Datei auf Ihrem Gerät
 
     ### Lokal verarbeitete Daten
 
-    Die folgenden Daten werden in Ihrem Browser verarbeitet, um die Pass-Datei zu erzeugen.
+    Die folgenden Daten werden in Ihrem Browser verarbeitet, um die Pass-Datei zu
+    erzeugen.
 
     Verarbeitete personenbezogene Daten, die im QR-Code enthalten sind:
 
@@ -264,7 +305,8 @@ privacy:
     * Eindeutiger Zertifikatsbezeichner (UVCI)
 
 
-    Für jedes im QR-Code enthaltene Genesungszertifikat werden die folgenden Daten verarbeitet:
+    Für jedes im QR-Code enthaltene Genesungszertifikat werden die folgenden Daten
+    verarbeitet:
 
     * Geimpfte Krankheit
 
@@ -281,17 +323,21 @@ privacy:
     * Eindeutiger Zertifikatsbezeichner (UVCI)
 
 
-    Das [Digital Covid Certificate Schema](https://github.com/ehn-dcc-development/ehn-dcc-schema) enthält eine detaillierte Spezifikation, welche Daten im QR-Code enthalten sein können.
+    Das [Digital Covid Certificate Schema](https://github.com/ehn-dcc-development/ehn-dcc-schema)
+    enthält eine detaillierte Spezifikation, welche Daten im QR-Code enthalten sein
+    können.
 
     ### Server-Anbieter
 
-    Unser Server-Provider ist die Hetzner Online GmbH. Folgende Daten können erhoben und in den Server-Logfiles gespeichert werden:
+    Unser Server-Provider ist die Hetzner Online GmbH. Folgende Daten können erhoben
+    und in den Server-Logfiles gespeichert werden:
 
     * Die verwendeten Browsertypen und -versionen
 
     * Das vom zugreifenden System verwendete Betriebssystem
 
-    * die Website, von der aus ein zugreifendes System auf unsere Website gelangt (sog. Referrer)
+    * die Website, von der aus ein zugreifendes System auf unsere Website gelangt
+    (sog. Referrer)
 
     * das Datum und die Uhrzeit des Zugriffs
 
@@ -301,13 +347,15 @@ privacy:
 
     Gemäß der DSGVO haben Sie folgende Rechte:
 
-    * Recht auf Auskunft über Ihre Daten: Sie haben das Recht zu erfahren, welche Daten über Sie erhoben wurden und wie diese verarbeitet wurden.
+    * Recht auf Auskunft über Ihre Daten: Sie haben das Recht zu erfahren, welche
+    Daten über Sie erhoben wurden und wie diese verarbeitet wurden.
 
     * Recht auf Vergessenwerden: Löschung Ihrer personenbezogenen Daten.
 
     * Recht auf Berichtigung: Sie haben das Recht, unzutreffende Daten zu berichtigen.
 
-    * Recht auf Datenübertragbarkeit: Sie haben das Recht, Ihre Daten von einem Verarbeitungssystem in ein anderes zu übertragen.
+    * Recht auf Datenübertragbarkeit: Sie haben das Recht, Ihre Daten von einem Verarbeitungssystem
+    in ein anderes zu übertragen.
 
     ### Drittanbieter verlinkt
 
@@ -319,8 +367,10 @@ privacy:
 
     ### Credits
 
-    Datenschutzerklärung maßgeblich erarbeitet von [Marvin Sextro](https://marvinsextro.de) (siehe [hier](https://github.com/covidpass-org/covidpass))
-    
-    Mit Auszügen aus: https://www.e-recht24.de/impressum-generator.html 
-    
-    Übersetzt mit www.DeepL.com/Translator (kostenlose Version)"
+    Datenschutzerklärung maßgeblich erarbeitet von [Marvin Sextro](https://marvinsextro.de)
+    (siehe [hier](https://github.com/covidpass-org/covidpass))
+
+    Mit Auszügen aus: https://www.e-recht24.de/impressum-generator.html
+
+    Übersetzt mit www.DeepL.com/Translator (kostenlose Version)'
+  title: Datenschutz
