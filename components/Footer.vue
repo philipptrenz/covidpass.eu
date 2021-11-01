@@ -9,15 +9,15 @@
         <span>|</span> 
         <NuxtLink :to="localePath('/privacy')">{{ $t('privacy.title') }}</NuxtLink>  
         <span>|</span> 
-        <select id="select" ref="select" v-model="$i18n.locale" class="uppercase appearance-none bg-transparent border-none rounded-none pr-4 focus:outline-none mx-3">
+        <select id="select" ref="select" v-model="$i18n.locale" @change="onChange($event)" class="uppercase appearance-none bg-transparent border-none rounded-none pr-4 focus:outline-none mx-3">
           <option
             class="appearance-none bg-none"
             v-for="lang in $i18n.locales"
-            :key="lang"
-            :value="lang"
-            >{{ lang }}</option
+            :key="lang.code"
+            :value="lang.code"
+            >{{ lang.code }}</option
           >
-        </select>      
+        </select>
       </div>
 
       <div class="flex flex-row justify-center align-middle pt-1 space-x-1 md:space-x-2 lg:space-x-3">
@@ -33,6 +33,23 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  data() {
+    return {
+      selectedLang: null as any
+    }
+  },
+  methods: {
+    onChange(event: any) {
+      this.$i18n.setLocale(event.target.value)
+    },
+  },
+})
+</script>
+
 
 <style scoped>
 #select {

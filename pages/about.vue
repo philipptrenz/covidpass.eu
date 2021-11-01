@@ -23,6 +23,21 @@
 import Vue from 'vue'
 export default Vue.extend({
   layout: 'main',
+  head() {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    return {
+      title: this.$t('about.title') + ' - ' + this.$t('index.title'),
+      htmlAttrs: {
+        ...i18nHead.htmlAttrs
+      },
+      meta: [
+        ...i18nHead.meta
+      ],
+      link: [
+        ...i18nHead.link
+      ]
+    }
+  },
   mounted() {
     console.log(this.$t('about.md'))
   }

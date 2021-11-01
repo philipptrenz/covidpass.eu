@@ -287,6 +287,21 @@ export default Vue.extend({
       initial: true
     }
   },
+  head() {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    return {
+      title: this.$t('index.title') + ' - ' + this.$t('index.subtitle'),
+      htmlAttrs: {
+        ...i18nHead.htmlAttrs
+      },
+      meta: [
+        ...i18nHead.meta
+      ],
+      link: [
+        ...i18nHead.link
+      ]
+    }
+  },
   computed: {
     walletBadgeIcon() {
       try {

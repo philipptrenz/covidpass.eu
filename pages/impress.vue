@@ -15,3 +15,24 @@
 
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  head() {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    return {
+      title: this.$t('impress.title') + ' - ' + this.$t('index.title'),
+      htmlAttrs: {
+        ...i18nHead.htmlAttrs
+      },
+      meta: [
+        ...i18nHead.meta
+      ],
+      link: [
+        ...i18nHead.link
+      ]
+    }
+  },
+})
+</script>

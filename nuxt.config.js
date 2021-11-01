@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'COVID Pass',
     htmlAttrs: {
-      lang: 'en',
+      //...i18nHead.htmlAttrs
     },
     bodyAttrs: {
       class: 'bg-primary'
@@ -32,6 +32,7 @@ export default {
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:description', content: 'Scan your vaccination, test and recovery certificates in QR code representation and save them to your Apple Wallet' },
       { name: 'twitter:creator', content: '@donatuswolf' },
+      //...i18nHead.meta
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
@@ -39,9 +40,10 @@ export default {
       { rel: 'icon" type="image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/manifest.json' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: tailwind.theme.colors.primary },
+      //...i18nHead.link
     ]
   },
-
+  
   // Environment variables
   publicRuntimeConfig: { // accessible from server and client
     teamIdentifier: process.env.PASS_TEAM_IDENTIFIER,
@@ -106,8 +108,18 @@ export default {
   },
 
   i18n: {
-    locales: ['en', 'de' , 'fr', 'es', 'it', 'ru', 'tr', 'ar' ],
+    locales: [
+      { code: 'en', iso: 'en-US' },
+      { code: 'de', iso: 'de-DE' },
+      { code: 'fr', iso: 'fr-FR' },
+      { code: 'es', iso: 'es-ES' },
+      { code: 'it', iso: 'it-IT' },
+      { code: 'ru', iso: 'ru-RU' },
+      { code: 'tr', iso: 'tr-TR' },
+      { code: 'ar', iso: 'ar-YE' },
+    ],
     defaultLocale: 'en',
+    baseUrl: 'https://covidpass.eu',
     strategy: 'prefix',
     vueI18n: i18n,
     detectBrowserLanguage: { 
