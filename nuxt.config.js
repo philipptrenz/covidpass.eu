@@ -94,6 +94,8 @@ export default {
   axios: {},
 
   sitemap: {
+    hostname: 'https://covidpass.eu',
+    i18n: true,
     gzip: true,
   },
 
