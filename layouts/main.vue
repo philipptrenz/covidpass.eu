@@ -5,7 +5,7 @@
 
     <div class="sm:hidden" style="height: 75vh;">
       <div class="w-full pt-6 bg-primary" >
-        <img class="min-w-full" src="/ios-apple-wallet-covid-pass.sm.png">
+        <img class="min-w-full" src="/ios-apple-wallet-covid-pass.sm.png" alt="Apple iPhone iOS Apple Wallet COVID Pass Background Mockup Image">
       </div>
     </div>
 
