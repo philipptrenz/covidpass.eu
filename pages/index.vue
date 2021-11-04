@@ -321,7 +321,7 @@ export default Vue.extend({
     const description = this.$t('seo.description');
     const applicationName = this.$t('seo.applicationName');
     return {
-      title: this.$t('index.title') + ' – COVID Pass',
+      title: this.$t('index.title') + ' – ' + this.$t('index.subtitle'),
       htmlAttrs: {
         ...i18nHead.htmlAttrs
       },
