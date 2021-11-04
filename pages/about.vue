@@ -15,6 +15,8 @@
     <div v-html="$md.render(this.$t('about.md'))" class="md"></div>
 
     <KofiButton />
+
+    <ContributeTranslationButton />
     
   </div>
 </template>
@@ -26,7 +28,7 @@ export default Vue.extend({
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
     return {
-      title: this.$t('about.title') + ' - ' + this.$t('index.title'),
+      title: this.$t('about.title') + ' – COVID Pass',
       htmlAttrs: {
         ...i18nHead.htmlAttrs
       },
