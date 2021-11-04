@@ -21,7 +21,7 @@
       </div>
 
       <div class="flex flex-row justify-center align-middle pt-1 space-x-1 md:space-x-2 lg:space-x-3">
-        <a href="https://applewallet.notion.site/applewallet/COVID-Pass-FAQ-88ea2d36936740bf8b454894bb91ac43" target="_blank">FAQ</a>
+        <NuxtLink :to="localePath('/faq')">FAQ</NuxtLink>  
         <span>|</span> 
         <a href="https://github.com/philipptrenz/covidpass" target="_blank">Github</a>
         <span>|</span> 
@@ -44,7 +44,7 @@ export default Vue.extend({
   },
   methods: {
     onChange(event: any) {
-      this.$i18n.setLocale(event.target.value)
+      this.$router.push(this.switchLocalePath(event.target.value));
     },
   },
 })

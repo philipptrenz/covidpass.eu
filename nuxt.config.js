@@ -50,6 +50,8 @@ export default {
     passIdentifier: process.env.PASS_TYPE_IDENTIFIER,
   },
   privateRuntimeConfig: { // only accessible from server
+    faqDataUrlDE: process.env.FAQ_DATA_URL_DE,
+    faqDataUrlEN: process.env.FAQ_DATA_URL_EN
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

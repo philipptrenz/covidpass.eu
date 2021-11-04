@@ -22,6 +22,8 @@ browserAlert:
     downloading the pass is only possible there. Please open this website again in
     Safari to make sure everything works properly.
   shareLink: Send to iPhone
+faq:
+  title: Frequently asked questions
 impress:
   md: '### Information according to § 5 TMG
 
