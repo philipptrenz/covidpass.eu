@@ -1,4 +1,5 @@
 about:
+  contributeTranslation: Contribute Traduzione
   md: Ciao, siamo Donatus e Philipp. Due sviluppatori e designer con un 💙 per soluzioni
     innovative e un'esperienza utente intuitiva per superare le sfide sociali e consentire
     (di nuovo) la partecipazione. COVID ha influenzato molto tutte le nostre vite
@@ -46,9 +47,9 @@ index:
         tuo COVID Pass con terzi.
   onboarding:
     icons:
-      recovered: recuperato
-      tested: testato
-      vaccinated: vaccinato
+      appleWatch: per  Watch
+      free: gratuito
+      withoutApp: nessuna app necessaria
     paragraphs:
       '1': Non importa se vai al cinema, un concerto o un ristorante - al giorno d'oggi
         devi mostrare che il Passo Green Covidi europeo a più posti per dimostrare
@@ -103,3 +104,7 @@ pass:
   vaccine: Vaccino
   validFrom: Valido da
   validUntil: Valido fino a
+seo:
+  applicationName: Passaggio Covidid per iPhone Apple Portafoglio
+  description: Scansiona i certificati di vaccinazione, test e recupero nella rappresentazione
+    del codice QR e salvarli sul tuo portafoglio Apple per iPhone

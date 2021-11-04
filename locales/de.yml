@@ -1,4 +1,5 @@
 about:
+  contributeTranslation: Übersetzen helfen
   md: Hi, wir sind Donatus und Philipp. Zwei Entwickler und Designer mit einem 💙  für
     innovative Lösungen und intuitive User Experience, um soziale Herausforderungen
     zu meistern und Teilhabe (wieder) zu ermöglichen. COVID hat unser aller Leben
@@ -114,9 +115,9 @@ index:
         nicht an Dritte weiterzugeben.
   onboarding:
     icons:
-      recovered: genesen
-      tested: getestet
-      vaccinated: geimpft
+      appleWatch: für die  Watch
+      free: kostenlos
+      withoutApp: ohne App
     paragraphs:
       '1': Egal, ob Du ins Kino, ein Konzert oder ein Restaurant gehst - aktuell musst
         Du an immer mehr Orten den europäischen COVID Green Pass vorzeigen, um nachzuweisen,
@@ -154,6 +155,7 @@ pass:
   country: Ausstellendes Land
   credits:
     label: Erstellt durch
+    value: https://covidpass.eu
   dateOfBirth: Geburtsdatum
   dateOfVaccination: Impfdatum
   disclaimer:
@@ -190,7 +192,7 @@ privacy:
 
     * Unser Server wird in Nürnberg, Deutschland, gehostet.
 
-    * Der Quellcode dieser Seite ist auf [GitHub](https://github.com/philipptrenz/covidpass)
+    * Der Quellcode dieser Seite ist auf [GitHub](http://github.com/philipptrenz/covidpass)
     verfügbar.
 
     * Standardmäßig sind die Apple-Wallet-Pässe über den Sperrbildschirm zugänglich.
@@ -372,5 +374,9 @@ privacy:
 
     Mit Auszügen aus: https://www.e-recht24.de/impressum-generator.html
 
-    Übersetzt mit [www.DeepL.com/Translator](https://www.deepl.com/Translator) (kostenlose Version)'
+    Übersetzt mit www.DeepL.com/Translator (kostenlose Version)'
   title: Datenschutz
+seo:
+  applicationName: COVID Pass für iPhone Apple Wallet
+  description: Scanne Dein Impf-, Test- und Genesungszertifikat als QR-Code und speicher
+    es in Deinem iPhone Apple Wallet

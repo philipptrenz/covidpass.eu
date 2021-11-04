@@ -1,4 +1,5 @@
 about:
+  contributeTranslation: Contribute la traducción
   md: Hola, somos Donatus y Philipp. Dos desarrolladores y diseñadores con una 💙  por
     las soluciones innovadoras y la experiencia de usuario intuitiva para superar
     los retos sociales y (re)permitir la participación. COVID ha sido una gran limitación
@@ -47,9 +48,9 @@ index:
         Pass con otras personas.
   onboarding:
     icons:
-      recovered: recuperado
-      tested: probado
-      vaccinated: vacunado
+      appleWatch: por  Watch
+      free: gratis
+      withoutApp: no se necesita ninguna aplicación
     paragraphs:
       '1': No importa si vas a películas, un concierto o un restaurante, hoy en día
         tienes que mostrar el pase verde covid europeo en más y más lugares para demostrar
@@ -104,3 +105,7 @@ pass:
   vaccine: Vacuna
   validFrom: Válido desde
   validUntil: Válido hasta
+seo:
+  applicationName: Pase covid para la cartera de manzanas de iPhone
+  description: Escanee sus certificados de vacunación, prueba y recuperación en la
+    representación del código QR y guárdelos en su billetera de Apple iPhone

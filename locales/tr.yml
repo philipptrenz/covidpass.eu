@@ -1,4 +1,5 @@
 about:
+  contributeTranslation: Contribute çeviri
   md: Merhaba, biz Donatus ve Philipp'iz. Sosyal zorlukların üstesinden gelmek ve
     katılımı (yeniden) etkinleştirmek için yenilikçi çözümler ve sezgisel kullanıcı
     deneyimi için bir 💙 ile iki geliştirici ve tasarımcı. COVID, son birkaç aydır
@@ -44,9 +45,9 @@ index:
         rica ediyoruz.
   onboarding:
     icons:
-      recovered: kurtarılmış
-      tested: test edilmiş
-      vaccinated: aşılanmış
+      appleWatch:  izle için
+      free: Bedava
+      withoutApp: Hiçbir uygulama gerekli
     paragraphs:
       '1': Filmlere, bir konser ya da bir restorana giderseniz olursa olsun, günümüzde
         Avrupa Covid Green Pass'ı aşılanmış, test edilmiş veya geri kazandığınızı
@@ -100,3 +101,7 @@ pass:
   vaccine: Aşı
   validFrom: Kadar geçerli
   validUntil: 'Şu tarihe kadar geçerlidir:'
+seo:
+  applicationName: İPhone Apple Cüzdanı için Covid Pass
+  description: QR Code temsilindeki aşılama, test ve kurtarma sertifikalarınızı tarayın
+    ve iPhone Apple Cüzdanınıza kaydedin

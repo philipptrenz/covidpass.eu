@@ -1,4 +1,5 @@
 about:
+  contributeTranslation: Contribuer la traduction
   md: Bonjour, nous sommes Donatus et Philipp, deux développeurs et designers avec
     un 💙 pour des solutions innovantes et une expérience intuitive d'utilisateur pour
     relever des défis sociaux et permettre à nouveau la participation. Le COVID a
@@ -53,9 +54,9 @@ index:
         partager votre Pass COVID avec d'autres personnes.
   onboarding:
     icons:
-      recovered: rétabli
-      tested: testé
-      vaccinated: vacciné
+      appleWatch: pour  Watch
+      free: gratuit
+      withoutApp: aucune application nécessaire
     paragraphs:
       '1': Peu importe oú vous voulez aller, au cinéma, à un concert ou au restaurant
         - vous êtes obligés aujourd‘hui de montrer votre pass sanitaire européen en
@@ -112,3 +113,8 @@ pass:
   vaccine: Vaccin
   validFrom: Valide à partir de
   validUntil: Valable jusqu'à
+seo:
+  applicationName: Covid Pass pour iPhone Apple Portefeuille
+  description: Scannez vos certificats de vaccination, de test et de récupération
+    dans la représentation du code QR et enregistrez-les sur votre portefeuille Apple
+    iPhone
