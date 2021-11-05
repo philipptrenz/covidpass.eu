@@ -161,7 +161,6 @@ app.get('/faq', async (req, res) => {
     }
 
     if ( !(locale in faqCache) || isExpired(faqCache[locale].added) ) {
-        console.log("refetching")
         try {
             const url = locale === 'de' ? FAQ_DATA_URL.DE : FAQ_DATA_URL.EN;
             const response = await axios.get(url);
