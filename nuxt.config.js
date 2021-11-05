@@ -1,6 +1,8 @@
 import i18n from './i18n';
 import tailwind from './tailwind.config'
 
+const BASE_URL = process.env.BASE_URL ? process.env.BASE_URL : 'http://localhost:3000'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -24,7 +26,7 @@ export default {
       { property: 'og:title', content: 'COVID Pass' },
       { property: 'og:description', content: 'Your digital COVID pass in your iPhone Apple Wallet' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://covidpass.eu' },
+      { property: 'og:url', content: BASE_URL },
       { property: 'og:site_name', content: 'COVID Pass' },
       { property: 'og:image', content: '/og-image.png' },
       { property: 'og:image:width', content: '1280' },
@@ -48,10 +50,16 @@ export default {
   publicRuntimeConfig: { // accessible from server and client
     teamIdentifier: process.env.PASS_TEAM_IDENTIFIER,
     passIdentifier: process.env.PASS_TYPE_IDENTIFIER,
+    axios: {
+      browserBaseURL: BASE_URL
+    }
   },
   privateRuntimeConfig: { // only accessible from server
     faqDataUrlDE: process.env.FAQ_DATA_URL_DE,
-    faqDataUrlEN: process.env.FAQ_DATA_URL_EN
+    faqDataUrlEN: process.env.FAQ_DATA_URL_EN,
+    axios: {
+      baseURL: BASE_URL
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -98,13 +106,13 @@ export default {
   axios: {},
 
   sitemap: {
-    hostname: 'https://covidpass.eu',
+    hostname: BASE_URL,
     i18n: true,
     gzip: true,
   },
 
   robots: {
-    Sitemap: (req) => `https://${req.headers.host}/sitemap.xml`,
+    Sitemap: `${ BASE_URL }/sitemap.xml`,
     UserAgent: '*',
     Disallow: (req) => req.headers.host.startsWith('dev.') ? '/': '',
   },
@@ -121,7 +129,7 @@ export default {
       { code: 'ar', iso: 'ar-YE' },
     ],
     defaultLocale: 'en',
-    baseUrl: 'https://covidpass.eu',
+    baseUrl: BASE_URL,
     strategy: 'prefix',
     vueI18n: i18n,
     detectBrowserLanguage: { 
