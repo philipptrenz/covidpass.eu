@@ -17,13 +17,19 @@
       <p v-html="$md.render(f.a)"></p>
     </div>
 
+    <div v-if="faqs == null || faqs.length == 0" class="text-center pt-24 pb-32">
+      <h2 class="font-bold">An error occured</h2>
+      <NuxtLink :to="localePath('/faq')" class="inline-block pr-2 pt-4 underline">
+        Reload
+      </NuxtLink>
+    </div>
+
   </div>
 </template>
 
 <script lang="ts">
+import { Context } from '@nuxt/types';
 import Vue from 'vue';
-const axios = require('axios');
-const _ = require('lodash');
 
 export default Vue.extend({
   layout: 'main',
@@ -42,21 +48,10 @@ export default Vue.extend({
       ]
     }
   },
-   async asyncData(context) {
-
-    const url = context.app.i18n.locale == 'de' ? context.$config.faqDataUrlDE : context.$config.faqDataUrlEN;
-    const response = await axios.get(url)
-    
-    const rows = response.data.split(/\r\n|\n/);
-    var faqs: any = [];
-    for (var i=1; i < rows.length; i++) {
-      var d = rows[i].split(/"\s{0,1},\s{0,1}"/);
-      if (d.length == 1) { if (faqs.length-1 > -1 ) faqs[faqs.length-1]['a'] += d; 
-      } else {
-        faqs.push({ q: d[0].replace(/^\"/, ''), a: d[1].replace(/\"$/, '') });
-      }
-    }
-    return { faqs }
+  async asyncData(ctx: Context) {
+    const response = await ctx.$axios.get(`/api/faq?locale=${ ctx.app.i18n.locale == 'de' ? 'de' : 'en' }`);
+    const faqs = response.data;
+    return { faqs };
   }
 })
 </script>
