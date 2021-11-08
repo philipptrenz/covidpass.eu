@@ -7,9 +7,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'COVID Pass',
-    htmlAttrs: {
-      //...i18nHead.htmlAttrs
-    },
+    htmlAttrs: { },
     bodyAttrs: {
       class: 'bg-primary'
     },
@@ -34,7 +32,6 @@ export default {
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
       { hid: 'twitter:description', name: 'twitter:description', content: 'Scan your vaccination, test and recovery certificates in QR code representation and save them to your Apple Wallet' },
       { hid: 'twitter:creator', name: 'twitter:creator', content: '@donatuswolf' },
-      //...i18nHead.meta
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
@@ -42,7 +39,6 @@ export default {
       { rel: 'icon" type="image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/manifest.json' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: tailwind.theme.colors.primary },
-      //...i18nHead.link
     ]
   },
   
