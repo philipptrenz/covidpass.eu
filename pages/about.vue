@@ -26,22 +26,28 @@ import Vue from 'vue'
 export default Vue.extend({
   layout: 'main',
   head() {
-    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
+
+    const description = this.$t('seo.description');
+    const applicationName = this.$t('seo.applicationName');
+    const meta: any = [
+      { hid: 'application-name', name: 'application-name', content: applicationName },
+      { hid: 'description', name: 'description', content: description },
+      { hid: 'og:description', property: 'og:description', content: description },
+      { hid: 'twitter:description', name: 'twitter:description', content: description },
+      ...i18nHead.meta
+    ];
+
     return {
       title: this.$t('about.title') + ' – COVID Pass',
       htmlAttrs: {
         ...i18nHead.htmlAttrs
       },
-      meta: [
-        ...i18nHead.meta
-      ],
+      meta: meta,
       link: [
         ...i18nHead.link
       ]
     }
   },
-  mounted() {
-    console.log(this.$t('about.md'))
-  }
 })
 </script>
