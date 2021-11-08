@@ -46,6 +46,7 @@ export default {
   publicRuntimeConfig: { // accessible from server and client
     teamIdentifier: process.env.PASS_TEAM_IDENTIFIER,
     passIdentifier: process.env.PASS_TYPE_IDENTIFIER,
+    baseUrl: BASE_URL,
     axios: {
       browserBaseURL: BASE_URL
     }
