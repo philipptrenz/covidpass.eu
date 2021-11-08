@@ -5,9 +5,9 @@
       
       <div class="w-10">
 
-        <Logo v-if="state != 1" class="pr-2 flex-shrink-0"/>
+        <Logo v-if="state != 1" class="flex-shrink-0 w-8 pr-2"/>
 
-        <button v-else @click="state = 0" class="inline-block pr-2">
+        <button v-else @click="state = 0" class="inline-block focus:outline-none w-8 pr-2">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 24L12 16L20 8" stroke="#27215B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
