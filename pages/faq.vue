@@ -32,7 +32,6 @@ import { Context } from '@nuxt/types';
 import Vue from 'vue';
 
 export default Vue.extend({
-  layout: 'main',
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
 
