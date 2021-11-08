@@ -1,8 +1,6 @@
 import i18n from './i18n';
 import tailwind from './tailwind.config'
 
-const BASE_URL = process.env.BASE_URL ? process.env.BASE_URL : 'http://localhost:3000'
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -24,7 +22,7 @@ export default {
       { hid: 'og:title', property: 'og:title', content: 'COVID Pass' },
       { hid: 'og:description', property: 'og:description', content: 'Your digital COVID pass in your iPhone Apple Wallet' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: BASE_URL },
+      { hid: 'og:url', property: 'og:url', content: process.env.BASE_URL },
       { hid: 'og:site_name', property: 'og:site_name', content: 'COVID Pass' },
       { hid: 'og:image', property: 'og:image', content: '/og-image.png' },
       { hid: 'og:image:width', property: 'og:image:width', content: '1280' },
@@ -46,16 +44,16 @@ export default {
   publicRuntimeConfig: { // accessible from server and client
     teamIdentifier: process.env.PASS_TEAM_IDENTIFIER,
     passIdentifier: process.env.PASS_TYPE_IDENTIFIER,
-    baseUrl: BASE_URL,
+    baseUrl: process.env.BASE_URL,
     axios: {
-      browserBaseURL: BASE_URL
+      browserBaseURL: process.env.BASE_URL
     }
   },
   privateRuntimeConfig: { // only accessible from server
     faqDataUrlDE: process.env.FAQ_DATA_URL_DE,
     faqDataUrlEN: process.env.FAQ_DATA_URL_EN,
     axios: {
-      baseURL: BASE_URL
+      baseURL: process.env.BASE_URL
     }
   },
 
@@ -103,13 +101,13 @@ export default {
   axios: {},
 
   sitemap: {
-    hostname: BASE_URL,
+    hostname: process.env.BASE_URL,
     i18n: true,
     gzip: true,
   },
 
   robots: {
-    Sitemap: `${ BASE_URL }/sitemap.xml`,
+    Sitemap: `${ process.env.BASE_URL }/sitemap.xml`,
     UserAgent: '*',
     Disallow: (req) => req.headers.host.startsWith('dev.') ? '/': '',
   },
@@ -126,7 +124,7 @@ export default {
       { code: 'ar', iso: 'ar-YE' },
     ],
     defaultLocale: 'en',
-    baseUrl: BASE_URL,
+    baseUrl: process.env.BASE_URL,
     strategy: 'prefix',
     vueI18n: i18n,
     detectBrowserLanguage: { 
