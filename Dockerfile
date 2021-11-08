@@ -9,6 +9,8 @@ RUN yarn install
 
 ADD . ./
 
+ENV NODE_ENV=production
+
 RUN yarn build
 
 EXPOSE 3000
