@@ -1,25 +1,18 @@
 <template>
   <div class="m-auto flex flex-col space-y-6 max-w-lg bg-white p-6 rounded-2xl" id="content">
 
-    <div v-if="state != 1" class="flex flex-row justify-start">
+    <div class="text-2xl text-primary flex flex-row align-middle justify-start">
+      
       <div class="w-10">
-        <Logo class="pr-2 flex-shrink-0"/>
-      </div>
-      <div class="inline-block text-2xl text-primary">
-        <h1> 
-          <span class="font-medium">{{ $t('index.title') }}</span><br/>
-          <span class="">{{ $t('index.subtitle') }}</span>
-        </h1>
-      </div>
-    </div>
 
-    <div v-else class="text-2xl text-primary flex flex-row align-middle justify-start">
-      <div class="w-10">
-        <button @click="state = 0" class="inline-block pr-2">
+        <Logo v-if="state != 1" class="pr-2 flex-shrink-0"/>
+
+        <button v-else @click="state = 0" class="inline-block pr-2">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 24L12 16L20 8" stroke="#27215B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
+
       </div>
       <div class="inline-block text-2xl text-primary">
         <h1> 
@@ -217,14 +210,14 @@
 
       <div class="flex flex-col bg-primary text-white text-xl rounded-lg p-4 focus:outline-none ">
         
-        <h1 class="">
+        <h2 class="">
           <span class="pl-2 inline-block align-middle font-semibold">
             <svg class="inline-block" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2801 11.0823L33.3333 15.6231L35.3865 11.0823L37.9468 12.5604L35.0408 16.6088L40 16.1164V19.0728L35.0407 18.5804L37.9468 22.6293L35.3864 24.1074L33.3333 19.5662L31.2802 24.1074L28.7198 22.6293L31.6259 18.5804L26.6666 19.0728V16.1164L31.6258 16.6088L28.7198 12.5604L31.2801 11.0823Z" fill="white"/>
             </svg>
             {{ 'COVID Pass' }}
           </span>
-        </h1>
+        </h2>
 
         <div class="flex flex-row align-middle justify-center py-14">
           <a ref="download" @click="downloaded" target="_system">
