@@ -14,7 +14,9 @@ const CERT_PASSPHRASE = process.env.PASS_CERT_SECRET
 const APPLE_CA_CERTIFICATE = forge.pki.certificateFromPem(fs.readFileSync('./keys/wwdr.pem'))
 
 const FAQ_DATA_URL = { DE: process.env.FAQ_DATA_URL_DE, EN: process.env.FAQ_DATA_URL_EN };
-const FAQ_CACHE_DURATION = process.env.FAQ_CACHE_DURATION ? process.env.FAQ_CACHE_DURATION : 60 * 60 * 1000; // One hour
+
+// env variable FAQ_CACHE_DURATION defines expiration time of cache in seconds, set 0 if cache should not expire
+const FAQ_CACHE_DURATION = (process.env.FAQ_CACHE_DURATION && !isNaN(process.env.FAQ_CACHE_DURATION)) ? parseInt(process.env.FAQ_CACHE_DURATION) * 1000 : 60 * 60 * 1000; 
 
 /*
  * Almost completely from https://github.com/covidpass-org/covidpass-api/blob/main/server.js
@@ -157,7 +159,11 @@ app.get('/faq', async (req, res) => {
     const locale = req.query.locale === 'de' ? 'de' : 'en'
 
     function isExpired(date) {
-        return ((new Date) - date) > FAQ_CACHE_DURATION;
+        if (FAQ_CACHE_DURATION > 0) {
+            return ((new Date) - date) > parseInt(FAQ_CACHE_DURATION);
+        } else { 
+            return false;
+        }
     }
 
     if ( !(locale in faqCache) || isExpired(faqCache[locale].added) ) {
