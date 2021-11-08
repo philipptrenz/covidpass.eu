@@ -30,7 +30,7 @@
     </div>
     
 
-    <div v-if="state == 0" class="-mt-2">        
+    <div v-show="state == 0" class="-mt-2">        
       <div>
         
         <div class="flex flex-row justify-around break-normal space-x-4 pb-8">
@@ -98,7 +98,7 @@
       </button>
     </div>
 
-    <div v-if="state == 1">
+    <div v-show="state == 1">
       <form @submit.prevent="consented" class="flex flex-col space-y-6 pt-2">
         
         <div>
@@ -270,7 +270,7 @@
 
       </div>
 
-      <div v-if="state == 4" @click="tellYourFriends" class="cursor-pointer bg-primary bg-opacity-20 text-primary text-xl rounded-lg p-4 focus:outline-none" >
+      <div v-show="state == 4" @click="tellYourFriends" class="cursor-pointer bg-primary bg-opacity-20 text-primary text-xl rounded-lg p-4 focus:outline-none" >
         <div class="flex justify-center align-middle">
           <div class="inline-block my-auto">
             <span class="inline-block font-medium align-middle px-2">
