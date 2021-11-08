@@ -124,7 +124,7 @@ export default {
       { code: 'ar', iso: 'ar-YE' },
     ],
     defaultLocale: 'en',
-    baseUrl: process.env.BASE_URL,
+    baseUrl: () => process.env.BASE_URL,
     strategy: 'prefix',
     vueI18n: i18n,
     detectBrowserLanguage: { 
