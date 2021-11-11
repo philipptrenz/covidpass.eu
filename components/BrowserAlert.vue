@@ -112,9 +112,9 @@ export default Vue.extend({
     }
   },
   created() {
-    this.$nuxt.$on('downloaded', ($event: Event) => {
+    /*this.$nuxt.$on('downloaded', ($event: Event) => {
       this.setDoShow();
-    })
+    })*/
   },
   mounted() {
     if ( navigator.permissions && navigator.permissions.query) {

@@ -84,6 +84,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/dotenv',
     'nuxt-i18n',
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -160,10 +161,12 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extend(config, ctx) {
+
       config.module.rules.push({
         test: /\.ya?ml$/,
         use: 'js-yaml-loader',
       })
+
     }
   }
 }

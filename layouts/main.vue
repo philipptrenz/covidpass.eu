@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-primary font-light" :class="{'direction-rtl': $i18n.locale == 'ar'}">
 
-    <NotCompatibleBrowserAlert />
+    <BrowserAlert />
 
     <div class="sm:hidden" style="height: 75vh;">
       <div class="w-full pt-6 bg-primary" >

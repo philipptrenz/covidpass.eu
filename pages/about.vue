@@ -4,9 +4,7 @@
     <div class="text-2xl font-bold text-primary flex flex-row align-middle justify-start">
 
       <NuxtLink :to="localePath('/')" class="inline-block pr-2">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 24L12 16L20 8" stroke="#27215B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <ChevronLeft class="w-8 h-8" />
       </NuxtLink>
 
       <h1>{{ $t('about.title') }}</h1>
@@ -14,16 +12,30 @@
     
     <div v-html="$md.render(this.$t('about.md'))" class="md"></div>
 
-    <KofiButton />
+    <LinkButton :text="$t('about.supportButton')" href="https://ko-fi.com/covidpass" >
+      <KofiIcon />
+    </LinkButton>
 
-    <ContributeTranslationButton />
+    <LinkButton :text="$t('about.contributeTranslation')" href="mailto:info@covidpass.eu?subject=I%20would%20like%20to%20translate!">
+      <TranslateIcon />
+    </LinkButton>
     
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
+
+import ChevronLeft from '~/assets/icons/chevron-left-32x32.svg?inline';
+import KofiIcon from '~/assets/icons/kofi.svg?inline';
+import TranslateIcon from '~/assets/icons/translate.svg?inline';
+
 export default Vue.extend({
+  components: {
+    ChevronLeft,
+    KofiIcon,
+    TranslateIcon
+  },
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
 
