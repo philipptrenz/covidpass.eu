@@ -4,7 +4,7 @@
     <div class="text-2xl text-primary flex flex-row align-middle justify-start">
       
       <div class="w-10">
-        <Logo v-if="state != 1" class="flex-shrink-0 w-8 pr-2"/>
+        <Logo v-if="state == 0 || state > 2" class="flex-shrink-0 w-8 pr-2"/>
         <button v-else @click="state = 0" class="inline-block focus:outline-none w-8 pr-2">
           <ChevronLeft class="w-8 h-8" />
         </button>
@@ -206,7 +206,7 @@ import TickIcon from '~/assets/icons/tick.svg?inline';
 import LogoWhite from '~/assets/icons/logo-white.svg?inline';
 import KofiIcon from '~/assets/icons/kofi.svg?inline';
 import ShareIcon from '~/assets/icons/share.svg?inline';
-import IOSSwitchIcon from '~/assets/icons/ios-switch-icon.svg?inline';
+
 
 enum State {
   NONE = 0,
@@ -227,7 +227,6 @@ export default Vue.extend({
     LogoWhite,
     KofiIcon,
     ShareIcon,
-    IOSSwitchIcon,
   },
   data() {
     return {

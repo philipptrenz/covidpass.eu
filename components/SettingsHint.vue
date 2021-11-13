@@ -12,3 +12,13 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+import IOSSwitchIcon from '~/assets/icons/ios-switch-icon.svg?inline';
+export default Vue.extend({
+  components: {
+    IOSSwitchIcon,
+  }
+})
+</script>
