@@ -5,7 +5,7 @@
       
       <div class="w-10">
         <Logo v-if="state == 0 || state > 2" class="flex-shrink-0 w-8 pr-2"/>
-        <button v-else @click="state = 0" class="inline-block focus:outline-none w-8 pr-2">
+        <button v-else @click="state = state-1" class="inline-block focus:outline-none w-8 pr-2">
           <ChevronLeft class="w-8 h-8" />
         </button>
       </div>
