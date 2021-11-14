@@ -28,6 +28,29 @@ exports.createPass = async function(data) {
     return sha.digest('hex');
   }
 
+  function isAppleParsableDateString(dateString) {
+    return /^([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-4]|1[0-9]|0[0-9]):[0-6][0-9]:[0-6][0-9]Z$/.test(dateString);
+  }
+
+  function getStringField(key, value, translateKey, isAlignedRight) {
+    return {
+      key: key,
+      value: value,
+      label: window.$nuxt.$t(translateKey),
+      textAlignment: isAlignedRight ? "PKTextAlignmentRight" : "PKTextAlignmentLeft"
+    }
+  }
+
+  function getDateField(key, value, translateKey, isAlignedRight) {
+    var field = getStringField(key, value, translateKey, isAlignedRight);
+    if (isAppleParsableDateString(value)) {
+      field["dateStyle"] = 'PKDateStyleMedium';
+      field["timeStyle"] ='PKDateStyleNone';
+      field["ignoresTimeZone"] = true;
+    }
+    return field;
+  }
+
   async function signPassWithRemote(pass, payload) {
     // From pass-js
     // https://github.com/walletpass/pass-js/blob/2b6475749582ca3ea742a91466303cb0eb01a13a/src/pass.ts
@@ -81,88 +104,38 @@ exports.createPass = async function(data) {
     if (payload.certificateType == consts.CERTIFICATE_TYPE.VACCINATION) {
       return {
         secondaryFields: [
-          {
-            key: "dose",
-            label:  window.$nuxt.$t('pass.dose'),
-            value: payload.dose
-          },
-          {
-            key: "dov",
-            label: window.$nuxt.$t('pass.dateOfVaccination'),
-            value: payload.dateOfVaccination,
-            textAlignment: "PKTextAlignmentRight"
-          }
+          getStringField("dose", payload.dose, "pass.dose", false),
+          getDateField("dov", payload.dateOfVaccination, "pass.dateOfVaccination", true),
         ],
         auxiliaryFields: [
-          {
-            key: "vaccine",
-            label: window.$nuxt.$t('pass.vaccine'),
-            value: payload.vaccineName
-          },
-          {
-            key: "dob",
-            label: window.$nuxt.$t('pass.dateOfBirth'),
-            value: payload.dateOfBirth,
-            textAlignment: "PKTextAlignmentRight"
-          }
+          getStringField("vaccine", payload.vaccineName, "pass.vaccine", false),
+          getDateField("dob", payload.dateOfBirth, "pass.dateOfBirth", true),
         ]
       }
+
     } else if (payload.certificateType == consts.CERTIFICATE_TYPE.TEST) {
+
       return {
         secondaryFields: [
-          {
-            key: "testType",
-            label: window.$nuxt.$t('pass.testType'),
-            value: payload.testType,
-          },
-          {
-            key: "testResult",
-            label: window.$nuxt.$t('pass.testResult'),
-            value: payload.testResult,
-            textAlignment: "PKTextAlignmentRight"
-          }
+          getStringField("testType", payload.testType, "pass.testType", false),
+          getStringField("testResult", payload.testResult, "pass.testResult", true),
         ],
         auxiliaryFields: [
-          {
-            key: "testingTime",
-            label: window.$nuxt.$t('pass.testingTime'),
-            value: payload.testingTime,
-          },
-          {
-            key: "dob",
-            label: window.$nuxt.$t('pass.dateOfBirth'),
-            value: payload.dateOfBirth,
-            textAlignment: "PKTextAlignmentRight"
-          }
+          getDateField("testingTime", payload.testingTime, "pass.testingTime", false),
+          getDateField("dob", payload.dateOfBirth, "pass.dateOfBirth", true),
         ]
       }
+
     } else if (payload.certificateType == consts.CERTIFICATE_TYPE.RECOVERY) {
+
       return {
         secondaryFields: [
-          {
-            key: "validFrom",
-            label:  window.$nuxt.$t('pass.validFrom'),
-            value: payload.validFromDate
-          },
-          {
-            key: "validUntil",
-            label: window.$nuxt.$t('pass.validUntil'),
-            value: payload.validUntilDate,
-            textAlignment: "PKTextAlignmentRight"
-          }
+          getDateField("validFrom", payload.validFromDate, "pass.validFrom", false),
+          getDateField("validUntil", payload.validUntilDate, "pass.validUntil", true),
         ],
         auxiliaryFields: [
-          {
-            key: "firstPositiveTested",
-            label: window.$nuxt.$t('pass.positiveTested'),
-            value: payload.positiveTestedDate
-          },
-          {
-            key: "dob",
-            label: window.$nuxt.$t('pass.dateOfBirth'),
-            value: payload.dateOfBirth,
-            textAlignment: "PKTextAlignmentRight"
-          }
+          getDateField("firstPositiveTested", payload.positiveTestedDate, "pass.positiveTested", false),
+          getDateField("dob", payload.dateOfBirth, "pass.dateOfBirth", true),
         ]
       }
     }
