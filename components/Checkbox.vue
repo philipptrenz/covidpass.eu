@@ -10,6 +10,7 @@
       h-6 w-6 text-gray border-2 rounded-md appearance-none focus:outline-none
       bg-checkbox hover:bg-checkbox-hover active:bg-checkbox-active 
       checked:bg-checkbox-checked hover:checked:first:bg-checkbox-checked-hover active:checked:bg-checkbox-checked-active
+      transition duration-150
       bg-no-repeat bg-cover bg-tick
     "
   />
