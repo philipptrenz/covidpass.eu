@@ -11,3 +11,8 @@ declare module "vue/types/vue" {
     $ua: UA;
   }
 }
+
+declare module '*.svg?inline' {
+  const content: any;
+  export default content;
+}

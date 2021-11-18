@@ -21,15 +21,28 @@
 import Vue from 'vue'
 export default Vue.extend({
   head() {
-    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
+
+    const description = this.$t('seo.description');
+    const applicationName = this.$t('seo.applicationName');
+    const basePath = this.$config.baseUrl.endsWith('/') ? this.$config.baseUrl.slice(0,-1) : this.$config.baseUrl;
+    const localizedBasePath = basePath+this.localePath('/');
+
+    const meta: any = [
+      { hid: 'application-name', name: 'application-name', content: applicationName },
+      { hid: 'description', name: 'description', content: description },
+      { hid: 'og:description', property: 'og:description', content: description },
+      { hid: 'twitter:description', name: 'twitter:description', content: description },
+      { hid: 'og:url', property: 'og:url', content: localizedBasePath },
+      ...i18nHead.meta
+    ];
+    
     return {
-      title: this.$t('privacy.title') + ' - ' + this.$t('index.title'),
+      title: this.$t('privacy.title') + ' – COVID Pass',
       htmlAttrs: {
         ...i18nHead.htmlAttrs
       },
-      meta: [
-        ...i18nHead.meta
-      ],
+      meta: meta,
       link: [
         ...i18nHead.link
       ]

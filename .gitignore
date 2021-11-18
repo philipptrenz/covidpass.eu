@@ -97,3 +97,9 @@ keys/
 
 # .DS_Store
 .DS_Store
+
+# Translation frameworks
+locales/reference_de.yml
+locales/reference_en.yml
+locales/translations.csv
+locales/main.py

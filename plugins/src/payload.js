@@ -12,23 +12,17 @@ exports.Payload = class {
   }
 
   formatDateString(dateString) {
-    try {
-      const d = new Date(dateString)
-
-      if (!this.isValidDate(d))
-        throw Error("No valid date")
-
-      const locale = window.$nuxt.$i18n.locale
-      const localeDateString = d.toLocaleDateString(locale, {
-         year: 'numeric', month: 'numeric', day: 'numeric'
-      });
-
-      if (!localeDateString)
-        throw Error("Localized date string is emty")
-
-      return localeDateString
-    } catch (error) {
-      return dateString
+    // Try to get date string into format "YYYY-MM-DDTHH:mm:ssZ"
+    // so that Apple can parse as localized date
+    if (dateString.length >= 10) {
+      return dateString.substr(0,10) + "T12:00:00Z";
+    } else  {
+      var cutDateString = dateString.substr(0,10);
+      if (/^((19|20)\d\d(-\d\d){2})$/.test(cutDateString)) { // expects "YYY-MM-DD"
+        return cutDateString + "T12:00:00Z";
+      } else { // "dob" can also be in format "YYYY-MM", "YYYY" or empty
+        return dateString;
+      }
     }
   }
 

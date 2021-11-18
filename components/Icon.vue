@@ -3,7 +3,7 @@
     <div class="bg-primary rounded-full h-16 w-16 flex justify-center items-center">
       <slot></slot>
     </div>
-    <span class="text-center pt-1">{{ text }}</span>
+    <span class="text-center pt-1" v-html="text"></span>
   </div>
 </template>
 

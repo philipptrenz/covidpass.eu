@@ -5,9 +5,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'COVID Pass',
-    htmlAttrs: {
-      //...i18nHead.htmlAttrs
-    },
+    htmlAttrs: { },
     bodyAttrs: {
       class: 'bg-primary'
     },
@@ -15,24 +13,23 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Scan your vaccination, test and recovery certificates in QR code representation and save them to your Apple Wallet' },
-      { name: 'application-name', content: 'COVID Pass in your iOS Apple Wallet'},
-      { name: 'keywords', content: 'Apple Wallet, iOS Wallet, iPhone Wallet, EU Digital COVID Certificate, COVID, covid pass, green pass, EU Green Certificate, Vaccination, Recovery, Test'},
-      { name: 'author', content: 'Donatus Wolf, Philipp Trenz'},
-      { name: 'theme-color', content: tailwind.theme.colors.primary },
-      { name: 'msapplication-TileColor', content: tailwind.theme.colors.primary },
-      { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
-      { property: 'og:title', content: 'COVID Pass' },
-      { property: 'og:description', content: 'Your digital COVID pass in your iPhone Apple Wallet' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://covidpass.eu' },
-      { property: 'og:site_name', content: 'COVID Pass' },
-      { property: 'og:image', content: '/og-image.png' },
-      { property: 'og:image:width', content: '1280' },
-      { property: 'og:image:height', content: '640' },
-      { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:description', content: 'Scan your vaccination, test and recovery certificates in QR code representation and save them to your Apple Wallet' },
-      { name: 'twitter:creator', content: '@donatuswolf' },
-      //...i18nHead.meta
+      { hid: 'application-name', name: 'application-name', content: 'COVID Pass in your iOS Apple Wallet'},
+      { hid: 'keywords', name: 'keywords', content: 'Apple Wallet, iOS Wallet, iPhone Wallet, EU Digital COVID Certificate, COVID, covid pass, green pass, EU Green Certificate, Vaccination, Recovery, Test'},
+      { hid: 'author', name: 'author', content: 'Donatus Wolf, Philipp Trenz'},
+      { hid: 'theme-color', name: 'theme-color', content: tailwind.theme.colors.primary },
+      { hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: tailwind.theme.colors.primary },
+      { hid: 'msapplication-TileImage', name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
+      { hid: 'og:title', property: 'og:title', content: 'COVID Pass' },
+      { hid: 'og:description', property: 'og:description', content: 'Your digital COVID pass in your iPhone Apple Wallet' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: process.env.BASE_URL },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'COVID Pass' },
+      { hid: 'og:image', property: 'og:image', content: '/og-image.png' },
+      { hid: 'og:image:width', property: 'og:image:width', content: '1280' },
+      { hid: 'og:image:height', property: 'og:image:height', content: '640' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+      { hid: 'twitter:description', name: 'twitter:description', content: 'Scan your vaccination, test and recovery certificates in QR code representation and save them to your Apple Wallet' },
+      { hid: 'twitter:creator', name: 'twitter:creator', content: '@donatuswolf' },
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
@@ -40,7 +37,6 @@ export default {
       { rel: 'icon" type="image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/manifest.json' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: tailwind.theme.colors.primary },
-      //...i18nHead.link
     ]
   },
   
@@ -48,8 +44,17 @@ export default {
   publicRuntimeConfig: { // accessible from server and client
     teamIdentifier: process.env.PASS_TEAM_IDENTIFIER,
     passIdentifier: process.env.PASS_TYPE_IDENTIFIER,
+    baseUrl: process.env.BASE_URL,
+    axios: {
+      browserBaseURL: process.env.BASE_URL
+    }
   },
   privateRuntimeConfig: { // only accessible from server
+    faqDataUrlDE: process.env.FAQ_DATA_URL_DE,
+    faqDataUrlEN: process.env.FAQ_DATA_URL_EN,
+    axios: {
+      baseURL: process.env.BASE_URL
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -79,6 +84,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/dotenv',
     'nuxt-i18n',
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -96,13 +102,13 @@ export default {
   axios: {},
 
   sitemap: {
-    hostname: 'https://covidpass.eu',
+    hostname: process.env.BASE_URL,
     i18n: true,
     gzip: true,
   },
 
   robots: {
-    Sitemap: (req) => `https://${req.headers.host}/sitemap.xml`,
+    Sitemap: `${ process.env.BASE_URL }/sitemap.xml`,
     UserAgent: '*',
     Disallow: (req) => req.headers.host.startsWith('dev.') ? '/': '',
   },
@@ -119,7 +125,7 @@ export default {
       { code: 'ar', iso: 'ar-YE' },
     ],
     defaultLocale: 'en',
-    baseUrl: 'https://covidpass.eu',
+    baseUrl: () => process.env.BASE_URL,
     strategy: 'prefix',
     vueI18n: i18n,
     detectBrowserLanguage: { 
@@ -155,10 +161,12 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extend(config, ctx) {
+
       config.module.rules.push({
         test: /\.ya?ml$/,
         use: 'js-yaml-loader',
       })
+
     }
   }
 }

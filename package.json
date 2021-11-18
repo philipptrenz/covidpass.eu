@@ -1,5 +1,5 @@
 {
-  "name": "eudgc2pkpass",
+  "name": "covidpass",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,6 @@
     "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
-    "@nuxtjs/svg": "^0.1.12",
     "base45-js": "^1.0.2",
     "cbor-js": "^0.1.0",
     "core-js": "^3.9.1",
@@ -33,6 +32,7 @@
   "devDependencies": {
     "@nuxt/types": "^2.15.3",
     "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/svg": "^0.3.0",
     "@nuxtjs/tailwindcss": "^4.0.1",
     "postcss": "^8.2.8"
   }

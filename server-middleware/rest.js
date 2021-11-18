@@ -3,6 +3,7 @@ import cors from 'cors';
 import forge from 'node-forge';
 import crypto from 'crypto';
 import fs from 'fs';
+import axios from 'axios';
 
 import img from '../plugins/src/img'
 
@@ -11,6 +12,11 @@ const ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGIN
 const CERT = fs.readFileSync(`./keys/${ process.env.PASS_TYPE_IDENTIFIER.substring(5) }.pem`)
 const CERT_PASSPHRASE = process.env.PASS_CERT_SECRET
 const APPLE_CA_CERTIFICATE = forge.pki.certificateFromPem(fs.readFileSync('./keys/wwdr.pem'))
+
+const FAQ_DATA_URL = { DE: process.env.FAQ_DATA_URL_DE, EN: process.env.FAQ_DATA_URL_EN };
+
+// env variable FAQ_CACHE_DURATION defines expiration time of cache in seconds, set 0 if cache should not expire
+const FAQ_CACHE_DURATION = (process.env.FAQ_CACHE_DURATION && !isNaN(process.env.FAQ_CACHE_DURATION)) ? parseInt(process.env.FAQ_CACHE_DURATION) * 1000 : 60 * 60 * 1000; 
 
 /*
  * Almost completely from https://github.com/covidpass-org/covidpass-api/blob/main/server.js
@@ -33,19 +39,21 @@ const imgHashes = {
 
 const app = express()
 
-app.use(cors({
+const corsOptions = {
     origin: function(origin, callback) {
+        console.log(origin)
         if (ALLOWED_ORIGINS.indexOf(origin) === -1) {
-            console.warn("Received request on /api/sign from unallowed origin", origin)
+            console.warn(`Received request on /api from unallowed origin`, origin)
             var msg = 'The CORS policy for this site does not allow access from the specified Origin.'
             return callback(new Error(msg), false)
         }
         return callback(null, true)
     }
-}))
+}
+
 app.use(express.json())
 
-app.post('/sign', async (req, res) => {
+app.post('/sign', cors(corsOptions), async (req, res) => {
 
     let manifestJson = req.body
 
@@ -137,6 +145,59 @@ app.post('/sign', async (req, res) => {
 
     res.type('application/octet-stream')
     res.status(200).send(signature)
+});
+
+
+/*
+ * Fetch CSV formatted FAQs server-sided
+ *
+ */
+
+var faqCache = {};
+
+app.get('/faq', async (req, res) => {
+    const locale = req.query.locale === 'de' ? 'de' : 'en'
+
+    function isExpired(date) {
+        if (FAQ_CACHE_DURATION > 0) {
+            return ((new Date) - date) > parseInt(FAQ_CACHE_DURATION);
+        } else { 
+            return false;
+        }
+    }
+
+    if ( !(locale in faqCache) || isExpired(faqCache[locale].added) ) {
+        try {
+            const url = locale === 'de' ? FAQ_DATA_URL.DE : FAQ_DATA_URL.EN;
+            const response = await axios.get(url);
+            var faqs = [];
+
+            // Parse CSV to [{ q: ..., a: ... }] format
+            const rows = response.data.split(/\r\n|\n/);
+            for (var i=1; i < rows.length; i++) {
+                var d = rows[i].split(/"\s{0,1},\s{0,1}"/);
+                if (d.length == 1) {
+                    if (faqs.length-1 > -1 ) faqs[faqs.length-1].a += d;
+                } else {
+                    faqs.push({ q: d[0].replace(/^\"/, ''), a: d[1].replace(/\"$/, '') });
+                }
+            }
+            faqCache[locale] = { added: new Date, data: faqs };
+        } catch(e) {
+            console.error(`Could not fetch FAQ data for locale ${locale}, falling back to cache`);
+        }
+    }
+
+    res.type('application/json')
+    if (locale in faqCache && 'data' in faqCache[locale])
+        res.status(200).send(faqCache[locale].data)
+    else
+        res.status(200).send([
+            locale === 'de' ?
+                { q: 'Fehler', a: 'Da ging etwas schief, versuche es später erneut'}
+            :
+                { q: 'Error', a: 'Something went wrong, please try again later'}
+        ])
 });
 
 module.exports = app

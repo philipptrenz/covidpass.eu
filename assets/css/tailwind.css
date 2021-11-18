@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+button {
+  @apply focus:outline-none; 
+}
+
 p > a {
   text-decoration: underline;
 }
