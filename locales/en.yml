@@ -338,6 +338,10 @@ privacy:
 
     * The pseudonymised IP addresses
 
+
+    We evaluate these server log files for error analysis and to improve the user
+    experience.
+
     ### Your rights
 
     In accordance with the GDPR you have the following rights:

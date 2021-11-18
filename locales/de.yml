@@ -347,6 +347,10 @@ privacy:
 
     * die pseudonymisierten IP-Adressen
 
+
+    Zur Fehleranalyse und zur Verbesserung des Nutzererlebnisses werten wir diese
+    Server-Logfiles aus.
+
     ### Ihre Rechte
 
     Gemäß der DSGVO haben Sie folgende Rechte:
