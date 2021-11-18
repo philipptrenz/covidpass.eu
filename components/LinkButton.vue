@@ -4,7 +4,7 @@
     target="_blank"
     class="cursor-pointer w-full h-16 bg-btn hover:bg-btn-hover active:bg-btn-active text-primary text-xl font-medium rounded-lg px-3 flex flex-row justify-center align-middle space-x-2 transition duration-150" >
 
-      <span class="h-12 w-12 self-center pr-2">
+      <span v-if="this.$slots.default" class="h-12 w-12 self-center pr-2">
         <slot></slot>
       </span>
 

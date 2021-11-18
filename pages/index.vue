@@ -120,7 +120,7 @@
             @init="onInit" 
             :camera="state == 2 ? 'auto' : 'off'"
             :track="undefined"
-            class="min-h-sm ">
+            class="min-h-[200px] h-full">
 
             <div v-if="!qrScannerDestroyed && !qrScannerLoading && !qrScannerError" class="absolute top-0 left-0 w-full h-full z-50 flex flex-col justify-center align-middle p-6 text-white font-medium">
               <svg class="w-full h-full" viewBox="0 0 300 301" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -137,17 +137,19 @@
 
               <div class="flex-grow flex flex-col justify-center rounded-xl">
 
-                <div class="text-medium text-center" v-if="qrScannerLoading">
+                <div class="text-center" v-if="qrScannerLoading">
                   {{ $t('labels.loading') }}
                 </div>
 
-                <div v-if="qrScannerError" class="h-full text-highlight text-sm text-center font-medium p-2 flex items-center justify-center">
+                <div v-if="qrScannerError" class="h-full text-highlight text-center font-medium p-2 flex items-center justify-center">
                   <p>{{ qrScannerError }}</p>
                 </div>
 
               </div>
 
-              <button v-if="qrScannerError" @click="reloadQRScanner" class="w-full text-sm rounded-lg border-primary border-2 p-1 font-medium focus:outline-none">{{ $t('labels.tryAgain') }}</button>
+              <Button v-if="qrScannerError" @click="reloadQRScanner" :text="$t('labels.tryAgain')" >
+                <ReloadIcon />
+              </Button>
               
             </div>
 
@@ -206,6 +208,7 @@ import TickIcon from '~/assets/icons/tick.svg?inline';
 import LogoWhite from '~/assets/icons/logo-white.svg?inline';
 import KofiIcon from '~/assets/icons/kofi.svg?inline';
 import ShareIcon from '~/assets/icons/share.svg?inline';
+import ReloadIcon from '~/assets/icons/reload.svg?inline';
 
 
 enum State {
@@ -227,6 +230,7 @@ export default Vue.extend({
     LogoWhite,
     KofiIcon,
     ShareIcon,
+    ReloadIcon,
   },
   data() {
     return {
