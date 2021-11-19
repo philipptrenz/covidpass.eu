@@ -120,7 +120,7 @@
             @init="onInit" 
             :camera="state == 2 ? 'auto' : 'off'"
             :track="undefined"
-            class="min-h-[200px] h-full">
+            class="min-h-[224px] h-full">
 
             <div v-if="!qrScannerDestroyed && !qrScannerLoading && !qrScannerError" class="absolute top-0 left-0 w-full h-full z-50 flex flex-col justify-center align-middle p-6 text-white font-medium">
               <svg class="w-full h-full" viewBox="0 0 300 301" fill="none" xmlns="http://www.w3.org/2000/svg">
