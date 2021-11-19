@@ -19,9 +19,8 @@
                 <LinkIcon />
               </Button>
             </div>
-            <div v-else-if="isAndroid" class="pt-4"></div>
-            <div v-else class="pt-4"> 
-              <Button v-if="canShare" :text="$t('browserAlert.shareLink')" @click="share()">
+            <div v-else-if="canShare" class="pt-4"> 
+              <Button :text="$t('browserAlert.shareLink')" @click="share()">
                 <ShareIcon />
               </Button>
             </div>
