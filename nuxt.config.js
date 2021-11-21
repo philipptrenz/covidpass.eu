@@ -108,7 +108,7 @@ export default {
   },
 
   robots: {
-    Sitemap: `${ process.env.BASE_URL }/sitemap.xml`,
+    Sitemap: (req) => `https://${ req.headers.host }/sitemap.xml`,
     UserAgent: '*',
     Disallow: (req) => req.headers.host.startsWith('dev.') ? '/': '',
   },
