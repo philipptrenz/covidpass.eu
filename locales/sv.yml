@@ -1,0 +1,379 @@
+about:
+  contributeTranslation: Bidra med översättning
+  md:
+    Hej, vi är Donatus och Philipp. Två utvecklare och designers med ett 💙 för innovativa
+    lösningar och en intuitiv användarupplevelse för att övervinna sociala utmaningar och (åter)aktivera deltagande. Covid har varit ett stort hinder för alla våra liv under de
+    senaste månaderna. Gradvis återgår nu en viss normalitet. Med detta verktyg,
+    bidra till att göra vardagen och resor lite lättare.
+    Vi skapade COVID Pass för iOS på vår fritid och betalar serverkostnaderna ur egen ficka.
+    Om du tycker att det här projektet är användbart får du gärna stödja oss.
+    Tack till Ann-Kathrin som bidragit med logotypen.
+  supportButton: Stöd oss på Ko-fi
+  title: Om oss
+browserAlert:
+  android:
+    Det verkar som att du inte har öppnat vår webbplats på en iPhone. Tyvärr,
+    nedladdning av passet är endast möjligt där. Android har inget inbyggt
+    sätt att hantera pass.
+  copyLink: Kopiera länk
+  notIphone:
+    Det verkar som att du inte har öppnat vår webbplats på en iPhone. Tyvärr,
+    nedladdning av passet är endast möjligt där. Vänligen öppna denna webbplats igen i
+    Safari på din iPhone för att se till att allt fungerar som det ska.
+  notSafari:
+    Det verkar som att du inte använder webbläsaren Safari på din iPhone. Tyvärr,
+    nedladdning av passet är endast möjligt där. Vänligen öppna denna webbplats igen i
+    Safari för att se till att allt fungerar som det ska.
+  shareLink: Skicka till en iPhone
+faq:
+  title: Vanliga frågor
+impress:
+  md: "#### Information enligt § 5 TMG
+
+    Donatus Wolf och Philipp Trenz
+
+    Kiepenheuerallee 5
+
+    14469 Potsdam
+
+    Tyskland
+
+    #### Kontakt
+
+    [info@covidpass.eu](mailto:info@covidpass.eu)
+
+    ### EU:s tvistlösning
+
+    Europeiska kommissionen tillhandahåller en plattform för tvistlösning online (OS):
+    https://ec.europa.eu/consumers/odr. Du hittar vår e-postadress i förlaget ovan.
+
+    ### Lösning av konsumenttvister/allmän skiljenämnd
+
+    Vi är inte villiga, eller skyldiga, att delta i tvistlösningsförfaranden
+    inför en konsumentskiljenämnd.
+
+    ### Ansvar för innehållet
+
+    Som tjänsteleverantör är vi ansvariga för vårt eget innehåll på dessa sidor i
+    enlighet med § 7 punkt 1 TMG enligt de allmänna lagarna. Enligt §§ 8
+    10 TMG är vi inte skyldiga att övervaka överförd eller lagrad information eller
+    att utreda omständigheter som tyder på olaglig verksamhet. Skyldigheter att ta bort
+    eller blockera användningen av information enligt de allmänna lagarna förblir opåverkade. Men,
+    ansvar i detta avseende är endast möjligt från och med den tidpunkt då en konkret
+    överträdelse av lagen blir känd. Om vi får kännedom om sådana överträdelser,
+    kommer vi att ta bort det berörda innehållet omedelbart.
+
+    #### Ansvar för länkar
+
+    Vårt erbjudande innehåller länkar till externa webbplatser från tredje part, vars innehåll
+    vi inte har något inflytande över. Vi kan därför inte ta något ansvar för dess externa
+    innehåll. Respektive leverantör, eller operatör, av webbplatserna är alltid ansvarig
+    för innehållet på de länkade webbplatserna. De länkade sidorna har kontrollerats med avseende på
+    eventuella rättsliga överträdelser vid tidpunkten för länkningen.
+    Inget olagligt innehåll påträffades vid tidpunkten för länkningen.
+    En ständig kontroll av innehållet på de länkade sidorna är dock inte möjlig
+    utan konkreta bevis för lagöverträdelser.
+    Om vi får kännedom om överträdelser kommer vi att ta bort sådana länkar omedelbart.
+
+    #### Varumärkesinformation
+
+    Apple, Apple Wallet, iPhone och Apple Watch är varumärken som tillhör Apple Inc.
+    och är registrerade i USA och andra länder och regioner.
+
+    ### Övrigt
+
+    Logotyp av [Ann-Kathrin Bernhard] (https://de.linkedin.com/in/ann-katrin-bernhard-b4b932208)
+
+    Mockup skapad med [mockuuups.studio](https://mockuuups.studio)
+
+    Med utdrag från: https://www.e-recht24.de/impressum-generator.html
+
+    Översatt av [Daniel Toivonen] (https://www.linkedin.com/in/your-favorite-nr-001/)"
+  title: Impressum
+index:
+  addToWallet:
+    note: För att skydda dina data, se till att ditt pass inte är synligt när
+      din iPhone är låst. Om det behövs kan du ändra denna inställning under inställningar
+      > Tryck på / Face ID & Lösenkod > Tillåt åtkomst från låst skärm
+    shareButtonText: Dela till dina vänner
+    successMessage: QR-koden har skannats
+  consent:
+    buttonText: Skanna QR-koden
+    icons:
+      noProfit: Inge vinst
+      noStorage: Lokal databearbetning
+      openSource: Open Source
+    inputText: Jag har läst sekretesspolicyn och samtycker till behandlingen av min data
+    paragraphs:
+      "1":
+        Din QR-kod innehåller såväl personliga, som känsliga hälsodata. För att skydda
+        denna data kommer den inte att lämna din dator. Behandlingen av informationen
+        sker uteslutande i din webbläsare. För att skapa passet, kommer endast en kryptografisk
+        hash skickas till vår server för att signeras där. Det betyder att vi inte har någon möjlighet
+        för att läsa eller spara dina data.
+      "2": För att skydda din integritet ber vi dig också att inte dela ditt COVID-pass med andra.
+  onboarding:
+    icons:
+      appleWatch: för  Watch
+      free: gratis
+      withoutApp: ingen app behövs
+    paragraphs:
+      "1":
+        Oavsett om du går på film, en konsert eller en restaurang – nuförtiden du
+        måste visa det europeiska Covid Green Pass på fler och fler platser för att bevisa
+        att du är vaccinerad, testad eller frisk. Med vår hemsida finns inget
+        behov av en extra app, skanna bara din kod en gång och lägg till den i din iOS
+        Apple Wallet. Och nästa gång du står i kö för att visa din QR-kod behöver du inte hålla på
+        och söka efter det – det är precis där, med ett dubbeltryck på din låsknapp.
+  scan:
+    errorHint: Denna QR kod är inte giltig
+    errors:
+      NotAllowedError: Var god och godkän tillgång till mobilkameran
+      NotFoundError: Kunde inte öppna kameran
+      NotReadableError: Kameran verkar redan användas
+      NotSupportedError: Tyvärr är denna funktion inte tillgänglig
+      OverconstrainedError: Installerade kameror är inte lämpliga
+      StreamApiNotSupportedError: Tyvärr verkar din webbläsare inte stödja denna funktion
+    hint: Skanna QR-koden
+  subtitle: bara ett klick bort i din iOS Apple Wallet
+  title: Ditt COVID Pass
+labels:
+  backToHome: Tillbaka till hem
+  loading: Laddar ...
+  next: Nästa
+  reportIssue: Rapportera ett problem
+  support: Stödj oss
+  tryAgain: Försök igen
+pass:
+  certificateIssuer: Utfärdare av beviset
+  certificateType:
+    label: Certifikattyp
+    recovery: Frisk
+    test: Test
+    vaccination: Vaccination
+  country: Utfärdande land
+  credits:
+    label: Genererat av
+    value: "https://covidpass.eu "
+  dateOfBirth: Födelsedatum
+  dateOfVaccination: Datum för vaccination
+  disclaimer:
+    label: Friskrivning
+    value:
+      Detta certifikat är endast giltigt i kombination med ett ID-kort av certificatets ägare.
+      Giltigheten av detta certifikat kontrollerades inte av COVID Pass.
+  dose: Dos
+  name: Namn
+  positiveTested: Testad positiv
+  testResult: Testresultat
+  testType: Testtyp
+  testingTime: Testtid
+  uniqueCertificateIdentifier: Unikt id för certifikatet (UVCI)
+  vaccine: Vaccin
+  validFrom: Giltig från
+  validUntil: Giltig till
+privacy:
+  md:
+    "Vår sekretesspolicy bygger på de villkor som används av den europeiska lagstiftaren för
+    antagandet av den allmänna dataskyddsförordningen (GDPR).
+
+    #### Allmän information
+
+    * Hela processen för att generera passfilen sker lokalt i din webbläsare.
+    För signeringssteget skickas endast en hashad representation av dina uppgifter till
+    servern.
+
+    * Dina uppgifter lagras inte längre än den aktiva webbläsarsessionen och webbplatsen använder inte kakor.
+
+    * Inga uppgifter skickas till tredje part.
+
+    * Vi överför dina uppgifter på ett säkert sätt via https.
+
+    * Vår server ligger i Nürnberg, Tyskland.
+
+    * Källkoden för denna webbplats finns på [GitHub] (http://github.com/philipptrenz/covidpass).
+
+    * Som standard är Apple Wallet-passen tillgängliga från låsskärmen. Detta kan
+    ändras i [inställningar](https://support.apple.com/de-de/guide/iphone/iph9a2a69136/ios).
+
+    * Serverleverantören behandlar data för att tillhandahålla denna webbplats. För att bättre
+    förstå vilka åtgärder de vidtar för att skydda dina uppgifter, vänligen läs också deras
+    [sekretesspolicy] (https://www.hetzner.com/de/rechtliches/datenschutz/) och den
+    [Vanliga frågor om dataskydd](https://docs.hetzner.com/general/general-terms-and-conditions/data-privacy-faq/).
+
+    #### Kontakt
+
+    Donatus Wolf och Philipp Trenz
+
+    Kiepenheuerallee 5
+
+    14469 Potsdam
+
+    Tyskland
+
+    E-post: [info@covidpass.eu](mailto:info@covidpass.eu)
+
+    ### Förenklad förklaring av processen
+
+    Processen startar först när du har godkänt denna policy och klickat på knappen Lägg till i plånboken.
+
+    Först sker följande steg lokalt i din webbläsare:
+
+    * Skanning och extrahering av QR-koddata från ditt valda certifikat via
+    kameran på din enhet
+
+    * Avkodning av dina personliga och hälsorelaterade uppgifter från QR-koden.
+
+    * Sammansättning av en ofullständig passfil av dina uppgifter.
+
+    * Generering av en hash av de uppgifter som finns lagrade i passfilen.
+
+    * Skicka endast hasherna till vår server.
+
+
+    Sedan sker följande steg på vår server:
+
+    * Mottagande och kontroll av de hash-koder som genererades lokalt.
+
+    * Signering av filen som innehåller hasherna.
+
+    * Skicka tillbaka signaturen.
+
+
+    Slutligen sker följande steg lokalt i din webbläsare:
+
+    * Sammansättning av den signerade passfilen av den ofullständiga fil som genererats lokalt och signaturen
+
+    * Spara filen på din enhet.
+
+    ### Lokalt bearbetade uppgifter
+
+    Följande data behandlas i din webbläsare för att generera passfilen.
+
+    Behandlade personuppgifter som finns i QR-koden:
+
+    * Ditt för- och efternamn
+
+    * Ditt födelsedatum
+
+
+    För varje vaccinationsintyg som ingår i QR-koden behandlas följande uppgifter:
+
+    * Sjukdom eller smittämne
+
+    * Namn på vaccin
+
+    * Innehavare av godkännande för försäljning eller tillverkare av vaccin
+
+    * Dosnummer
+
+    * Totala antalet doser
+
+    * Datum för senaste vaccination
+
+    * Medlemsland där vaccination utförts
+
+    * Utfärdare av beviset
+
+    * Unikt id för certifikatet (UVCI)
+
+
+    För varje testintyg som ingår i QR-koden behandlas följande uppgifter:
+
+    * Sjukdom eller smittämne
+
+    * Testtyp
+
+    * NAA Testnamn
+
+    * RAT Testets namn och tillverkare
+
+    * Datum/tid för provtagning
+
+    * Testresultat
+
+    * Testcentral
+
+    * Medlemsland där testet utförts
+
+    * Utfärdare av beviset
+
+    * Unikt id för certifikatet (UVCI)
+
+
+    För varje återvinningscertifikat som ingår i QR-koden ska följande uppgifter anges
+    bearbetas:
+
+    * Sjukdom eller smittämne
+
+    * Datum för första positiva NAA-testresultat
+
+    * Medlemsland där testet utfördes
+
+    * Utfärdare av beviset
+
+    * Certifikatet är giltigt från och med
+
+    * Certifikatet är giltigt till och med
+
+    * Unikt id för certifikatet (UVCI)
+
+
+    [Digital Covid Certificate Schema] (https://github.com/ehn-dcc-development/ehn-dcc-schema)
+    innehåller en detaljerad specifikation av vilka data som kan ingå i QR-koden.
+
+    ### Serverleverantör
+
+    Vår serverleverantör är Hetzner Online GmbH. Följande uppgifter kan samlas in
+    och lagras i serverns loggfiler:
+
+    * De webbläsartyper och versioner som används.
+
+    * Det operativsystem som används av åtkomstsystemet.
+
+    * Den webbplats från vilken systemet når vår webbplats (s.k. referrers).
+
+    * Datum och tid för åtkomst.
+
+    * Pseudonymiserade IP-adresser
+
+
+    Vi utvärderar dessa serverloggfiler för felsökning och för att förbättra användarvänligheten och användarupplevelsen.
+
+    #### Dina rättigheter
+
+    I enlighet med GDPR har du följande rättigheter:
+
+    * Rätt till tillgång till dina uppgifter: Du har rätt att få veta vilka uppgifter som har
+    samlats in om dig och hur de har behandlats.
+
+    * Rätt att bli bortglömd: Radering av dina personuppgifter.
+
+    * Rätt till rättelse: Du har rätt till att korrigera felaktiga uppgifter.
+
+    * Rätt till dataportabilitet: Du har rätt att överföra dina uppgifter från ett system till ett annat.
+
+    Translated with www.DeepL.com/Translator (free version)
+
+    ### Tredjepartslänkar
+
+    * GitHub: [Sekretesspolicy] (https://docs.github.com/en/github/site-policy/github-privacy-statement)
+
+    * PayPal: [Integritetspolicy] (https://www.paypal.com/de/webapps/mpp/ua/privacy-full?locale.x=en_EN)
+
+    * Apple kan synkronisera dina pass via iCloud: [Integritetspolicy](https://www.apple.com/legal/privacy/en-ww/)
+
+    ### Credits
+
+    Integritetspolicy auktoritativt utarbetad av [Marvin Sextro](https://marvinsextro.de)
+    (se [här](https://github.com/covidpass-org/covidpass)))
+
+    Med utdrag från: https://www.e-recht24.de/impressum-generator.html
+
+    Översatt av [Daniel Toivonen] (https://www.linkedin.com/in/your-favorite-nr-001/) "
+  title: Integritetspolicy
+seo:
+  applicationName: COVID Pass för iPhone Apple Wallet
+  description:
+    Skanna dina vaccinations-, test- och friskhetsintyg i QR-kodformat
+    och spara dem i din iPhone Apple Wallet
