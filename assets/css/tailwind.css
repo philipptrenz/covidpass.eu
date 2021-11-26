@@ -41,3 +41,11 @@ p > a {
 .direction-rtl {
   direction: rtl;
 }
+
+.qrcode-stream-camera {
+  @apply h-full object-cover;
+}
+
+.qrcode-stream-camera, .qrcode-stream-overlay, .qrcode-stream-overlay > div {
+  @apply rounded-lg;
+}

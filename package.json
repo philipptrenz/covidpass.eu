@@ -27,7 +27,7 @@
     "nuxt-i18n": "^6.27.1",
     "nuxt-user-agent": "^1.2.2",
     "passbook": "^2.3.0",
-    "vue-qrcode-reader": "2.3.18"
+    "vue-qrcode-reader": "^3.0.6"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.3",
