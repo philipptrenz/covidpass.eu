@@ -1,16 +1,14 @@
 about:
   contributeTranslation: Tłumaczenie wkładu
-  md: 'Cześć, jesteśmy Donatus i Philipp. Dwóch programistów i projektantów z 💙 dla
+  md: Cześć, jesteśmy Donatus i Philipp. Dwóch programistów i projektantów z 💙 dla
     innowacyjnych rozwiązań i intuicyjnych doświadczeń użytkowników w celu przezwyciężania
     wyzwań społecznych.Covid był głównym ograniczeniem wszystkich sfer naszego życia
     w ciągu ostatnich kilku miesięcy. Jednakże ostatnio wracamy powoli do normalności
     a dzięki temu narzędziu,  chcemy ułatwić choć trochę codzienne życie czy też podróżowanie.
     Dzięki Ann-Kathrinowi, który stworzył logo, stworzyliśmy Covid Pass dla IOS w
-    naszym wolnym czasie.
-
-    Koszty utrzymania serwera opłacamy z naszych kieszeni więc jeżeli uznasz że wykonujemy
-    przydatną prace - wesprzyj nas :)'
-  supportButton: Wspieraj nas na KO-FI
+    naszym wolnym czasie. Koszty utrzymania serwera opłacamy z naszych kieszeni więc
+    jeżeli uznasz że wykonujemy przydatną prace - wesprzyj nas :)
+  supportButton: Wspieraj nas na Ko-Fi
   title: O nas
 browserAlert:
   android: Wygląda na to, że nie otworzono strony na IPhone.Niestety, sciągniecie
@@ -53,16 +51,16 @@ index:
   onboarding:
     icons:
       appleWatch: ' dla  Watch'
-      free: wolny
+      free: darmowy
       withoutApp: nie wymaga aplikacji
     paragraphs:
       '1': Bez wględu czy idziesz do kina, na koncert czy do restauracji - w dzisiejszych
         czasach musisz okazać Europejski paszport COVID'owy w coraz to większej ilości
-        miejsc publicznych  by poświadczyć swój status zaszczepienia (zasczepiony,ozdrowieniec
-        lub przetestowany). Z naszą strona nie ma potrzeby instalowania dodatkowych
-        aplikacji -  wystarczy zeskanować raz swój kod i dodać go do swojego portfela  Apple.Gdy
-        zajdzie potrzeba okazania kodu QR, nie bedzie potrzeby szukania go - wystarczy
-        nacisnąć dwa razy przycisk zasilania na swoim urządzeniu.
+        miejsc publicznych  by poświadczyć swój status zaszczepienia (zasczepiony,
+        ozdrowieniec lub przetestowany). Z naszą strona nie ma potrzeby instalowania
+        dodatkowych aplikacji – wystarczy zeskanować raz swój kod i dodać go do swojego
+        portfela  Apple.Gdy zajdzie potrzeba okazania kodu QR, nie bedzie potrzeby
+        szukania go – wystarczy nacisnąć dwa razy przycisk zasilania na swoim urządzeniu.
   scan:
     errorHint: Ten kod QR jest nieprawidłowy
     errors:

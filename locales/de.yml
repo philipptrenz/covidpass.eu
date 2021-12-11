@@ -126,7 +126,7 @@ index:
         dass Du geimpft, getestet oder genesen bist. Mit unserer Website brauchst
         Du keine zusätzliche App, sondern scannst Deinen Code nur einmal und fügst
         ihn in Dein iOS Apple Wallet hinzu. Und wenn Du das nächste Mal in der Schlange
-        stehst, um Deinen QR-Code vorzuzeigen, musst Du nicht mehr danach suchen -
+        stehst, um Deinen QR-Code vorzuzeigen, musst Du nicht mehr danach suchen –
         er ist gleich da, mit einem Doppeltipp auf Deiner Sperrtaste.
   scan:
     errorHint: Dieser QR-Code ist nicht korrekt
