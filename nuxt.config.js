@@ -167,7 +167,8 @@ export default {
         test: /\.ya?ml$/,
         use: 'js-yaml-loader',
       })
+    },
 
-    }
+    postcss: { order: 'presetEnvAndCssnanoLast', },
   }
 }
