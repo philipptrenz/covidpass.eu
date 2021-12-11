@@ -13,18 +13,20 @@ const it = load('./locales/it.yml')
 const ru = load('./locales/ru.yml')
 const tr = load('./locales/tr.yml')
 const ar = load('./locales/ar.yml')
+const sv = load('./locales/sv.yml')
 
 export default {
   locale: 'en',
   fallbackLocale: 'en',
-  messages: { 
-    en, 
+  messages: {
+    en,
     de,
     fr,
     es,
-    it, 
+    it,
     ru,
-    tr, 
-    ar
+    tr,
+    ar,
+    sv
   }
 }

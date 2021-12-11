@@ -1,0 +1,112 @@
+about:
+  contributeTranslation: Bidra med översättning
+  md: Hej, vi är Donatus och Philipp. Två utvecklare och designers med ett 💙 för innovativa  lösningar
+    och en intuitiv användarupplevelse för att övervinna sociala utmaningar och (åter)aktivera
+    deltagande. Covid har varit ett stort hinder för alla våra liv under de senaste
+    månaderna. Gradvis återgår nu en viss normalitet. Med detta verktyg, bidra till
+    att göra vardagen och resor lite lättare. Vi skapade COVID Pass för iOS på vår
+    fritid och betalar serverkostnaderna ur egen ficka. Om du tycker att det här projektet
+    är användbart får du gärna stödja oss. Tack till Ann-Kathrin som bidragit med
+    logotypen.
+  supportButton: Stöd oss på Ko-fi
+  title: Om oss
+browserAlert:
+  android: Det verkar som att du inte har öppnat vår webbplats på en iPhone. Tyvärr,
+    nedladdning av passet är endast möjligt där. Android har inget inbyggt sätt att
+    hantera pass.
+  copyLink: Kopiera länk
+  notIphone: Det verkar som att du inte har öppnat vår webbplats på en iPhone. Tyvärr,
+    nedladdning av passet är endast möjligt där. Vänligen öppna denna webbplats igen
+    i Safari på din iPhone för att se till att allt fungerar som det ska.
+  notSafari: Det verkar som att du inte använder webbläsaren Safari på din iPhone.
+    Tyvärr, nedladdning av passet är endast möjligt där. Vänligen öppna denna webbplats
+    igen i Safari för att se till att allt fungerar som det ska.
+  shareLink: Skicka till en iPhone
+faq:
+  title: Vanliga frågor
+index:
+  addToWallet:
+    note: För att skydda dina data, se till att ditt pass inte är synligt när din
+      iPhone är låst. Om det behövs kan du ändra denna inställning under inställningar
+      > Tryck på / Face ID & Lösenkod > Tillåt åtkomst från låst skärm
+    shareButtonText: Dela till dina vänner
+    successMessage: QR-koden har skannats
+  consent:
+    buttonText: Skanna QR-koden
+    icons:
+      noProfit: Inge vinst
+      noStorage: Lokal databearbetning
+      openSource: Open Source
+    inputText: Jag har läst sekretesspolicyn och samtycker till behandlingen av min
+      data
+    paragraphs:
+      '1': Din QR-kod innehåller såväl personliga, som känsliga hälsodata. För att
+        skydda denna data kommer den inte att lämna din dator. Behandlingen av informationen
+        sker uteslutande i din webbläsare. För att skapa passet, kommer endast en
+        kryptografisk hash skickas till vår server för att signeras där. Det betyder
+        att vi inte har någon möjlighet för att läsa eller spara dina data.
+      '2': För att skydda din integritet ber vi dig att inte dela ditt Covid Pass
+        med andra.
+  onboarding:
+    icons:
+      appleWatch: för  Watch
+      free: gratis
+      withoutApp: Ingen app behövs
+    paragraphs:
+      '1': Oavsett om du går på film, en konsert eller en restaurang – nuförtiden
+        du måste visa det europeiska Covid Green Pass på fler och fler platser för
+        att bevisa att du är vaccinerad, testad eller frisk. Med vår hemsida finns
+        inget behov av en extra app, skanna bara din kod en gång och lägg till den
+        i din iOS Apple Wallet. Och nästa gång du står i kö för att visa din QR-kod
+        behöver du inte hålla på och söka efter det – det är precis där, med ett dubbeltryck
+        på din låsknapp.
+  scan:
+    errorHint: Denna QR kod är inte giltig
+    errors:
+      NotAllowedError: Var god och godkän tillgång till mobilkameran
+      NotFoundError: Kunde inte öppna kameran
+      NotReadableError: Kameran verkar redan användas
+      NotSupportedError: Tyvärr är denna funktion inte tillgänglig
+      OverconstrainedError: Installerade kameror är inte lämpliga
+      StreamApiNotSupportedError: Tyvärr verkar din webbläsare inte stödja denna funktion
+    hint: Skanna QR-koden
+  subtitle: bara ett klick bort i din iOS Apple Wallet
+  title: Ditt COVID Pass
+labels:
+  backToHome: Tillbaka till hem
+  loading: Laddar …
+  next: Nästa
+  reportIssue: Rapportera ett problem
+  support: Stödj oss
+  tryAgain: Försök igen
+pass:
+  certificateIssuer: Utfärdare av beviset
+  certificateType:
+    label: Certifikattyp
+    recovery: Frisk
+    test: Test
+    vaccination: Vaccination
+  country: Utfärdande land
+  credits:
+    label: Genererat av
+    value: 'https://covidpass.eu '
+  dateOfBirth: Födelsedatum
+  dateOfVaccination: Datum för vaccination
+  disclaimer:
+    label: Friskrivning
+    value: Detta certifikat är endast giltigt i kombination med ett ID-kort av certificatets
+      ägare. Giltigheten av detta certifikat kontrollerades inte av COVID Pass.
+  dose: Dos
+  name: Namn
+  positiveTested: Testad positiv
+  testResult: Testresultat
+  testType: Testtyp
+  testingTime: Testtid
+  uniqueCertificateIdentifier: Unikt id för certifikatet (UVCI)
+  vaccine: Vaccin
+  validFrom: Giltig från
+  validUntil: Giltig till
+seo:
+  applicationName: COVID Pass för iPhone Apple Wallet
+  description: Skanna dina vaccinations-, test- och friskhetsintyg i QR-kodformat
+    och spara dem i din iPhone Apple Walle
