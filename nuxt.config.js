@@ -120,6 +120,7 @@ export default {
       { code: 'fr', iso: 'fr-FR' },
       { code: 'es', iso: 'es-ES' },
       { code: 'it', iso: 'it-IT' },
+      { code: 'sv', iso: 'sv-SE' },
       { code: 'ru', iso: 'ru-RU' },
       { code: 'tr', iso: 'tr-TR' },
       { code: 'ar', iso: 'ar-YE' },
