@@ -69,6 +69,7 @@ labels:
   reportIssue: بلغ عن خطأ
   support: دعمنا
   tryAgain: حاول مجددا
+language: عربي
 pass:
   certificateIssuer: مشدر الشهادة
   certificateType:

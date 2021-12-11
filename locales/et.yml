@@ -1,0 +1,108 @@
+about:
+  contributeTranslation: Tõlget toetama
+  md: Tere, me oleme Donatu ja Philipp. Kaks arendaja ja disainer koos 💙 innovatiivsete
+    lahenduste ja intuitiivsete kasutajate kogemustega sotsiaalsete väljakutsete ületamiseks
+    ja (re) võimaldavad osalemist. COVID on viimase paari kuu jooksul olnud meie elu
+    peamine piirang. Järk-järgult naaseb mõned normaalsus nüüd. Selle tööriistaga
+    tahame teha väikese panuse igapäevaelu tegemisse ja reisida veidi lihtsamaks.
+    Tänu Ann-Kathrinile, kes logo andis. Loodud CoVid pass iOS meie vaba aega ja maksta
+    server kulud välja meie taskus. Kui leiate selle projekti kasulikuks, siis palun
+    võtke meid toetama.
+  supportButton: Toetage meid Ko-Fi-s
+  title: Meist
+browserAlert:
+  android: Tundub, et te ei ole avanud oma veebisaiti iPhone'is. Kahjuks on passi
+    allalaadimine võimalik ainult seal. Androidil ei ole emakeelena läbipääsu hallata.
+  copyLink: Kopeeri link
+  notIphone: Tundub, et te ei ole avanud oma veebisaiti iPhone'is. Kahjuks on passi
+    allalaadimine võimalik ainult seal võimalik. Palun avage see veebisait uuesti
+    Safaris oma iPhone'is, et veenduda, et kõik toimib korralikult.
+  notSafari: Tundub, et te ei kasuta iPhone'i Safari brauserit. Kahjuks on passi allalaadimine
+    võimalik ainult seal võimalik. Palun avage see veebisait safaris uuesti, et veenduda,
+    et kõik toimib korralikult.
+  shareLink: Saada iPhone'ile
+faq:
+  title: Korduma kippuvad küsimused
+index:
+  addToWallet:
+    note: Andmete kaitsmiseks veenduge, et teie pass ei ole nähtav, kui teie iPhone
+      on lukustatud. Vajadusel saate muuta selle seadistuse seadete all> Touch / Face
+      ID & Passcode> Luba ligipääsu lukustatud
+    shareButtonText: Räägi oma sõpradele
+    successMessage: QR-kood edukalt skaneeritud
+  consent:
+    buttonText: Skannige QR-koodi
+    icons:
+      noProfit: Kasumit
+      noStorage: Kohalik töötlemine
+      openSource: Avatud lähtekoodiga
+    inputText: Olen lugenud privaatsuspoliitikat ja nõustun minu andmete töötlemisega
+    paragraphs:
+      '1': Teie QR-kood sisaldab isiklikke ja tundlikke terviseandmeid. Selle andmete
+        kaitsmiseks ei jäta see teie arvutit. Teabe töötlemine toimub ainult teie
+        brauseris. Passi loomiseks saadetakse meie serverile ainult krüptograafiline
+        räsi ja allkirjastate seal. See tähendab, et meil ei ole võimalik lugeda ega
+        salvestada andmeid.
+      '2': Teie privaatsuse kaitsmiseks palume ka teil mitte jagada oma Covidi teistega.
+  onboarding:
+    icons:
+      appleWatch: Sest  Watch
+      free: vaba
+      withoutApp: Rakendust pole vaja
+    paragraphs:
+      '1': Pole tähtis, kas te lähete filmidesse, kontserdile või restoranile Meie
+        veebisaidil ei ole vaja täiendavat rakendust, lihtsalt skannige oma koodi
+        üks kord ja lisage see oma iOS Apple Walletile. Ja järgmine kord, kui olete
+        oma QR-koodi näitama, ei pea te seda enam otsima - see on seal õige, kahekordse
+        nupuga topeltpuuduta.
+  scan:
+    errorHint: See QR-kood ei kehti
+    errors:
+      NotAllowedError: Palun andke kaamera juurdepääsu Permisson
+      NotFoundError: Kaamera avada
+      NotReadableError: Kaamera tundub olevat juba kasutusel
+      NotSupportedError: Kahjuks seda funktsiooni ei toetata
+      OverconstrainedError: Paigaldatud kaamerad ei sobi
+      StreamApiNotSupportedError: Kahjuks ei toeta teie brauser seda funktsiooni
+    hint: Skannige QR-koodi
+  subtitle: Lihtsalt klõpsa oma iOS Apple'i rahakotis
+  title: Teie CoVid Pass
+labels:
+  backToHome: Tagasi koju
+  loading: Laadimine ...
+  next: Järgmine
+  reportIssue: Teavitage probleemi
+  support: Toetage meid
+  tryAgain: Proovi uuesti
+language: Eesti keel
+pass:
+  certificateIssuer: Sertifikaadi väljaandja
+  certificateType:
+    label: Sertifikaadi tüüp
+    recovery: Taastumine
+    test: Katse
+    vaccination: Vaktsineerimine
+  country: Väljaandev riik
+  credits:
+    label: Loodud
+    value: https://covidpass.eu
+  dateOfBirth: Sünnikuupäev
+  dateOfVaccination: Vaktsineerimise kuupäev
+  disclaimer:
+    label: Lahtiütlemine
+    value: See sertifikaat kehtib ainult koos sertifikaadi omaniku ID-kaardiga. Käesoleva
+      sertifikaadi kehtivust ei kontrollitud Covid Pass.
+  dose: Annus
+  name: Nimetus
+  positiveTested: Testitud positiivne
+  testResult: Testi tulemus
+  testType: Katseliik
+  testingTime: Katseaeg
+  uniqueCertificateIdentifier: Unikaalne sertifikaadi identifikaator (UVCI)
+  vaccine: Vaktsiin
+  validFrom: Kehtib alates
+  validUntil: Kehtiv kuni
+seo:
+  applicationName: CoVid Pass iPhone Apple Wareti
+  description: Skaneerige oma vaktsineerimist, testimis- ja taastumissertifikaate
+    QR-koodi esinduses ja salvestage need oma iPhone Apple Walletile

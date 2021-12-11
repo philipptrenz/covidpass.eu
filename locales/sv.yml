@@ -79,6 +79,7 @@ labels:
   reportIssue: Rapportera ett problem
   support: Stödj oss
   tryAgain: Försök igen
+language: svenska
 pass:
   certificateIssuer: Utfärdare av beviset
   certificateType:

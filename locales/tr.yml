@@ -75,6 +75,7 @@ labels:
   reportIssue: Sorun bildir
   support: Bizi destekle
   tryAgain: Tekrar deneyin
+language: türkçe
 pass:
   certificateIssuer: Sertifika Veren
   certificateType:

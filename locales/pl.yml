@@ -1,0 +1,117 @@
+about:
+  contributeTranslation: Tłumaczenie wkładu
+  md: 'Cześć, jesteśmy Donatus i Philipp. Dwóch programistów i projektantów z 💙 dla
+    innowacyjnych rozwiązań i intuicyjnych doświadczeń użytkowników w celu przezwyciężania
+    wyzwań społecznych.Covid był głównym ograniczeniem wszystkich sfer naszego życia
+    w ciągu ostatnich kilku miesięcy. Jednakże ostatnio wracamy powoli do normalności
+    a dzięki temu narzędziu,  chcemy ułatwić choć trochę codzienne życie czy też podróżowanie.
+    Dzięki Ann-Kathrinowi, który stworzył logo, stworzyliśmy Covid Pass dla IOS w
+    naszym wolnym czasie.
+
+    Koszty utrzymania serwera opłacamy z naszych kieszeni więc jeżeli uznasz że wykonujemy
+    przydatną prace - wesprzyj nas :)'
+  supportButton: Wspieraj nas na KO-FI
+  title: O nas
+browserAlert:
+  android: Wygląda na to, że nie otworzono strony na IPhone.Niestety, sciągniecie
+    paszportu COVID jest tylko mozliwe na IPhone ponieważ  system Android nie posiada
+    natywnej obsługi by zarządzać paszportami.
+  copyLink: Kopiuj link
+  notIphone: Wygląda na to, że nie otworzono strony na IPhone.Niestety, sciągniecie
+    paszportu COVID jest tylko mozliwe na IPhone. Otwórz ponownie  stronę w przeglądarce
+    Safari na swoim IPhone by mieć pewność , że wszystko zadziała.
+  notSafari: Wygląda na to, że nie korzystasz z przegladarki Safari.Niestety jest
+    ona wymagana by pobrać na urządzenie paszport . Otwórz ponownie tą stronę w Safari
+    by mieć pewność że wszystko zadziała.
+  shareLink: Wyślij na IPhone'a
+faq:
+  title: Często Zadawane Pytania
+index:
+  addToWallet:
+    note: Aby chronić swoje dane, upewnij się, że Twój paszport nie jest widoczny,
+      gdy iPhone jest zablokowany. W razie potrzeby można zmienić to ustawienie w
+      obszarze Ustawienia> Touch/Face ID i hasło> Zezwalaj na dostęp.
+    shareButtonText: Podziel się ze znajomymi
+    successMessage: Kod QR pomyślnie zeskanowany
+  consent:
+    buttonText: Skanuj kod QR
+    icons:
+      noProfit: Charytatywnie
+      noStorage: Lokalna obróbka
+      openSource: Open Source
+    inputText: Przeczytałem politykę prywatności i wyrażam zgodę na przetwarzanie
+      moich danych
+    paragraphs:
+      '1': Twój kod QR zawiera wrażliwe dane osobowe, a także dane o  zdrowiu. Aby
+        chronić te dane, nie pozostawiaj swojego urządzenia bez Twojego nadzoru. Przetwarzanie
+        informacji dzieje się wyłącznie w przeglądarce. Aby utworzyć paszport dla
+        portfela Apple ,dane te są wysyłane po zaszyfrowaniu kluczem kryptograficznym
+        na nasz serwer oraz na nim podpisywane. Oznacza to, że nie mamy możliwości
+        odczytania lub zapisywania danych.
+      '2': Aby chronić swoją prywatność, prosimy również, by nie udostępniać swojego
+        paszportu osobom trzecim.
+  onboarding:
+    icons:
+      appleWatch: ' dla  Watch'
+      free: wolny
+      withoutApp: nie wymaga aplikacji
+    paragraphs:
+      '1': Bez wględu czy idziesz do kina, na koncert czy do restauracji - w dzisiejszych
+        czasach musisz okazać Europejski paszport COVID'owy w coraz to większej ilości
+        miejsc publicznych  by poświadczyć swój status zaszczepienia (zasczepiony,ozdrowieniec
+        lub przetestowany). Z naszą strona nie ma potrzeby instalowania dodatkowych
+        aplikacji -  wystarczy zeskanować raz swój kod i dodać go do swojego portfela  Apple.Gdy
+        zajdzie potrzeba okazania kodu QR, nie bedzie potrzeby szukania go - wystarczy
+        nacisnąć dwa razy przycisk zasilania na swoim urządzeniu.
+  scan:
+    errorHint: Ten kod QR jest nieprawidłowy
+    errors:
+      NotAllowedError: Prosze przyznać dostep do aparatu urządzenia
+      NotFoundError: Nie można otworzyć aparatu
+      NotReadableError: Aparat wydaje się być już używany
+      NotSupportedError: Niestety ta funkcja nie jest obsługiwana
+      OverconstrainedError: Zainstalowane kamery nie są odpowiednie
+      StreamApiNotSupportedError: Niestety Twoja przeglądarka nie obsługuje tej funkcji
+    hint: Skanuj kod QR
+  subtitle: Tylko jedno kliknięcie by dodać do Portfela Apple
+  title: Twój paszport COVID
+labels:
+  backToHome: Wróć na stronę główna
+  loading: Ładowanie ...
+  next: Dalej
+  reportIssue: Zgłoś problem
+  support: Wesprzyj nas
+  tryAgain: Spróbuj ponownie
+language: polski
+pass:
+  certificateIssuer: Wystawca certyfikatu
+  certificateType:
+    label: Typ Certyfikatu
+    recovery: Wyleczenie
+    test: Test
+    vaccination: Szczepionka
+  country: Państwo wydające
+  credits:
+    label: Wygenerowane przez
+    value: https://covidass.eu.
+  dateOfBirth: Data urodzenia
+  dateOfVaccination: Data szczepienia
+  disclaimer:
+    label: Zastrzeżenie
+    value: Ten certyfikat jest ważny tylko w połączeniu z dowodem osobistym/paszportem/prawem
+      jazdy  posiadacza certyfikatu. Ważność tego certyfikatu nie była sprawdzana
+      przez Pass Covid.
+  dose: Dawka
+  name: Nazwa
+  positiveTested: Test pozytywny
+  testResult: Wynik testu
+  testType: Typ testu
+  testingTime: Czas testu
+  uniqueCertificateIdentifier: Unikalny identyfikator certyfikatu (UVCI)
+  vaccine: Szczepionka
+  validFrom: Ważny od
+  validUntil: 'Ważny do '
+seo:
+  applicationName: 'Paszport COVID dla IPhone oraz Apple Watch '
+  description: Zeskanuj certyfikaty szczepienia, testów lub ozdrowienia w postaci  kodu
+    QR i zapisz je na telefonie iPhone w aplikacji Portfel Apple.

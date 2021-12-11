@@ -78,6 +78,7 @@ labels:
   reportIssue: Informar de un problema
   support: Apóyenos
   tryAgain: Intentar de nuevo
+language: español
 pass:
   certificateIssuer: Emisor del certificado
   certificateType:

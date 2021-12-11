@@ -86,6 +86,7 @@ labels:
   reportIssue: Signaler un problème
   support: Soutenez-nous
   tryAgain: Essayer à nouveau
+language: français
 pass:
   certificateIssuer: Émetteur du certificat
   certificateType:

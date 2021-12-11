@@ -147,6 +147,7 @@ labels:
   reportIssue: Fehler melden
   support: Unterstützen
   tryAgain: Erneut versuchen
+language: deutsch
 pass:
   certificateIssuer: Zertifikatsaussteller
   certificateType:
