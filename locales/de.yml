@@ -121,12 +121,12 @@ index:
       free: kostenlos
       withoutApp: ohne App
     paragraphs:
-      '1': Egal, ob Du ins Kino, ein Konzert oder ein Restaurant gehst - aktuell musst
+      '1': Egal, ob Du ins Kino, ein Konzert oder ein Restaurant gehst – aktuell musst
         Du an immer mehr Orten den europäischen COVID Green Pass vorzeigen, um nachzuweisen,
         dass Du geimpft, getestet oder genesen bist. Mit unserer Website brauchst
         Du keine zusätzliche App, sondern scannst Deinen Code nur einmal und fügst
         ihn in Dein iOS Apple Wallet hinzu. Und wenn Du das nächste Mal in der Schlange
-        stehst, um Deinen QR-Code vorzuzeigen, musst Du nicht mehr danach suchen -
+        stehst, um Deinen QR-Code vorzuzeigen, musst Du nicht mehr danach suchen –
         er ist gleich da, mit einem Doppeltipp auf Deiner Sperrtaste.
   scan:
     errorHint: Dieser QR-Code ist nicht korrekt
@@ -142,11 +142,12 @@ index:
   title: Dein COVID Pass
 labels:
   backToHome: Zurück zur Startseite
-  loading: Laden ...
+  loading: Laden …
   next: Weiter
   reportIssue: Fehler melden
   support: Unterstützen
   tryAgain: Erneut versuchen
+language: deutsch
 pass:
   certificateIssuer: Zertifikatsaussteller
   certificateType:

@@ -25,7 +25,7 @@
         <span>|</span> 
         <a href="https://github.com/philipptrenz/covidpass" target="_blank">Github</a>
         <span>|</span> 
-        <a href="https://github.com/philipptrenz/covidpass/issues/new" target="_blank">{{ $t('labels.reportIssue') }}</a> 
+        <a href="https://github.com/philipptrenz/covidpass/issues/new/choose" target="_blank">{{ $t('labels.reportIssue') }}</a> 
         <span>|</span>   
         <a href="https://ko-fi.com/covidpass" target="_blank">{{ $t('labels.support') }}</a>
       </div>

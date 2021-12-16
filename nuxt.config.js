@@ -33,8 +33,8 @@ export default {
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-      { rel: 'icon" type="image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-      { rel: 'icon" type="image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/manifest.json' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: tailwind.theme.colors.primary },
     ]
@@ -120,6 +120,9 @@ export default {
       { code: 'fr', iso: 'fr-FR' },
       { code: 'es', iso: 'es-ES' },
       { code: 'it', iso: 'it-IT' },
+      { code: 'sv', iso: 'sv-SE' },
+      { code: 'pl', iso: 'pl-PL' },
+      { code: 'et', iso: 'et-EE' },
       { code: 'ru', iso: 'ru-RU' },
       { code: 'tr', iso: 'tr-TR' },
       { code: 'ar', iso: 'ar-YE' },

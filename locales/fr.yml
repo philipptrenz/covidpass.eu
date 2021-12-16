@@ -59,12 +59,12 @@ index:
       withoutApp: aucune application nécessaire
     paragraphs:
       '1': Peu importe oú vous voulez aller, au cinéma, à un concert ou au restaurant
-        - vous êtes obligés aujourd‘hui de montrer votre pass sanitaire européen en
+        – vous êtes obligés aujourd‘hui de montrer votre pass sanitaire européen en
         toujours plus de lieux pour prouver que vous êtes vacciné, testé ou guéri.
         Avec notre site Web, il n'y a pas besoin d'une application supplémentaire,
         il suffit de lire votre code QR une seule et de l'ajouter à votre Apple wallet.
         Et la prochaine fois que vous êtes en ligne pour montrer votre code QR, plus
-        besoin de chercher - vous le trouvez en double-cliquant sur votre bouton de
+        besoin de chercher – vous le trouvez en double-cliquant sur votre bouton de
         verrouillage.
   scan:
     errorHint: Ce code QR n'est pas valide
@@ -86,6 +86,7 @@ labels:
   reportIssue: Signaler un problème
   support: Soutenez-nous
   tryAgain: Essayer à nouveau
+language: français
 pass:
   certificateIssuer: Émetteur du certificat
   certificateType:

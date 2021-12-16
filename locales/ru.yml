@@ -82,6 +82,7 @@ labels:
   reportIssue: Сообщить о проблеме
   support: Поддержите нас
   tryAgain: Попробуйте ещё раз
+language: русский
 pass:
   certificateIssuer: Орган, выдавший сертификат
   certificateType:
