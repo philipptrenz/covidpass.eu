@@ -52,9 +52,9 @@ index:
       '1': Filmlere, bir konser ya da bir restorana giderseniz olursa olsun, günümüzde
         Avrupa Covid Green Pass'ı aşılanmış, test edilmiş veya geri kazandığınızı
         kanıtlamak için giderek daha fazla yerde göstermeniz gerekir. Web sitemizle
-        ek bir uygulamaya gerek yok, sadece kodunuzu bir kez tarayın ve IOS Apple
+        ek bir uygulamaya gerek yok, sadece kodunuzu bir kez tarayın ve iOS Apple
         Cüzdanınıza ekleyin. Ve bir dahaki sefere QR kodunuzu göstermek için sıraladasınız,
-        artık aramak zorunda değilsiniz - tam orada, kilitleme düğmesinde çift dokunma
+        artık aramak zorunda değilsiniz – tam orada, kilitleme düğmesinde çift dokunma
         ile.
   scan:
     errorHint: Bu QR Kodu geçerli değil
