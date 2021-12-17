@@ -114,45 +114,81 @@
     <div v-show="state == 2">
       <div class="bg-primary bg-opacity-20 text-primary text-xl rounded-lg focus:outline-none text-center font-medium">
         <client-only>
-          <qrcode-stream 
-            :key="_uid"
-            v-if="!qrScannerDestroyed"
-            @decode="onDecode" 
-            @init="onInit" 
-            :camera="state == 2 ? 'auto' : 'off'"
-            :track="paintBoundingBox"
-            class="h-full">
 
-            <div v-if="!qrScannerDestroyed && !qrScannerLoading && !qrScannerError" class="absolute top-0 left-0 w-full h-full z-50 flex flex-col justify-center align-middle p-6 text-white font-medium">
-              <svg class="w-full h-full" viewBox="0 0 300 301" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 22.5V2.5H22" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M298 278.008V298.008H278" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M278 2.00806L298 2.00806V22.0081" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M22 298.008H2L2 278.008" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span class="pt-2">{{ scanHint }}</span>
-            </div>
-            <div v-if="!qrScannerDestroyed && !qrScannerLoading && !qrScannerError" class="absolute top-0 left-0 w-full h-full z-40 bg-primary opacity-40"></div>
 
-            <div class="h-full flex flex-col justify-evenly space-y-2 p-5">
+          <div v-if="isWebcamMode">
 
-              <div v-if="qrScannerLoading" class="text-center" >
-                {{ $t('labels.loading') }}
+            <qrcode-stream 
+              :key="_uid"
+              v-if="!qrScannerDestroyed"
+              @decode="onDecode" 
+              @init="onInit" 
+              :camera="state == 2 ? 'auto' : 'off'"
+              :track="paintBoundingBox"
+              class="h-full">
+
+              <div v-if="!qrScannerDestroyed && !qrScannerLoading && !qrScannerError" class="absolute top-0 left-0 w-full h-full z-50 flex flex-col justify-center align-middle p-6 text-white font-medium">
+                <svg class="w-full h-full" viewBox="0 0 300 301" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 22.5V2.5H22" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M298 278.008V298.008H278" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M278 2.00806L298 2.00806V22.0081" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22 298.008H2L2 278.008" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="pt-2">{{ scanHint }}</span>
+              </div>
+              <div v-if="!qrScannerDestroyed && !qrScannerLoading && !qrScannerError" class="absolute top-0 left-0 w-full h-full z-40 bg-primary opacity-40"></div>
+
+              <div class="h-full flex flex-col justify-evenly space-y-2 p-5">
+
+                <div v-if="qrScannerLoading" class="text-center" >
+                  {{ $t('labels.loading') }}
+                </div>
+
+                <div v-if="qrScannerError" class="h-full text-highlight text-center font-medium p-2 flex items-center justify-center">
+                  <p>{{ qrScannerError }}</p>
+                </div>
+
+                <Button v-if="qrScannerError" @click="reloadQRScanner" :text="$t('labels.tryAgain')" >
+                  <ReloadIcon />
+                </Button>
+                
               </div>
 
-              <div v-if="qrScannerError" class="h-full text-highlight text-center font-medium p-2 flex items-center justify-center">
-                <p>{{ qrScannerError }}</p>
-              </div>
+            </qrcode-stream>
 
-              <Button v-if="qrScannerError" @click="reloadQRScanner" :text="$t('labels.tryAgain')" >
-                <ReloadIcon />
-              </Button>
+          </div>
+          <div v-else>
+
+            <qrcode-drop-zone 
+              @detect="onDetect"
+              class="h-44 w-full relative">
+
+              <div class="absolute inset-0 bg-white mx-2 my-2 rounded z-0">
+                <div class="w-full h-full z-50 flex flex-col justify-center align-middle p-6 text-primary opacity-80 font-medium">
+
+                  <!--<svg class="w-full h-full" viewBox="0 0 300 301" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 22.5V2.5H22" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M298 278.008V298.008H278" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M278 2.00806L298 2.00806V22.0081" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 298.008H2L2 278.008" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>-->
+
+                  <span class="pt-2 max-w-[240px] mx-auto" v-if="qrScannerLoading" >{{ $t('labels.loading') }}</span>
+                  <span class="pt-2 max-w-[240px] mx-auto" v-else-if="dragAndDropError" >{{ dragAndDropError }}</span>
+                  <span class="pt-2 max-w-[240px] mx-auto" v-else >Drag & drop your document onto this area<br>PDFs might work best</span>
+
+                </div>
+              </div>
               
-            </div>
+            </qrcode-drop-zone>
 
-          </qrcode-stream>
+          </div>
+
         </client-only>
+
       </div>
+
+      <Button class="mt-6" @click="isWebcamMode=!isWebcamMode" :text="isWebcamMode ? 'Switch to file upload (beta)' : 'Back to QR code scanner'"></Button>
     </div>
 
     <div v-show="state == 3 || state == 4" class="space-y-6">
@@ -237,8 +273,10 @@ export default Vue.extend({
       qrScannerLoading: false,
       qrScannerDestroyed: false,
       qrScannerError: <string|null>null,
+      dragAndDropError: <string|null>null,
       scanHint: this.$t('index.scan.hint'),
-      initial: true
+      initial: true,
+      isWebcamMode: true
     }
   },
   head() {
@@ -305,12 +343,42 @@ export default Vue.extend({
     },
     onDecode(rawData: string) {
       try {
-        const decoded = this.$hcertDecode(rawData)
-        this.generate(rawData, decoded)
+        const decoded = this.$hcertDecode(rawData);
+        this.generate(rawData, decoded);
       } catch (error) {
-        this.scanHint = this.$t('index.scan.errorHint')
+        this.scanHint = this.$t('index.scan.errorHint');
+        console.error(error);
         console.error('Invalid QR code found');
         this.reloadQRScanner();
+      }
+    },
+    async onDetect (promise: Promise<any>) {
+      try {
+        this.qrScannerLoading = true;
+
+        const {
+          imageData,    // raw image data of image/frame
+          content,      // decoded String or null
+          location      // QR code coordinates or null
+        } = await promise;
+
+        if (content !== null) this.onDecode(content);
+        else this.dragAndDropError = "Certificate could not be found, please try again";
+
+      } catch (error: any) {
+
+        if (error.name === 'DropImageFetchError') {
+          this.dragAndDropError = "The drag & dropped file can not be read";
+        } else if (error.name === 'DropImageDecodeError') {
+          this.dragAndDropError = "Drag & dropped file is not of type image and can't be decoded";
+        } else {
+          this.dragAndDropError = "An unknown error occured";
+        }
+
+      } finally {
+
+        this.qrScannerLoading = false;
+
       }
     },
     async onInit (promise: Promise<any>) {
