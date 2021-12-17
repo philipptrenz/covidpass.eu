@@ -115,11 +115,12 @@
       <div class="bg-primary bg-opacity-20 text-primary text-xl rounded-lg focus:outline-none text-center font-medium">
         <client-only>
           <qrcode-stream 
+            :key="_uid"
             v-if="!qrScannerDestroyed"
             @decode="onDecode" 
             @init="onInit" 
             :camera="state == 2 ? 'auto' : 'off'"
-            :track="undefined"
+            :track="paintBoundingBox"
             class="h-full">
 
             <div v-if="!qrScannerDestroyed && !qrScannerLoading && !qrScannerError" class="absolute top-0 left-0 w-full h-full z-50 flex flex-col justify-center align-middle p-6 text-white font-medium">
@@ -392,6 +393,23 @@ export default Vue.extend({
     },
     scrollToTop() {
       document.getElementById("content")?.scrollIntoView({ behavior: "smooth" });
+    },
+    paintBoundingBox(detectedCodes: any, ctx: any) {
+      for (const detectedCode of detectedCodes) {
+        const [ firstPoint, ...otherPoints ] = detectedCode.cornerPoints
+
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "#27215b";
+
+        ctx.beginPath();
+        ctx.moveTo(firstPoint.x, firstPoint.y);
+        for (const { x, y } of otherPoints) {
+          ctx.lineTo(x, y);
+        }
+        ctx.lineTo(firstPoint.x, firstPoint.y);
+        ctx.closePath();
+        ctx.stroke();
+      }
     },
   }
 })
