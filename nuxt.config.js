@@ -12,13 +12,16 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+
       { hid: 'description', name: 'description', content: 'Scan your vaccination, test and recovery certificates in QR code representation and save them to your Apple Wallet' },
       { hid: 'application-name', name: 'application-name', content: 'COVID Pass in your iOS Apple Wallet'},
       { hid: 'keywords', name: 'keywords', content: 'Apple Wallet, iOS Wallet, iPhone Wallet, EU Digital COVID Certificate, COVID, covid pass, green pass, EU Green Certificate, Vaccination, Recovery, Test'},
       { hid: 'author', name: 'author', content: 'Donatus Wolf, Philipp Trenz'},
       { hid: 'theme-color', name: 'theme-color', content: tailwind.theme.colors.primary },
+      
       { hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: tailwind.theme.colors.primary },
       { hid: 'msapplication-TileImage', name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
+      
       { hid: 'og:title', property: 'og:title', content: 'COVID Pass' },
       { hid: 'og:description', property: 'og:description', content: 'Your digital COVID pass in your iPhone Apple Wallet' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
@@ -27,9 +30,16 @@ export default {
       { hid: 'og:image', property: 'og:image', content: '/og-image.png' },
       { hid: 'og:image:width', property: 'og:image:width', content: '1280' },
       { hid: 'og:image:height', property: 'og:image:height', content: '640' },
-      { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+
+      { hid: 'twitter:site', name: 'twitter:site', content: '' },
+      { hid: 'twitter:creator', name: 'twitter:creator', content: '@donatuswolf,@philipptrenz' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:image', property: 'twitter:image', content: '/og-image.png' },
+      { hid: 'twitter:url', property: 'twitter:url', content: 'https://covidpass.eu' },
+      { hid: 'twitter:domain', property: 'twitter:domain', content: 'covidpass.eu' },
+      { hid: 'twitter:title', property: 'twitter:title', content: 'COVID Pass in your iOS Apple Wallet' },
       { hid: 'twitter:description', name: 'twitter:description', content: 'Scan your vaccination, test and recovery certificates in QR code representation and save them to your Apple Wallet' },
-      { hid: 'twitter:creator', name: 'twitter:creator', content: '@donatuswolf' },
+
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },

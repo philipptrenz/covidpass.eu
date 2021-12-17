@@ -46,10 +46,12 @@ export default Vue.extend({
 
     const meta: any = [
       { hid: 'application-name', name: 'application-name', content: applicationName },
+      { hid: 'twitter:title', name: 'twitter:title', content: applicationName },
       { hid: 'description', name: 'description', content: description },
       { hid: 'og:description', property: 'og:description', content: description },
       { hid: 'twitter:description', name: 'twitter:description', content: description },
       { hid: 'og:url', property: 'og:url', content: localizedBasePath },
+      { hid: 'twitter:url', property: 'twitter:url', content: localizedBasePath },
       ...i18nHead.meta
     ];
 
