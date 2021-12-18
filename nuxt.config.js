@@ -34,7 +34,7 @@ export default {
       { hid: 'og:image:width', property: 'og:image:width', content: '1280' },
       { hid: 'og:image:height', property: 'og:image:height', content: '640' },
 
-      { hid: 'twitter:site', property: 'twitter:site', content: '' },
+      { hid: 'twitter:site', property: 'twitter:site', content: '@covidpass_eu' },
       { hid: 'twitter:creator', property: 'twitter:creator', content: '@donatuswolf,@philipptrenz' },
       { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:image', property: 'twitter:image', content: '/og-image.png' },
