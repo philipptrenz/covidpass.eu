@@ -3,6 +3,7 @@ import tailwind from './tailwind.config'
 
 const title = "COVID Pass";
 const description = "Scan your vaccination, test and recovery certificates and save them to your Apple Wallet";
+const ogImageUrl = "https://covidpass.eu/og-image.png?v=2";
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -30,14 +31,14 @@ export default {
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: process.env.BASE_URL },
       { hid: 'og:site_name', property: 'og:site_name', content: title },
-      { hid: 'og:image', property: 'og:image', content: '/og-image.png' },
+      { hid: 'og:image', property: 'og:image', content: ogImageUrl },
       { hid: 'og:image:width', property: 'og:image:width', content: '1280' },
       { hid: 'og:image:height', property: 'og:image:height', content: '640' },
 
       { hid: 'twitter:site', property: 'twitter:site', content: '@covidpass_eu' },
       { hid: 'twitter:creator', property: 'twitter:creator', content: '@donatuswolf,@philipptrenz' },
       { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
-      { hid: 'twitter:image', property: 'twitter:image', content: '/og-image.png' },
+      { hid: 'twitter:image', property: 'twitter:image', content: ogImageUrl },
       { hid: 'twitter:url', property: 'twitter:url', content: process.env.BASE_URL },
       { hid: 'twitter:domain', property: 'twitter:domain', content: 'covidpass.eu' },
       { hid: 'twitter:title', property: 'twitter:title', content: title },
