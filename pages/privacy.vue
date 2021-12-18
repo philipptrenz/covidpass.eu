@@ -29,13 +29,18 @@ export default Vue.extend({
     const localizedBasePath = basePath+this.localePath('/');
 
     const meta: any = [
-      { hid: 'application-name', name: 'application-name', content: applicationName },
-      { hid: 'twitter:title', name: 'twitter:title', content: applicationName },
-      { hid: 'description', name: 'description', content: description },
+      
+      { hid: 'application-name', property: 'application-name', content: applicationName },
+      { hid: 'og:title', property: 'og:title', content: applicationName },
+      { hid: 'twitter:title', property: 'twitter:title', content: applicationName },
+
+      { hid: 'description', property: 'description', content: description },
       { hid: 'og:description', property: 'og:description', content: description },
-      { hid: 'twitter:description', name: 'twitter:description', content: description },
+      { hid: 'twitter:description', property: 'twitter:description', content: description },
+
       { hid: 'og:url', property: 'og:url', content: localizedBasePath },
       { hid: 'twitter:url', property: 'twitter:url', content: localizedBasePath },
+
       ...i18nHead.meta
     ];
     

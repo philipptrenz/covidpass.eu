@@ -1,10 +1,13 @@
 import i18n from './i18n';
 import tailwind from './tailwind.config'
 
+const title = "COVID Pass";
+const description = "Scan your vaccination, test and recovery certificates and save them to your Apple Wallet";
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'COVID Pass',
+    title: title,
     htmlAttrs: { },
     bodyAttrs: {
       class: 'bg-primary'
@@ -13,8 +16,8 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
 
-      { hid: 'description', name: 'description', content: 'Scan your vaccination, test and recovery certificates in QR code representation and save them to your Apple Wallet' },
-      { hid: 'application-name', name: 'application-name', content: 'COVID Pass in your iOS Apple Wallet'},
+      { hid: 'description', name: 'description', content: description },
+      { hid: 'application-name', name: 'application-name', content: description},
       { hid: 'keywords', name: 'keywords', content: 'Apple Wallet, iOS Wallet, iPhone Wallet, EU Digital COVID Certificate, COVID, covid pass, green pass, EU Green Certificate, Vaccination, Recovery, Test'},
       { hid: 'author', name: 'author', content: 'Donatus Wolf, Philipp Trenz'},
       { hid: 'theme-color', name: 'theme-color', content: tailwind.theme.colors.primary },
@@ -22,23 +25,23 @@ export default {
       { hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: tailwind.theme.colors.primary },
       { hid: 'msapplication-TileImage', name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
       
-      { hid: 'og:title', property: 'og:title', content: 'COVID Pass' },
-      { hid: 'og:description', property: 'og:description', content: 'Your digital COVID pass in your iPhone Apple Wallet' },
+      { hid: 'og:title', property: 'og:title', content: title },
+      { hid: 'og:description', property: 'og:description', content: description },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: process.env.BASE_URL },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'COVID Pass' },
+      { hid: 'og:site_name', property: 'og:site_name', content: title },
       { hid: 'og:image', property: 'og:image', content: '/og-image.png' },
       { hid: 'og:image:width', property: 'og:image:width', content: '1280' },
       { hid: 'og:image:height', property: 'og:image:height', content: '640' },
 
-      { hid: 'twitter:site', name: 'twitter:site', content: '' },
-      { hid: 'twitter:creator', name: 'twitter:creator', content: '@donatuswolf,@philipptrenz' },
-      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:site', property: 'twitter:site', content: '' },
+      { hid: 'twitter:creator', property: 'twitter:creator', content: '@donatuswolf,@philipptrenz' },
+      { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:image', property: 'twitter:image', content: '/og-image.png' },
-      { hid: 'twitter:url', property: 'twitter:url', content: 'https://covidpass.eu' },
+      { hid: 'twitter:url', property: 'twitter:url', content: process.env.BASE_URL },
       { hid: 'twitter:domain', property: 'twitter:domain', content: 'covidpass.eu' },
-      { hid: 'twitter:title', property: 'twitter:title', content: 'COVID Pass in your iOS Apple Wallet' },
-      { hid: 'twitter:description', name: 'twitter:description', content: 'Scan your vaccination, test and recovery certificates in QR code representation and save them to your Apple Wallet' },
+      { hid: 'twitter:title', property: 'twitter:title', content: title },
+      { hid: 'twitter:description', property: 'twitter:description', content: description },
 
     ],
     link: [
