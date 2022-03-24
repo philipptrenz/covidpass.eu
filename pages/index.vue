@@ -186,7 +186,7 @@
 
       <div class="flex flex-row space-x-6">
 
-        <Button v-if="state == 4 && isShareSheetAvailable" :text="$t('index.addToWallet.shareButtonText')" @click="tellYourFriends()" class="w-auto">
+        <Button v-if="state == 4 && isShareSheetAvailable" :text="$t('index.addToWallet.shareButtonText')" @click="tellYourFriends()" class="w-auto pl-2 pr-4">
           <ShareIcon />
         </Button>
 

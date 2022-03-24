@@ -8,11 +8,11 @@
       <div class="md:w-1/2 pl-4 pb-4 pr-4 md:pr-0">
 
         <p class="font-semibold text-base">
-          The business card<br />
+          The business card<br class="hidden md:inline" />
           you can’t forget
         </p>
         <p class="font-semibold text-base">
-          and sticks to your<br />
+          and sticks to your<br class="hidden md:inline" />
           new contacts
         </p>
         <a 
