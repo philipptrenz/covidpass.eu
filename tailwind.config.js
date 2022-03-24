@@ -25,6 +25,12 @@ module.exports = {
       },
       walletGray: 'rgb(30,30,30)',
       walletText: 'rgb(209,209,209)',
+      businesspass: '#110BF4',
+      'businesspass-button': {
+        DEFAULT: 'rgba(255,255,255,0.15)',
+        hover: 'rgba(255,255,255,0.25)',
+        active: 'rgba(255,255,255,0.35)',
+      },
     },
     fontFamily: {
       body: ['-apple-system', 'sans-serif'],
