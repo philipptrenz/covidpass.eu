@@ -15,10 +15,8 @@
     <LinkButton :text="$t('about.supportButton')" href="https://ko-fi.com/covidpass" >
       <KofiIcon />
     </LinkButton>
-
-    <LinkButton :text="$t('about.contributeTranslation')" href="mailto:info@covidpass.eu?subject=I%20would%20like%20to%20translate!">
-      <TranslateIcon />
-    </LinkButton>
+    
+    <BusinessPass />
     
   </div>
 </template>
@@ -29,13 +27,15 @@ import Vue from 'vue';
 import ChevronLeft from '~/assets/icons/chevron-left-32x32.svg?inline';
 import KofiIcon from '~/assets/icons/kofi.svg?inline';
 import TranslateIcon from '~/assets/icons/translate.svg?inline';
+import BusinessPass from '../components/BusinessPass.vue';
 
 export default Vue.extend({
   components: {
     ChevronLeft,
     KofiIcon,
-    TranslateIcon
-  },
+    TranslateIcon,
+    BusinessPass
+},
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
 

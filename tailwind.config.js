@@ -27,9 +27,9 @@ module.exports = {
       walletText: 'rgb(209,209,209)',
       businesspass: '#110BF4',
       'businesspass-button': {
-        DEFAULT: 'rgba(255,255,255,0.15)',
-        hover: 'rgba(255,255,255,0.25)',
-        active: 'rgba(255,255,255,0.35)',
+        DEFAULT: 'rgba(255,255,255,0.25)',
+        hover: 'rgba(255,255,255,0.35)',
+        active: 'rgba(255,255,255,0.45)',
       },
     },
     fontFamily: {
