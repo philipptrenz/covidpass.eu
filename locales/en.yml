@@ -8,7 +8,7 @@ about:
     easier. Thanks to Ann-Kathrin, who contributed the logo. We created COVID Pass
     for iOS within our spare time and pay the server costs out of our own pocket.
     If you find this project useful, please feel free to support us.
-  supportButton: Support us on Ko-fi
+  supportButton: Support us
   title: About us
 browserAlert:
   android: It seems that you have not opened our website on an iPhone. Unfortunately,
@@ -92,7 +92,7 @@ index:
     note: To protect your data, please make sure that your Pass is not visible when
       your iPhone is locked. If necessary, you can change this setting under Settings
       > Touch / Face ID & Passcode > Allow access when locked
-    shareButtonText: Tell your friends
+    shareButtonText: Share
     successMessage: QR-Code successfully scanned
   consent:
     buttonText: Scan QR-Code

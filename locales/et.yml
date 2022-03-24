@@ -8,7 +8,7 @@ about:
     Tänu Ann-Kathrinile, kes logo andis. Loodud CoVid pass iOS meie vaba aega ja maksta
     server kulud välja meie taskus. Kui leiate selle projekti kasulikuks, siis palun
     võtke meid toetama.
-  supportButton: Toetage meid Ko-Fi-s
+  supportButton: Toetage meid
   title: Meist
 browserAlert:
   android: Tundub, et te ei ole avanud oma veebisaiti iPhone'is. Kahjuks on passi
@@ -28,7 +28,7 @@ index:
     note: Andmete kaitsmiseks veenduge, et teie pass ei ole nähtav, kui teie iPhone
       on lukustatud. Vajadusel saate muuta selle seadistuse seadete all> Touch / Face
       ID & Passcode> Luba ligipääsu lukustatud
-    shareButtonText: Räägi oma sõpradele
+    shareButtonText: Jagama
     successMessage: QR-kood edukalt skaneeritud
   consent:
     buttonText: Skannige QR-koodi

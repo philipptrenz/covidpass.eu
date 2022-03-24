@@ -98,6 +98,8 @@ keys/
 # .DS_Store
 .DS_Store
 
+venv
+
 # Translation frameworks
 locales/reference_de.yml
 locales/reference_en.yml

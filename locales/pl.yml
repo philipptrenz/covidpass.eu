@@ -8,7 +8,7 @@ about:
     Dzięki Ann-Kathrin, który stworzył logo, stworzyliśmy COVID Pass dla iOS w naszym
     wolnym czasie. Koszty utrzymania serwera opłacamy z naszych kieszeni więc jeżeli
     uznasz że wykonujemy przydatną prace – wesprzyj nas.
-  supportButton: Wspieraj nas na Ko-Fi
+  supportButton: Wesprzyj nas
   title: O nas
 browserAlert:
   android: Wygląda na to, że nie otworzono strony na iPhone. Niestety, sciągniecie
@@ -51,7 +51,7 @@ index:
   onboarding:
     icons:
       appleWatch: ' dla  Watch'
-      free: wolny
+      free: bez opłat
       withoutApp: nie wymaga aplikacji
     paragraphs:
       '1': Bez wględu czy idziesz do kina, na koncert czy do restauracji – w dzisiejszych
@@ -100,7 +100,7 @@ pass:
       jazdy posiadacza certyfikatu. Ważność tego certyfikatu nie była sprawdzana przez
       Pass COVID.
   dose: Dawka
-  name: Nazwa
+  name: Imię
   positiveTested: Test pozytywny
   testResult: Wynik testu
   testType: Typ testu

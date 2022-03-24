@@ -9,7 +9,7 @@ about:
     die das Logo zur Verfügung stellt. Wir haben COVID Pass für iOS in unserer Freizeit
     erstellt und bezahlen die Serverkosten aus eigener Tasche. Wenn Du dieses Projekt
     nützlich findest, freuen wir uns über eine kleine Unterstützung.
-  supportButton: Unterstütze uns auf Ko-fi
+  supportButton: Unterstütze uns
   title: Über uns
 browserAlert:
   android: Es scheint so, also ob Du unsere Website nicht auf einem iPhone geöffnet
@@ -96,7 +96,7 @@ index:
       ist, wenn Dein iPhone gesperrt ist. Falls nötig, kannst Du diese Einstellung
       unter Einstellungen > Touch / Face ID & Passcode > Im Sperrzustand Zugriff erlauben
       ändern.
-    shareButtonText: Erzähle es weiter
+    shareButtonText: Teilen
     successMessage: QR-Code erfolgreich gescannt
   consent:
     buttonText: QR-Code scannen

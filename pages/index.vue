@@ -190,7 +190,7 @@
           <ShareIcon />
         </Button>
 
-        <LinkButton v-show="state == 4" :text="$t('about.supportButton')" href="https://ko-fi.com/covidpass" >
+        <LinkButton class="flex-grow" v-show="state == 4" :text="$t('about.supportButton')" href="https://ko-fi.com/covidpass" >
           <KofiIcon />
         </LinkButton>
 
@@ -243,7 +243,7 @@ export default Vue.extend({
 },
   data() {
     return {
-      state: State.SCANNED,
+      state: State.NONE,
       consentGiven: false,
       hintNotConsented: false,
       qrScannerLoading: false,
