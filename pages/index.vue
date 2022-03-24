@@ -186,11 +186,11 @@
 
       <div class="flex flex-row space-x-6">
 
-        <Button v-if="state == 4 && isShareSheetAvailable" :text="$t('index.addToWallet.shareButtonText')" @click="tellYourFriends()" >
+        <Button v-if="state == 4 && isShareSheetAvailable" :text="$t('index.addToWallet.shareButtonText')" @click="tellYourFriends()" class="w-auto">
           <ShareIcon />
         </Button>
 
-        <LinkButton class="flex-grow" v-show="state == 4" :text="$t('about.supportButton')" href="https://ko-fi.com/covidpass" >
+        <LinkButton v-show="state == 4" :text="$t('about.supportButton')" href="https://ko-fi.com/covidpass" >
           <KofiIcon />
         </LinkButton>
 
