@@ -5,7 +5,7 @@
       <img src="~assets/logos/businesspass.svg" alt="Business Pass" class="py-2" />
     </div>
     <div class="flex flex-col md:flex-row">
-      <div class="md:w-1/2 pl-4 pb-4 pr-4">
+      <div class="md:w-1/2 pl-4 pb-4 pr-4 md:pr-0">
 
         <p class="font-semibold text-base">
           <span class="opacity-50">The business card<br />
