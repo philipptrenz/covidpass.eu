@@ -46,6 +46,10 @@
         <span class="font-bold">Bekannt aus</span>
         <div class="flex flex-row justify-start space-x-8 align-middle min-h-[42px]">
           <a class="self-center" target="_blank" 
+            href="https://www.computerbild.de/artikel/cb-News-Handy-Corona-Impfpass-auf-Apple-Watch-Apple-Wallet-30423359.html">
+            <img src="~/assets/logos/computerbild.svg" alt="Logo von Computer BILD">
+          </a>
+          <a class="self-center" target="_blank" 
             href="https://www.focus.de/digital/diese-apps-machen-es-moeglich-impfnachweis-auf-dem-smartphone-praktische-tipps-tricks-fuers-schnelle-laden_id_13467124.html">
             <img src="~/assets/logos/focus.svg" alt="Logo von Focus Online">
           </a>
