@@ -165,7 +165,7 @@
         <TickIcon />
       </Button>
 
-      <div class="flex flex-col bg-primary text-white text-xl rounded-lg p-4 focus:outline-none ">
+      <div v-show="state == 3" class="flex flex-col bg-primary text-white text-xl rounded-lg p-4 focus:outline-none ">
         
         <h2 class="">
           <span class="pl-2 inline-block align-middle font-semibold">
@@ -243,7 +243,7 @@ export default Vue.extend({
 },
   data() {
     return {
-      state: State.NONE,
+      state: State.SCANNED,
       consentGiven: false,
       hintNotConsented: false,
       qrScannerLoading: false,
