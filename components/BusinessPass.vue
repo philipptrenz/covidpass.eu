@@ -8,17 +8,17 @@
       <div class="md:w-1/2 pl-4 pb-4 pr-4 md:pr-0">
 
         <p class="font-semibold text-base">
-          <span class="opacity-50">The business card<br />
-          you</span> can’t forget
+          The business card<br />
+          you can’t forget
         </p>
         <p class="font-semibold text-base">
-          <span class="opacity-50">and</span> sticks <span class="opacity-50"> to your<br />
-          new contacts</span>
+          and sticks to your<br />
+          new contacts
         </p>
         <a 
           href="https://passit.one/" 
           target="_blank" 
-          class="mt-2 cursor-pointer w-full h-16 bg-businesspass-button hover:bg-businesspass-button-hover active:bg-businesspass-button-active text-white text-xl md:text-2xl font-medium rounded-lg px-3 flex flex-row justify-center align-middle space-x-2 transition duration-150 ">
+          class="mt-2 cursor-pointer w-full h-16 bg-businesspass-button hover:bg-businesspass-button-hover active:bg-businesspass-button-active text-white text-xl lg:text-2xl font-medium rounded-lg px-3 flex flex-row justify-center align-middle space-x-2 transition duration-150 ">
           <span class="self-center">Create yours</span>
         </a>
 
