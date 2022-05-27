@@ -47,7 +47,7 @@ Then run the following command to convert to `.pem` as well as to automatically 
 Alternatively you can directly convert the certificates using `openssl`:
 
 ```bash
-openssl pkcs12 -legacy -in "./keys/<PASS_ID>.p12" -out "./keys/<PASS_ID>.pem" -passout "pass:<PRIVATE_KEY_PASSWORD>" -nocerts
+openssl pkcs12 -legacy -in "./keys/<PASS_ID>.p12" -out "./keys/<PASS_ID>.pem" -passout "pass:<PASS_CERT_SECRET>" -nocerts
 curl https://developer.apple.com/certificationauthority/AppleWWDRCA.cer | openssl x509 -inform der -out ./keys/wwdr.pem
 ```
 
