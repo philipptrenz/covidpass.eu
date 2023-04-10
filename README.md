@@ -51,6 +51,8 @@ openssl pkcs12 -legacy -in "./keys/<PASS_ID>.p12" -out "./keys/<PASS_ID>.pem" -p
 curl https://developer.apple.com/certificationauthority/AppleWWDRCA.cer | openssl x509 -inform der -out ./keys/wwdr.pem
 ```
 
+Check if expired with `openssl x509 -enddate -noout -in ./keys/<PASS_ID>.pem`.
+
 ### Set environment variables
 
 The following environment variables have to be set for Apple Wallet® pass generation. This can be done by an `.env` file within the project root or by adding the variables to the environment.
